@@ -1,0 +1,22 @@
+.Multiheader {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 8px;
+}
+
+.orangeArea {
+    background-color: #f5a700;
+}
+
+.greenArea {
+    background-color: #3af700;
+}
+
+.redArea {
+    background-color: #f00000;
+}
+
+.blueArea {
+    background-color: #0180e9;
+}

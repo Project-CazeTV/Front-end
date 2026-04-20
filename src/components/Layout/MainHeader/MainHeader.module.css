@@ -1,0 +1,321 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 100;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 70px;
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo { 
+  height: 60px; 
+  width: auto;
+}
+
+.accountArea {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.accButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+#accCircle {
+  font-variation-settings: 'FILL' 1;
+  font-size: 32px;
+}
+
+.accountPopover {
+  position: absolute;
+  top: 55px;
+  right: -10px;
+  width: 220px;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  z-index: 1001;
+  padding: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  animation: popIn 0.2s ease-out;
+}
+
+.popoverArrow {
+  position: absolute;
+  top: -6px;
+  right: 25px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--bg-color);
+  transform: rotate(45deg);
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 10px;
+  background: #0180e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(128, 128, 128, 0.2);
+  margin: 12px 0;
+}
+
+.themeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.popoverOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.hamburgerBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+#menuIcon {
+  font-size: 32px;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.logoSmall {
+  height: 45px;
+  width: auto;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 5px;
+}
+
+#closeIcon {
+  font-size: 32px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  font-weight: 600;
+  font-size: 13px;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.subItemsWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  overflow: hidden;
+}
+
+.isExpanded {
+  grid-template-rows: 1fr;
+}
+
+.mobileSubList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.subItemMobile {
+  padding: 10px 0;
+  font-size: 12px;
+  opacity: 0.8;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.05);
+}
+
+
+  .subItemsWrapper > * {
+  min-height: 0;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hamburgerBtn { display: none !important; }
+  .desktopNav { display: block; height: 70px; }
+  
+  .mainList {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+  }
+
+  .mainListItem {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .mainListItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    transition: height 0.4s ease;
+  }
+
+  .mainListItem:hover::before,
+  .mainListItem.active::before {
+    height: 100%;
+  }
+
+  .mainListItem:hover,
+  .mainListItem.active {
+    color: #fff;
+  }
+
+  .mainListItem:nth-child(1)::before { background-color: #f5a700; }
+  .mainListItem:nth-child(2)::before,
+  .mainListItem:nth-child(3)::before { background-color: #f00000; }
+  .mainListItem:nth-child(4)::before { background-color: #3af700; }
+  .mainListItem:nth-child(n+5)::before { background-color: #0180e9; }
+
+  .subHeaderDesktop {
+    position: absolute;
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 0;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  }
+
+  .showSub {
+    height: 50px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .subListHorizontal {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+    font-size: 10px;
+    list-style: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  transition: opacity 0.3s;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

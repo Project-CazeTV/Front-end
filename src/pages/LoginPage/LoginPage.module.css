@@ -1,0 +1,169 @@
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  color: var(--text-color, #333); 
+}
+
+.backButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.loginContainer {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerLogos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.logoCaze {
+  height: 60px;
+  width: auto;
+}
+
+.logoFifa {
+  height: 60px;
+  width: auto;
+}
+
+.divider {
+  width: 2px;
+  height: 50px;
+  background-color: #e0e0e0;
+}
+
+.welcomeText {
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background-color: #212121;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #424242;
+}
+
+.submitBtn span {
+  font-size: 24px;
+}
+
+.switchArea {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 25px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.registerLink {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+}
+
+.socialLogin {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.googleBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to bottom, #058EFF, #11FE00, #FFB700) border-box;
+}
+
+.googleBtn:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: scale(1.05);
+}
+
+.googleBtn img {
+  height: 20px;
+  width: 20px;
+}

@@ -1,0 +1,39 @@
+.themeToggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.themeToggleWrapper span {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.toggle {
+  width: 44px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle.active {
+  background: #005fdb;
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+.toggle.active .ball {
+  transform: translateX(22px);
+}

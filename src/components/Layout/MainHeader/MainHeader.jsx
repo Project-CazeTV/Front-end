@@ -6,15 +6,24 @@ import LogoCazeWhiteText from '../../../assets/CazéTVNomeBranco.png';
 import { useNavigate } from 'react-router-dom';
 import ThemeToggle from '../../Common/ThemeToggle/ThemeToggle';
 
+import { auth } from '../../../services/firebase/firebaseConfig';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [drawerLogo, setDrawerLogo] = useState(LogoCazeBlackText);
+  
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
     const updateDrawerLogo = () => {
       const isDark = document.body.getAttribute('data-theme') === 'dark';
       setDrawerLogo(isDark ? LogoCazeWhiteText : LogoCazeBlackText);
@@ -23,8 +32,32 @@ export default function MainHeader() {
     updateDrawerLogo();
     const observer = new MutationObserver(updateDrawerLogo);
     observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
-    return () => observer.disconnect();
+    
+    return () => {
+      observer.disconnect();
+      unsubscribe();
+    };
   }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setIsAccountOpen(false);
+      navigate('/');
+    } catch (error) {
+      console.error("Erro ao sair:", error);
+    }
+  };
+
+  const renderUserIcon = () => {
+    if (user?.photoURL) {
+      return <img src={user.photoURL} alt="Perfil" className={styles.avatarImg} />;
+    }
+    if (user?.displayName) {
+      return <div className={styles.avatarInitial}>{user.displayName[0].toUpperCase()}</div>;
+    }
+    return <span className="material-symbols-outlined" id={styles.accCircle}>account_circle</span>;
+  };
 
   const menuData = [
     { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'GRUPOS', 'CIDADES-SEDE'] },
@@ -39,7 +72,7 @@ export default function MainHeader() {
     <>
       <header className={styles.header} onMouseLeave={() => setActiveSubmenu(null)}>
         <div className={styles.topBar}>
-          <img src={LogoCazeIcon} alt="Cazé TV" className={styles.logo} />
+          <img src={LogoCazeIcon} alt="Cazé TV" className={styles.logo} onClick={() => navigate('/')} style={{cursor: 'pointer'}} />
 
           <nav className={styles.desktopNav}>
             <ul className={styles.mainList}>
@@ -58,25 +91,41 @@ export default function MainHeader() {
           <div className={styles.headerControls}>
             <div className={styles.accountArea}>
               <button className={styles.accButton} onClick={() => setIsAccountOpen(!isAccountOpen)}>
-                <span className="material-symbols-outlined" id={styles.accCircle}>account_circle</span>
+                {renderUserIcon()}
               </button>
+              
               {isAccountOpen && (
                 <>
                   <div className={styles.popoverOverlay} onClick={() => setIsAccountOpen(false)} />
                   <div className={styles.accountPopover}>
                     <div className={styles.popoverArrow} />
                     <div className={styles.popoverContent}>
-                      <button 
-  className={styles.loginBtn} 
-  onClick={() => {
-    navigate('/login');
-    setIsAccountOpen(false);
-  }}
->
-  Entrar / Cadastrar
-</button>
+                      
+                      {user ? (
+                        <div className={styles.userInfoSection}>
+                          <p className={styles.welcomeText}>Coé, <strong>{user.displayName?.split(' ')[0]}</strong>!</p>
+                          <button className={styles.logoutBtn} onClick={handleLogout}>
+                            <span className="material-symbols-outlined">logout</span>
+                            Sair
+                          </button>
+                        </div>
+                      ) : (
+                        <button 
+                          className={styles.loginBtn} 
+                          onClick={() => {
+                            navigate('/login');
+                            setIsAccountOpen(false);
+                          }}
+                        >
+                          Entrar / Cadastrar
+                        </button>
+                      )}
+
                       <div className={styles.divider} />
-                      <div className={styles.themeRow}><span>Tema</span><ThemeToggle /></div>
+                      <div className={styles.themeRow}>
+                        <span>Tema</span>
+                        <ThemeToggle />
+                      </div>
                     </div>
                   </div>
                 </>

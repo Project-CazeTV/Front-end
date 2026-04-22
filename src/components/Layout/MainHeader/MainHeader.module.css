@@ -319,3 +319,54 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.avatarImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00D1FF;
+}
+
+.avatarInitial {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #058EFF, #11FE00);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.userInfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.welcomeText {
+  font-size: 14px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  font-size: 13px;
+}
+
+.logoutBtn:hover {
+  text-decoration: underline;
+}

@@ -6,6 +6,9 @@ import LogoFIFA from '../../assets/logo-copa-escuro.png';
 import LogoFIFALight from '../../assets/logo-copa.png';
 import { useNavigate } from 'react-router-dom';
 
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth, googleProvider } from "../../services/firebase/firebaseConfig";
+
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -16,6 +19,10 @@ export default function LoginPage() {
   const handleBack = () => {
     navigate('/');
   };
+
+  const goToSignUp = () => {
+    navigate('/signup')
+  }
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -36,10 +43,24 @@ export default function LoginPage() {
     return () => observer.disconnect();
   }, []);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log('Login com:', email, senha);
-  };
+  const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    await signInWithEmailAndPassword(auth, email, senha);
+    navigate('/');
+  } catch (error) {
+    alert("Email ou senha incorretos.");
+  }
+};
+
+const loginWithGoogle = async () => {
+  try {
+    await signInWithPopup(auth, googleProvider);
+    navigate('/');
+  } catch (error) {
+    console.error("Erro ao logar com Google", error);
+  }
+};
 
   return (
     <div className={styles.pageWrapper}>
@@ -78,18 +99,18 @@ export default function LoginPage() {
             required
           />
 
-          <button type="submit" className={styles.submitBtn}>
+          <button type="submit" className={styles.submitBtn} >
             <span className="material-symbols-outlined">arrow_forward</span>
           </button>
         </form>
 
         <div className={styles.switchArea}>
           <span>Não tem uma conta?</span>
-          <button className={styles.registerLink}>Cadastre-se</button>
+          <button className={styles.registerLink} onClick={goToSignUp}>Cadastre-se</button>
         </div>
 
         <div className={styles.socialLogin}>
-          <button className={styles.googleBtn}>
+          <button className={styles.googleBtn} onClick={loginWithGoogle}>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/960px-Google_Favicon_2025.svg.png" alt="Google" />
             Entrar com Google
           </button>

@@ -1,46 +1,106 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSwipeable } from 'react-swipeable';
 import styles from './HomeNews.module.css';
 
-export default function HomeNews({ newsList }){
-    
-    const currentNews = newsList[index]
+export default function HomeNews({ news }) {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const timerRef = useRef(null);
 
-    return(
-        <section className={styles.heroContainer}>
-            <AnimatePresence mode="wait">
-                <motion.div 
-          key={currentNews.id} 
-          className={styles.contentFlex}
-          initial={{ y: -50, opacity: 0 }}
+  const nextNews = useCallback(() => {
+    setDirection(1);
+    setIndex((prev) => (prev + 1) % news.length);
+  }, [news.length]);
+
+  const prevNews = useCallback(() => {
+    setDirection(-1);
+    setIndex((prev) => (prev - 1 + news.length) % news.length);
+  }, [news.length]);
+
+  useEffect(() => {
+    if (!isPaused) {
+      timerRef.current = setInterval(() => {
+        nextNews();
+      }, 10000);
+    }
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [nextNews, isPaused, index]);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: nextNews,
+    onSwipedRight: prevNews,
+    trackMouse: true
+  });
+
+  const current = news[index];
+
+  return (
+    <section 
+      className={styles.container} 
+      {...handlers}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+
+      <div className={styles.progressBarContainer}>
+        <motion.div 
+          key={`bar-${index}-${isPaused}`}
+          className={styles.progressBar}
+          initial={{ width: "0%" }}
+          animate={{ width: isPaused ? "0%" : "100%" }}
+          transition={{ duration: isPaused ? 0 : 10, ease: "linear" }}
+        />
+      </div>
+
+      <AnimatePresence mode="wait" custom={direction}>
+        <motion.div 
+          key={current.id}
+          className={styles.newsWrapper}
+          initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          {/* lado esquerdo: a imagem */}
           <motion.div 
-            className={styles.imageWrapper}
-            initial={{ x: -100 }} // Imagem sai/entra pela esquerda
-            animate={{ x: 0 }}
-            exit={{ x: -100 }}
-            transition={{ duration: 0.5 }}
+            className={styles.imageSide}
+            exit={{ x: -100, opacity: 0 }}
           >
-            <img src={currentNews.image} alt={currentNews.title} className={styles.heroImage} />
+            <div className={styles.imageMask}>
+              <img src={current.imagem} alt={current.titulo} className={styles.mainImg} />
+            </div>
           </motion.div>
 
-          {/* lado direito: o texto */}
           <motion.div 
-            className={styles.textWrapper}
-            initial={{ x: 100 }} // Texto sai/entra pela direita
-            animate={{ x: 0 }}
-            exit={{ x: 100 }}
-            transition={{ duration: 0.5 }}
+            className={styles.textSide}
+            exit={{ x: 100, opacity: 0 }}
           >
-            <h2>{currentNews.title}</h2>
-            <p>{currentNews.description}</p>
-            <button className={styles.btn}>Ver notícia completa</button>
+            <h2 className={styles.title}>{current.titulo}</h2>
+            <p className={styles.description}>{current.descricao}</p>
+            <button className={styles.btn}>
+              ver notícia completa 
+              <span className="material-symbols-outlined">arrow_circle_right</span>
+            </button>
           </motion.div>
         </motion.div>
-            </AnimatePresence>
-        </section>
-    )
+      </AnimatePresence>
+
+      <div className={styles.dots}>
+        {news.map((_, i) => (
+          <button 
+            key={i} 
+            className={`${styles.dot} ${i === index ? styles.active : ''}`}
+            onClick={() => {
+              setDirection(i > index ? 1 : -1);
+              setIndex(i);
+            }}
+          />
+        ))}
+      </div>
+    </section>
+  );
 }

@@ -1,0 +1,24 @@
+.pageContainer {
+  width: 100%;
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+
+.mainContent {
+  width: 100%;
+  z-index: 1;
+}
+
+.lowerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-top: -70px;
+  }
+}

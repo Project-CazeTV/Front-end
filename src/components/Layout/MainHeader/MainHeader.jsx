@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './MainHeader.module.css';
 import LogoCazeIcon from '../../../assets/caze.png';
@@ -9,7 +10,7 @@ import ThemeToggle from '../../Common/ThemeToggle/ThemeToggle';
 import { auth } from '../../../services/firebase/firebaseConfig';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
-export default function MainHeader() {
+export default function MainHeader({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
@@ -48,7 +49,7 @@ export default function MainHeader() {
       console.error("Erro ao sair:", error);
     }
   };
-
+  
   const renderUserIcon = () => {
     if (user?.photoURL) {
       return <img src={user.photoURL} alt="Perfil" className={styles.avatarImg} />;
@@ -70,9 +71,18 @@ export default function MainHeader() {
 
   return (
     <>
-      <header className={styles.header} onMouseLeave={() => setActiveSubmenu(null)}>
+      <header 
+        className={`${styles.header} ${isTransparent ? styles.transparent : ''}`} 
+        onMouseLeave={() => setActiveSubmenu(null)}
+      >
         <div className={styles.topBar}>
-          <img src={LogoCazeIcon} alt="Cazé TV" className={styles.logo} onClick={() => navigate('/')} style={{cursor: 'pointer'}} />
+          <img 
+            src={LogoCazeIcon} 
+            alt="Cazé TV" 
+            className={styles.logo} 
+            onClick={() => navigate('/')} 
+            style={{cursor: 'pointer'}} 
+          />
 
           <nav className={styles.desktopNav}>
             <ul className={styles.mainList}>

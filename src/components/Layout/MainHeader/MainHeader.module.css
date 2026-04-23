@@ -1,9 +1,9 @@
 .header {
-  position: sticky;
+  position: relative;
   top: 0;
   width: 100%;
   background-color: var(--bg-color);
-  z-index: 100;
+  z-index: 1000;
   border-bottom: 1px solid rgba(128, 128, 128, 0.1);
   color: var(--text-color);
   transition: background 0.3s ease;
@@ -369,4 +369,25 @@
 
 .logoutBtn:hover {
   text-decoration: underline;
+}
+
+.header.transparent {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.header.transparent .mainListItem,
+.header.transparent #accCircle,
+.header.transparent #menuIcon {
+  color: #FFFFFF;
+}
+
+.header.transparent .subHeaderDesktop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-bottom: none;
+}
+
+.header.transparent .subListHorizontal {
+  color: #FFFFFF;
 }

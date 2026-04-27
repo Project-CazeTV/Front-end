@@ -1,0 +1,97 @@
+.container {
+  padding: 0 16px;
+  margin-top: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayCard {
+  width: 280px;
+}
+
+.navBtn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.date {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.matchCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.flag {
+  width: 48px;
+  height: 48px;
+}
+
+.matchInfo {
+  flex: 1;
+  text-align: center;
+}
+
+.time {
+  font-size: 11px;
+  color: #888;
+}
+
+.teams {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 4px 0;
+  font-weight: 600;
+}
+
+.stadium {
+  font-size: 11px;
+  color: #7c7c7c;
+}
+
+.location {
+  font-size: 10px;
+  color: #aaa;
+}

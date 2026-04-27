@@ -52,3 +52,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
+
+.filtroBtnActive {
+  background: #0047BB !important;
+  color: #ffffff !important;
+  border-color: #0047BB !important;
+}

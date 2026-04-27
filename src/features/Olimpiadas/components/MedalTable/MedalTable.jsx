@@ -8,13 +8,13 @@ export default function MedalTable() {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>Ordem</th>
-            <th>País</th>
-            <th><span className={styles.goldDot}></span></th>
-            <th><span className={styles.silverDot}></span></th>
-            <th><span className={styles.bronzeDot}></span></th>
-            <th>Total</th>
-          </tr>
+              <th className={styles.rankHeader}>Ordem</th>
+              <th className={styles.countryHeader}>País</th>
+              <th><img src="../../../../assets/Gold_medal.svg.png" alt="Ouro" className={styles.medalIcon} /></th>
+              <th><img src="../../../../assets/Silver_medal.svg.png"alt="Prata" className={styles.medalIcon} /></th>
+              <th><img src="../../../../assets/Bronze_medal.svg.png" alt="Bronze" className={styles.medalIcon} /></th>
+              <th><img src="../../../../assets/GoldSilverBronze_medals.svg.png" alt="Total" className={styles.medalIcon} /></th>
+            </tr>
         </thead>
         <tbody>
           {medalData.map((item, index) => (

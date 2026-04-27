@@ -60,6 +60,21 @@ export default function MainHeader({ isTransparent }) {
     return <span className="material-symbols-outlined" id={styles.accCircle}>account_circle</span>;
   };
 
+  const handleSubItemClick = (subItem) => {
+    setIsMenuOpen(false); 
+    setActiveSubmenu(null); 
+
+    if (subItem === 'TABELA') {
+      navigate('/world-cup');
+    } else if (subItem === 'JOGOS OLÍMPICOS DE VERÃO') {
+      navigate('/olympics');
+    } else if (subItem === 'DE ONDE VEIO A CAZETV') {
+      navigate('/historia/cazetv');
+    } else if (subItem === 'NOVIDADES') {
+      navigate('/noticias/novidades');
+    }
+  };
+
   const menuData = [
     { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'GRUPOS', 'CIDADES-SEDE'] },
     { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO MINEIRO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
@@ -150,8 +165,16 @@ export default function MainHeader({ isTransparent }) {
 
         <div className={`${styles.subHeaderDesktop} ${activeSubmenu ? styles.showSub : ''}`}>
           <ul className={styles.subListHorizontal}>
-            {activeSubmenu?.items.map(item => <li key={item}>{item}</li>)}
-          </ul>
+  {activeSubmenu?.items.map(item => (
+    <li 
+      key={item} 
+      onClick={() => handleSubItemClick(item)} 
+      style={{ cursor: 'pointer' }}
+    >
+      {item}
+    </li>
+  ))}
+</ul>
         </div>
       </header>
 
@@ -180,10 +203,17 @@ export default function MainHeader({ isTransparent }) {
               
               <div className={`${styles.subItemsWrapper} ${mobileSubOpen === menu.title ? styles.isExpanded : ''}`}>
                 <ul className={styles.mobileSubList}>
-                  {menu.items.map(sub => (
-                    <li key={sub} className={styles.subItemMobile}>{sub}</li>
-                  ))}
-                </ul>
+  {menu.items.map(sub => (
+    <li 
+      key={sub} 
+      className={styles.subItemMobile} 
+      onClick={() => handleSubItemClick(sub)}
+      style={{ cursor: 'pointer' }}
+    >
+      {sub}
+    </li>
+  ))}
+</ul>
               </div>
             </div>
           ))}

@@ -17,6 +17,107 @@
   padding: 40px 20px;
 }
 
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0 40px;
+}
+
+.groupCard {
+  width: 280px;
+  background: var(--bg-color);
+  border-radius: 16px;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.groupTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9a9a9a;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.countriesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.countryRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.countryRow:first-child {
+  border-top: none;
+}
+
+.flagWrapper {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag {
+  width: 32px;
+  border-radius: 3px;
+}
+
+.countryName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.prev {
+  left: calc(50% - 170px);
+}
+
+.next {
+  right: calc(50% - 170px);
+}
+
+.navBtn span {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.noInfo {
+  margin: auto;
+}
+
 @media (max-width: 1024px) {
   .mainContent {
     margin-top: -70px;

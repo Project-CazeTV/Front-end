@@ -4,8 +4,34 @@ import CountdownCard from '../../features/WorldCup/components/CountdownCard/Coun
 import FilterSection from '../../components/Common/FilterSection/FilterSection';
 import styles from './WorldCupPage.module.css';
 import ColoredHeader from '../../components/Layout/ColoredHeader/ColoredHeader';
+import NextMatches from '../../features/WorldCup/components/NextMatches/NextMatches';
+import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+import { groups } from '../../mocks/groups';
 
 export default function WorldCupPage() {
+
+  const [activeFilter, setActiveFilter] = useState("Grupos");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const filtros = ["Grupos", "Fase de grupos", "Rodadas", "Notícias"];
+
+
+  const nextGroup = () => {
+    if (currentIndex < groups.length - 1) setCurrentIndex(prev => prev + 1);
+  };
+
+  const prevGroup = () => {
+    if (currentIndex > 0) setCurrentIndex(prev => prev - 1);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: nextGroup,
+    onSwipedRight: prevGroup,
+    trackMouse: true
+  });
+
+  const grupoAtual = groups[currentIndex];
+
   return (
     <div className={styles.pageContainer}>
         <ColoredHeader></ColoredHeader>
@@ -14,6 +40,64 @@ export default function WorldCupPage() {
       <main className={styles.mainContent}>
         <CountdownCard />
       </main>
+
+
+     <FilterSection 
+        filtros={filtros} 
+        filtroAtivo={activeFilter} 
+        setFiltroAtivo={setActiveFilter} 
+      />
+
+      {activeFilter === "Grupos" && (
+        <section className={styles.carouselContainer}>
+          <button 
+            className={`${styles.navBtn} ${styles.prev}`} 
+            onClick={prevGroup}
+            disabled={currentIndex === 0}
+          >
+            <span className="material-symbols-outlined">arrow_back_ios_new</span>
+          </button>
+
+          <div className={styles.groupCard} {...handlers}>
+            <h3 className={styles.groupTitle}>GRUPO {grupoAtual.grupo}</h3>
+            
+            <div className={styles.countriesList}>
+              {grupoAtual.paises.map((pais, pIdx) => (
+                <div key={pIdx} className={styles.countryRow}>
+                  <div className={styles.flagWrapper}>
+                    <img src={pais.imagem} alt={pais.nome} className={styles.flag} />
+                  </div>
+                  <span className={styles.countryName}>{pais.nome.toUpperCase()}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button 
+            className={`${styles.navBtn} ${styles.next}`} 
+            onClick={nextGroup}
+            disabled={currentIndex === groups.length - 1}
+          >
+            <span className="material-symbols-outlined">arrow_forward_ios</span>
+          </button>
+        </section>
+      )}
+
+      {activeFilter === "Fase de grupos" && (
+  <NextMatches groups={groups} />
+)}
+
+{activeFilter === "Rodadas" && (
+  <div className={styles.noInfo}>
+  <h3> Sem informações disponíveis</h3>
+  </div>
+)}
+
+{activeFilter === "Notícias" && ( 
+  <div className={styles.noInfo}>
+  <h3> Sem informações disponíveis</h3>
+  </div>
+)}
 
       <CommonFooter />
     </div>

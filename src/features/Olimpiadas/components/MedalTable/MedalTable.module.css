@@ -1,99 +1,100 @@
-.tableContainer {
+.sectionContainer {
   width: 100%;
-  padding: 1rem;
-  background-color: var(--bg-primary); /* Variável de fundo do seu tema */
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
 }
 
 .title {
   font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-weight: 800;
+  color: var(--text-color);
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
+.flag{
+  width: 32px;
+}
+
 .responsiveWrapper {
+  width: 100%;
   overflow-x: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--bg-secondary);
+  text-align: center;
+  background-color: #EDEFF2; 
 }
 
-.table thead tr {
-  background-color: var(--bg-table-header); /* Defina no seu tema light/dark */
-  border-bottom: 2px solid var(--border-color);
+:global([data-theme="dark"]) .table {
+  background-color: #26242C;
 }
 
 .table th {
-  padding: 12px 10px;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  text-transform: capitalize;
+  padding: 12px 5px;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.8rem;
 }
 
 .medalIcon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+  width: 22px;
+  height: 22px;
   display: block;
   margin: 0 auto;
 }
 
 .row {
   border-bottom: 1px solid var(--border-color);
-  transition: background-color 0.2s;
+  
 }
 
-.row:hover {
-  background-color: var(--bg-hover);
-}
-
-.rankValue {
-  text-align: center;
-  font-weight: 600;
-  color: var(--text-secondary);
+.rankCell {
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 .countryCell {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
-}
-
-.flag {
-  font-size: 1.4rem;
+  gap: 8px;
+  padding: 12px 4px;
+  text-align: left;
 }
 
 .countryName {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.medalValue {
-  text-align: center;
   font-weight: 600;
-  color: var(--text-primary);
+  font-size: 0.85rem;
+  color: var(--text-color);
 }
 
-.totalValue {
-  text-align: center;
+.medalCell {
+  width: 42px;
   font-weight: 700;
-  color: var(--text-primary);
-  background-color: var(--bg-color);
+  color: #000;
 }
 
-@media (max-width: 480px) {
-  .countryName {
-    font-size: 0.85rem;
-  }
-  .medalIcon {
-    width: 20px;
-    height: 20px;
-  }
+:global([data-theme="light"]) .gold,
+:global(:not([data-theme="dark"])) .gold { background-color: #E6D340; 
+  color: var(--text-color); }
+
+:global([data-theme="light"]) .silver,
+:global(:not([data-theme="dark"])) .silver { background-color: #E9F4FD; 
+  color: var(--text-color); }
+
+:global([data-theme="light"]) .bronze,
+:global(:not([data-theme="dark"])) .bronze { background-color: #E4B78F; 
+  color: var(--text-color); }
+
+:global([data-theme="dark"]) .gold { background-color: #D9C425; }
+:global([data-theme="dark"]) .silver { background-color: #98A2A2; }
+:global([data-theme="dark"]) .bronze { background-color: #CA8B53; }
+
+.total {
+  font-weight: 800;
+  color: var(--text-color);
 }

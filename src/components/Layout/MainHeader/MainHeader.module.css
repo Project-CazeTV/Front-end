@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  top: 0;
+  top: 10px;
   width: 100%;
   background-color: var(--bg-color);
   z-index: 1000;
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 0 7%;
   height: 70px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .logo { 
-  height: 60px; 
+  height: 70px; 
   width: auto;
 }
 
@@ -43,9 +43,10 @@
   align-items: center;
 }
 
-#accCircle {
-  font-variation-settings: 'FILL' 1;
-  font-size: 32px;
+.userIcon {
+  padding: 12px;
+  background-color: var(--border-color);
+  border-radius: 50%;
 }
 
 .accountPopover {
@@ -111,10 +112,6 @@
   color: inherit;
   display: flex;
   align-items: center;
-}
-
-#menuIcon {
-  font-size: 32px;
 }
 
 .drawer {
@@ -377,7 +374,6 @@
 }
 
 .header.transparent .mainListItem,
-.header.transparent #accCircle,
 .header.transparent #menuIcon {
   color: #FFFFFF;
 }

@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  top: 10px;
+  top: 0;
   width: 100%;
   background-color: var(--bg-color);
   z-index: 1000;
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 7%;
-  height: 70px;
+  height: 90px;
 }
 
 .headerControls {
@@ -78,12 +78,13 @@
 .loginBtn {
   width: 100%;
   padding: 10px;
-  background: #0180e9;
+  background: #0059B2;
+  font-family: "Sora", sans-serif;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .divider {
@@ -374,6 +375,7 @@
 }
 
 .header.transparent .mainListItem,
+.header.transparent .userIcon,
 .header.transparent #menuIcon {
   color: #FFFFFF;
 }

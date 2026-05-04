@@ -84,7 +84,7 @@
   background-color: #e0e0e0;
   border: none;
   border-radius: 12px;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -94,6 +94,7 @@
   background-color: #212121;
   color: white;
   border: none;
+  font-family: "Sora", sans-serif;
   border-radius: 12px;
   cursor: pointer;
   display: flex;
@@ -117,6 +118,7 @@
   gap: 5px;
   margin-top: 25px;
   font-size: 12px;
+  font-family: "Sora", sans-serif;
   opacity: 0.8;
 }
 
@@ -124,6 +126,7 @@
   background: none;
   border: none;
   color: var(--text-color);
+  font-family: "Sora", sans-serif;
   font-weight: 700;
   cursor: pointer;
   padding: 0;
@@ -149,6 +152,7 @@
   gap: 10px;
   font-weight: 600;
   font-size: 13px;
+  font-family: "Sora", sans-serif;
   color: #333;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s ease;

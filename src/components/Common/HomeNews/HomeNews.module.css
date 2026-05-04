@@ -78,12 +78,12 @@
 }
 
 .btn {
-  background-color: #0047BB;
+  background-color: #0059B2;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-weight: 700;
+  padding: 14px 20px;
+  font-weight: 500;
+  font-family: "Sora", sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 8px;

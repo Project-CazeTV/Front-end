@@ -19,7 +19,6 @@ export default function MainHeader({ isTransparent }) {
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [drawerLogo, setDrawerLogo] = useState(LogoCazeBlackText);
-
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
@@ -55,7 +54,7 @@ export default function MainHeader({ isTransparent }) {
 
   const renderUserIcon = () => {
     if (user?.displayName) {
-      return <div className={styles.avatarInitial}>{user?.displayName}</div>;
+      return <div className={styles.avatarInitial}>Olá, {user?.displayName.split(" ")[0]}</div>;
     }
     return <FaUser size={25} className={styles.userIcon} />;
   };

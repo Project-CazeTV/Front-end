@@ -40,14 +40,13 @@ export default function HomeNews({ news }) {
   const current = news[index];
 
   return (
-    <section 
-      className={styles.container} 
+    <section
+      className={styles.container}
       {...handlers}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-
-      <div className={styles.progressBarContainer}>
+      {/*<div className={styles.progressBarContainer}>
         <motion.div 
           key={`bar-${index}-${isPaused}`}
           className={styles.progressBar}
@@ -55,10 +54,9 @@ export default function HomeNews({ news }) {
           animate={{ width: isPaused ? "0%" : "100%" }}
           transition={{ duration: isPaused ? 0 : 10, ease: "linear" }}
         />
-      </div>
-
+      </div>*/}
       <AnimatePresence mode="wait" custom={direction}>
-        <motion.div 
+        <motion.div
           key={current.id}
           className={styles.newsWrapper}
           initial={{ y: -40, opacity: 0 }}
@@ -66,7 +64,7 @@ export default function HomeNews({ news }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <motion.div 
+          <motion.div
             className={styles.imageSide}
             exit={{ x: -100, opacity: 0 }}
           >
@@ -75,14 +73,14 @@ export default function HomeNews({ news }) {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={styles.textSide}
             exit={{ x: 100, opacity: 0 }}
           >
             <h2 className={styles.title}>{current.titulo}</h2>
             <p className={styles.description}>{current.descricao}</p>
             <button className={styles.btn}>
-              ver notícia completa 
+              ver notícia completa
               <span className="material-symbols-outlined">arrow_circle_right</span>
             </button>
           </motion.div>
@@ -91,8 +89,8 @@ export default function HomeNews({ news }) {
 
       <div className={styles.dots}>
         {news.map((_, i) => (
-          <button 
-            key={i} 
+          <button
+            key={i}
             className={`${styles.dot} ${i === index ? styles.active : ''}`}
             onClick={() => {
               setDirection(i > index ? 1 : -1);

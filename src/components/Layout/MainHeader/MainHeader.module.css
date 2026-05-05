@@ -388,7 +388,8 @@
 
 .header.transparent .mainListItem,
 .header.transparent .userIcon,
-.header.transparent #menuIcon {
+.header.transparent #menuIcon,
+.header.transparent .avatarInitial {
   color: #FFFFFF;
 }
 

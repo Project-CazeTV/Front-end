@@ -54,7 +54,10 @@ export default function MainHeader({ isTransparent }) {
   };
 
   const renderUserIcon = () => {
+    if (user?.displayName) {
       return <div className={styles.avatarInitial}>{user?.displayName}</div>;
+    }
+    return <FaUser size={25} className={styles.userIcon} />;
   };
 
   const handleSubItemClick = (subItem) => {

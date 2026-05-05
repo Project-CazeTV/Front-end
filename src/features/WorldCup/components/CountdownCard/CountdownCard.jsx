@@ -9,8 +9,6 @@ export default function CountdownCard() {
 
   return (
     <div className={styles.countdownWrapper}>
-      <img src={bgDetails} alt="Detalhes visuais" className={styles.bgDetails} />
-      
       <div className={styles.content}>
         <div className={styles.headerLogos}>
           <img src={logoFifa} alt="FIFA World Cup 26" className={styles.logoFifa} />

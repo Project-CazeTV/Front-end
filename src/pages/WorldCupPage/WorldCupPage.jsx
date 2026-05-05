@@ -38,6 +38,10 @@ export default function WorldCupPage() {
       <MainHeader isTransparent={true} />
       
       <main className={styles.mainContent}>
+        <div className={styles.DetailsBackground}>
+          <p className={styles.DetailBackground}>2026</p>
+          <p className={styles.DetailBackground2}>2026</p>
+        </div>
         <CountdownCard />
       </main>
 

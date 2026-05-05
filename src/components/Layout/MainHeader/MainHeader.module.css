@@ -7,6 +7,7 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.1);
   color: var(--text-color);
   transition: background 0.3s ease;
+  height: 100px;
 }
 
 .topBar {
@@ -14,7 +15,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 7%;
-  height: 90px;
 }
 
 .headerControls {
@@ -26,6 +26,13 @@
 .logo { 
   height: 70px; 
   width: auto;
+  position: relative;
+  top: 20px;
+}
+
+#menuIcon {
+  position: relative;
+  top: 20px;
 }
 
 .accountArea {
@@ -47,6 +54,8 @@
   padding: 12px;
   background-color: var(--border-color);
   border-radius: 50%;
+  position: relative;
+  top: 20px;
 }
 
 .accountPopover {
@@ -323,13 +332,14 @@
   height: 35px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #00D1FF;
+  border: 2px solid #242424;
+  position: relative;
+  top: 19px;
 }
 
 .avatarInitial {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: 72px;
+  height: 42px;
   background: linear-gradient(135deg, #058EFF, #11FE00);
   color: white;
   display: flex;
@@ -337,6 +347,8 @@
   justify-content: center;
   font-weight: 800;
   font-size: 14px;
+  position: relative;
+  top: 19px;
 }
 
 .userInfoSection {

@@ -33,6 +33,38 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
+.DetailsBackground {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  justify-content: flex-start;
+}
+
+.DetailBackground {
+  font-family: copa;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(212, 212, 212, 0.075);
+  font-size: 300px;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(90deg);
+  left: -316px;
+
+}
+
+.DetailBackground2 {
+  font-family: copa;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(216, 216, 216, 0.075);
+  font-size: 300px;
+  position: absolute;
+  z-index: -2;
+  transform: rotate(90deg);
+  left: -156px;
+  top: 50px;
+}
 
 .groupTitle {
   font-size: 14px;

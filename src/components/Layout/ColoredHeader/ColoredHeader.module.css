@@ -1,6 +1,6 @@
 .Multiheader {
     display: grid;
-    width: 100vw;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 8px;
 }

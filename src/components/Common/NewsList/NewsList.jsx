@@ -1,6 +1,6 @@
 import styles from './NewsList.module.css';
 
-export default function NewsList({ noticias }) {
+export default function NewsList({ noticias, title }) {
   return (
     <div className={styles.listContainer}>
       {noticias.map((noticia) => (

@@ -1,6 +1,6 @@
 .pageContainer {
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
@@ -9,6 +9,7 @@
 .mainContent {
   width: 100%;
   z-index: 1;
+  margin-top: -70px;
 }
 
 .lowerContent {
@@ -49,9 +50,8 @@
   font-size: 300px;
   position: absolute;
   z-index: -1;
-  transform: rotate(90deg);
   left: -316px;
-
+  user-select: none;
 }
 
 .DetailBackground2 {
@@ -62,9 +62,9 @@
   font-size: 300px;
   position: absolute;
   z-index: -2;
-  transform: rotate(90deg);
   left: -156px;
   top: 50px;
+  user-select: none;
 }
 
 .groupTitle {
@@ -123,7 +123,6 @@
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,8 +150,31 @@
   margin: auto;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .mainContent {
-    margin-top: -70px;
+    margin-top: 0;
+  }
+
+  .DetailsBackground {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    bottom: 200px;
+    width: 100%;
+}
+
+  .DetailBackground {
+    left: 0;
+    font-size: 470px;
+    margin: 0;
+  }
+
+  .DetailBackground2 {
+    left: 0;
+    top: 300px;
+    left: 200px;
+    font-size: 470px;
+    margin: 0;
   }
 }

@@ -75,7 +75,9 @@ export default function MainHeader({ isTransparent }) {
     navigate('/historia/cazetv');
   } else if (subItem === 'NOVIDADES') {
     navigate('/noticias/novidades');
-  }
+  } else if (subItem === 'COMPRAR NA CAZÉ TV') {
+  navigate('/shop');
+}
 };
 
   const menuData = [

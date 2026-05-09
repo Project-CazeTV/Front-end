@@ -16,6 +16,7 @@ const noticiasMenoresMock = [
     categoria: "Principal Masculina",
     tagColor: "#0047BB",
     titulo: 'Ancelotti: "Marrocos, Haiti e Escócia merecem o mesmo respeito"',
+    descricao: "O técnico da Seleção Brasileira fez questão de destacar que não há adversário fácil no grupo do Brasil e pediu atenção máxima da equipe desde a primeira partida.",
     tempo: "3 MESES",
     imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3OqENRL9zVhkgHBC6Tl7GjEl8o6sgAu-FUw&s"
   },
@@ -24,6 +25,7 @@ const noticiasMenoresMock = [
     categoria: "SÃO PAULO FC",
     tagColor: "#E20E0E",
     titulo: "São Paulo vence o Red Bull Bragantino e avança à semifinal do Paulistão.",
+    descricao: "Com gol nos acréscimos, o Tricolor Paulista superou o Bragantino fora de casa e garantiu vaga entre os quatro melhores do Campeonato Paulista.",
     tempo: "1 DIA",
     imagem: "https://public-rf-upload.minhawebradio.net/2158/news/cf58aad228392acb027c15dc20efad3c.jpg"
   }

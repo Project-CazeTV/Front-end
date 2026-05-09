@@ -14,14 +14,13 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import { groups } from '../../mocks/groups';
-import { octaves } from '../../mocks/octaves';
-import { final } from '../../mocks/worldCupFinal';
+import { octaves, quarters, semis, final } from '../../mocks/roundsWorldCup';
 
 export default function WorldCupPage() {
   const location = useLocation();
   const [activeFilter, setActiveFilter] = useState(location.state?.filtroAtivo ?? "Grupos");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const filtros = ["Grupos", "Fase de grupos", "Oitavas de final", "Final", "Jogadores de destaque"];
+  const filtros = ["Grupos", "Fase de grupos", "Oitavas de final", "Quartas de final", "Semi-final", "Final", "Jogadores de destaque"];
 
   const nextGroup = () => {
     if (currentIndex < groups.length - 1) setCurrentIndex(prev => prev + 1);
@@ -133,6 +132,26 @@ export default function WorldCupPage() {
           title="OITAVAS DE FINAL"
           subtitle="16 jogos · 32 seleções classificadas"
           description="Os 24 melhores da fase de grupos mais os 8 melhores terceiros colocados se enfrentam em jogos eliminatórios. Quem perde está fora da Copa."
+          pendente={true}
+        />
+      )}
+
+      {activeFilter === "Quartas de final" && (
+        <NextMatches
+          groups={quarters}
+          title="QUARTAS DE FINAL"
+          subtitle="8 jogos · 16 seleções"
+          description="Os 8 vencedores das oitavas se enfrentam em jogos eliminatórios. Apenas os 4 melhores avançam para as semifinais."
+          pendente={true}
+        />
+      )}
+
+      {activeFilter === "Semi-final" && (
+        <NextMatches
+          groups={semis}
+          title="SEMIFINAL"
+          subtitle="2 jogos · 4 seleções"
+          description="As quatro seleções que restaram disputam as duas vagas na grande final. Um passo para a eternidade."
           pendente={true}
         />
       )}

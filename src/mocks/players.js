@@ -72,14 +72,14 @@ export const players = [
   {
     nome: "Endrick",
     pais: "Brasil",
-    clube: "Real Madrid",
+    clube: "Lyon",
     posicao: "Atacante",
     imagem: "https://conteudo.imguol.com.br/c/esporte/d0/2026/02/04/endrick-celebra-gol-do-lyon-sobre-o-laval-em-jogo-da-copa-da-franca-1770239987933_v2_1080x1440.jpg"
   },
   {
     nome: "Neymar Jr.",
     pais: "Brasil",
-    clube: "Al-Hilal",
+    clube: "Santos",
     posicao: "Atacante",
     imagem: "https://agorarn.com.br/files/uploads/2022/12/20221205_foto_GETTY_neymar_jr_jogo_brasil_x_coreia_copa_do_mundo__209_.jpg"
   },

@@ -67,6 +67,12 @@ export default function MainHeader({ isTransparent }) {
     navigate('/world-cup');
   } else if (subItem === 'PAÍSES-SEDE') { 
     navigate('/world-cup');
+  } else if (subItem === 'OITAVAS DE FINAL') { 
+    navigate('/world-cup', { state: { filtroAtivo: 'Oitavas de final' } });
+    } else if (subItem === 'QUARTAS DE FINAL') { 
+    navigate('/world-cup', { state: { filtroAtivo: 'Quartas de final' } });
+    } else if (subItem === 'SEMI-FINAL') { 
+    navigate('/world-cup', { state: { filtroAtivo: 'Semi-final' } });
   } else if (subItem === 'FINAL') { 
     navigate('/world-cup', { state: { filtroAtivo: 'Final' } });
   } else if (subItem === 'JOGOS OLÍMPICOS DE VERÃO') {
@@ -81,10 +87,10 @@ export default function MainHeader({ isTransparent }) {
 };
 
   const menuData = [
-    { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'FINAL', 'PAÍSES-SEDE'] },
+    { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA','OITAVAS DE FINAL','QUARTAS DE FINAL','SEMI-FINAL', 'FINAL', 'PAÍSES-SEDE'] },
     { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO GAUCHÃO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
     { title: 'JOGOS OLÍMPICOS', items: ['JOGOS OLÍMPICOS DE INVERNO', 'JOGOS OLÍMPICOS DE VERÃO'] },
-    { title: 'LIGAS E TAÇAS EUROPEIAS UEFA', items: ['SUPERLIGA'] },
+    { title: 'OUTROS CAMPEONATOS', items: ['BRASILEIRÃO BETANO', 'COPA DO BRASIL', 'CONMEBOL LIBERTADORES', 'SUDAMERICANA'] },
     { title: 'LOJA', items: ['COMPRAR NA CAZÉ TV'] },
     { title: 'HISTÓRIA', items: ['DE ONDE VEIO A CAZETV'] }
   ];

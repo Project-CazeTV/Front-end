@@ -58,6 +58,16 @@ export const logosTime = {
   "Newell's":            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Newells_Old_Boys_logo.svg/800px-Newells_Old_Boys_logo.svg.png",
   "Paranaense":          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Athletico_Paranaense_logo.svg/800px-Athletico_Paranaense_logo.svg.png",
   "Palestino":           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Club_Deportivo_Palestino_logo.svg/800px-Club_Deportivo_Palestino_logo.svg.png",
+  "Bolívar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Escudo_de_Club_Bol%C3%ADvar.svg/1920px-Escudo_de_Club_Bol%C3%ADvar.svg.png",
+  "Always Ready": "https://upload.wikimedia.org/wikipedia/commons/0/00/Club_Always_Ready_Bol%C3%ADvia.png",
+  "Boca Juniors": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1920px-Boca_Juniors_logo18.svg.png",
+  "Estudiantes": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Escudo_del_Club_Estudiantes_de_La_Plata.svg/1920px-Escudo_del_Club_Estudiantes_de_La_Plata.svg.png",
+  "Cerro Porteño": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Escudo_del_Club_Cerro_Porte%C3%B1o.png",
+  "LDU Quito": "https://upload.wikimedia.org/wikipedia/commons/5/54/LOGO_5TA._ESTRELLA.png",
+  "Talleres": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Escudo_Talleres_2015.svg",
+  "Sao Lorenzo": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/18.png",
+  "Peñarol": "https://a.espncdn.com/i/teamlogos/soccer/500/2683.png",
+  "Newell's": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/14.png",
 
   // ── Copa do Brasil ──
   "Juventude":           "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Juventude_crest.png/250px-Juventude_crest.png",
@@ -72,4 +82,19 @@ export const logosTime = {
   "America-MG":          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_do_America_Futebol_Clube.svg/960px-Escudo_do_America_Futebol_Clube.svg.png",
   "Villa Nova":          "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/4910.png",
   "Caxias":              "https://sercaxias.com.br/wp-content/uploads/2025/01/qkcdkc4odeainjq68qf5.png",
+  "Madureira": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Madureira_EC_%28RJ%29.svg/1280px-Madureira_EC_%28RJ%29.svg.png",
+  "Boavista": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Boavista_Sport_Club_SAF_logo.png/250px-Boavista_Sport_Club_SAF_logo.png",
+  "Bangu": "https://upload.wikimedia.org/wikipedia/commons/7/70/Bangu_escudo.png",
+  "Volta Redonda": "https://upload.wikimedia.org/wikipedia/commons/0/08/Volta_Redonda_Futebol_Clube.svg",
+  "Capivariano": "https://upload.wikimedia.org/wikipedia/commons/4/43/Capivariano_FC.png",
+  "Novorizontino": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Gr%C3%AAmio_Novorizontino.svg/1280px-Gr%C3%AAmio_Novorizontino.svg.png",
+  "Portuguesa": "https://upload.wikimedia.org/wikipedia/commons/6/61/Associa%C3%A7%C3%A3o_Portuguesa_de_Desportos.svg",
+  "Ypiranga-RS": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ypiranga_Futebol_Clube.png",
+  "Novo Hamburgo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Esporte_Clube_Novo_Hamburgo.svg",
+  "São Luiz": "https://upload.wikimedia.org/wikipedia/en/0/00/Esporte_Clube_S%C3%A3o_Luiz_logo.svg",
+  "São José-RS": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Esporte_Clube_S%C3%A3o_Jos%C3%A9_logo.png",
+  "Pouso Alegre": "https://upload.wikimedia.org/wikipedia/pt/9/99/Pouso_Alegre_Futebol_Clube.png",
+  "América-MG": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE0fU5f906cJNyfW-5i_Szy48wOyCfMMqCgA&s",
+
+
 };

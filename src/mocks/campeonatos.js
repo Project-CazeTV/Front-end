@@ -14,46 +14,80 @@ export const brasileirao = {
   edicao: "2026",
   logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Campeonato_Brasileiro_S%C3%A9rie_A_logo_%282024%29.svg/1920px-Campeonato_Brasileiro_S%C3%A9rie_A_logo_%282024%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
   cor: "#009B3A",
-  fase: "Rodada 7 (em andamento)",
+  fase: "Rodada 15 (em andamento)",
   tabela: [
-    { pos: 1,  time: "Palmeiras",          pts: 33, j: 14, v: 10, e: 3, d: 1,  gp: 24, gc: 11, sg: 13,  zona: "libertadores" },
-    { pos: 2,  time: "Flamengo",           pts: 26, j: 12, v: 8,  e: 2, d: 2,  gp: 24, gc: 10, sg: 14,  zona: "libertadores" },
-    { pos: 3,  time: "Fluminense",         pts: 26, j: 13, v: 8,  e: 2, d: 3,  gp: 23, gc: 16, sg: 7,   zona: "libertadores" },
-    { pos: 4,  time: "São Paulo",          pts: 23, j: 13, v: 7,  e: 2, d: 4,  gp: 17, gc: 11, sg: 6,   zona: "libertadores" },
-    { pos: 5,  time: "Athletico-PR",       pts: 23, j: 14, v: 7,  e: 2, d: 5,  gp: 20, gc: 15, sg: 5,   zona: "pre-libertadores" },
-    { pos: 6,  time: "Bahia",              pts: 21, j: 12, v: 6,  e: 3, d: 3,  gp: 17, gc: 14, sg: 3,   zona: "pre-libertadores" },
-    { pos: 7,  time: "Coritiba",           pts: 19, j: 14, v: 5,  e: 4, d: 5,  gp: 16, gc: 17, sg: -1,  zona: "sulamericana" },
-    { pos: 8,  time: "Vitória",            pts: 18, j: 13, v: 5,  e: 3, d: 5,  gp: 16, gc: 18, sg: -2,  zona: "sulamericana" },
-    { pos: 9,  time: "Red Bull Bragantino",pts: 17, j: 13, v: 5,  e: 2, d: 6,  gp: 15, gc: 15, sg: 0,   zona: "sulamericana" },
-    { pos: 10, time: "Botafogo",           pts: 17, j: 13, v: 5,  e: 2, d: 6,  gp: 25, gc: 26, sg: -1,  zona: "sulamericana" },
-    { pos: 11, time: "Atlético-MG",        pts: 17, j: 14, v: 5,  e: 2, d: 7,  gp: 17, gc: 20, sg: -3,  zona: "sulamericana" },
-    { pos: 12, time: "Grêmio",             pts: 17, j: 14, v: 4,  e: 5, d: 5,  gp: 15, gc: 16, sg: -1,  zona: "sulamericana" },
-    { pos: 13, time: "Vasco",              pts: 16, j: 13, v: 4,  e: 4, d: 5,  gp: 18, gc: 19, sg: -1,  zona: "neutro" },
-    { pos: 14, time: "Cruzeiro",           pts: 16, j: 14, v: 4,  e: 4, d: 6,  gp: 18, gc: 24, sg: -6,  zona: "neutro" },
-    { pos: 15, time: "Corinthians",        pts: 15, j: 13, v: 3,  e: 6, d: 4,  gp: 9,  gc: 11, sg: -2,  zona: "neutro" },
-    { pos: 16, time: "Santos",             pts: 15, j: 14, v: 3,  e: 6, d: 5,  gp: 19, gc: 22, sg: -3,  zona: "neutro" },
-    { pos: 17, time: "Internacional",      pts: 14, j: 13, v: 3,  e: 5, d: 5,  gp: 12, gc: 14, sg: -2,  zona: "rebaixamento" },
-    { pos: 18, time: "Remo",               pts: 11, j: 14, v: 2,  e: 5, d: 7,  gp: 15, gc: 24, sg: -9,  zona: "rebaixamento" },
-    { pos: 19, time: "Chapecoense",        pts: 9,  j: 14, v: 2,  e: 3, d: 9,  gp: 12, gc: 28, sg: -16, zona: "rebaixamento" },
-    { pos: 20, time: "Mirassol",           pts: 8,  j: 13, v: 2,  e: 2, d: 9,  gp: 11, gc: 22, sg: -11, zona: "rebaixamento" },
+    { pos: 1,  time: "Palmeiras",           pts: 33, j: 14, v: 10, e: 3, d: 1,  gp: 24, gc: 11, sg: 13,  zona: "libertadores" },
+    { pos: 2,  time: "Flamengo",            pts: 26, j: 12, v: 8,  e: 2, d: 2,  gp: 24, gc: 10, sg: 14,  zona: "libertadores" },
+    { pos: 3,  time: "Fluminense",          pts: 26, j: 13, v: 8,  e: 2, d: 3,  gp: 23, gc: 16, sg: 7,   zona: "libertadores" },
+    { pos: 4,  time: "São Paulo",           pts: 23, j: 13, v: 7,  e: 2, d: 4,  gp: 17, gc: 11, sg: 6,   zona: "libertadores" },
+    { pos: 5,  time: "Athletico-PR",        pts: 23, j: 14, v: 7,  e: 2, d: 5,  gp: 20, gc: 15, sg: 5,   zona: "pre-libertadores" },
+    { pos: 6,  time: "Bahia",               pts: 21, j: 12, v: 6,  e: 3, d: 3,  gp: 17, gc: 14, sg: 3,   zona: "pre-libertadores" },
+    { pos: 7,  time: "Coritiba",            pts: 19, j: 14, v: 5,  e: 4, d: 5,  gp: 16, gc: 17, sg: -1,  zona: "sulamericana" },
+    { pos: 8,  time: "Vitória",             pts: 18, j: 13, v: 5,  e: 3, d: 5,  gp: 16, gc: 18, sg: -2,  zona: "sulamericana" },
+    { pos: 9,  time: "Red Bull Bragantino", pts: 17, j: 13, v: 5,  e: 2, d: 6,  gp: 15, gc: 15, sg: 0,   zona: "sulamericana" },
+    { pos: 10, time: "Botafogo",            pts: 17, j: 13, v: 5,  e: 2, d: 6,  gp: 25, gc: 26, sg: -1,  zona: "sulamericana" },
+    { pos: 11, time: "Atlético-MG",         pts: 17, j: 14, v: 5,  e: 2, d: 7,  gp: 17, gc: 20, sg: -3,  zona: "sulamericana" },
+    { pos: 12, time: "Grêmio",              pts: 17, j: 14, v: 4,  e: 5, d: 5,  gp: 15, gc: 16, sg: -1,  zona: "sulamericana" },
+    { pos: 13, time: "Vasco",               pts: 16, j: 13, v: 4,  e: 4, d: 5,  gp: 18, gc: 19, sg: -1,  zona: "neutro" },
+    { pos: 14, time: "Cruzeiro",            pts: 16, j: 14, v: 4,  e: 4, d: 6,  gp: 18, gc: 24, sg: -6,  zona: "neutro" },
+    { pos: 15, time: "Corinthians",         pts: 15, j: 13, v: 3,  e: 6, d: 4,  gp: 9,  gc: 11, sg: -2,  zona: "neutro" },
+    { pos: 16, time: "Santos",              pts: 15, j: 14, v: 3,  e: 6, d: 5,  gp: 19, gc: 22, sg: -3,  zona: "neutro" },
+    { pos: 17, time: "Internacional",       pts: 14, j: 13, v: 3,  e: 5, d: 5,  gp: 12, gc: 14, sg: -2,  zona: "rebaixamento" },
+    { pos: 18, time: "Remo",                pts: 11, j: 14, v: 2,  e: 5, d: 7,  gp: 15, gc: 24, sg: -9,  zona: "rebaixamento" },
+    { pos: 19, time: "Chapecoense",         pts: 9,  j: 14, v: 2,  e: 3, d: 9,  gp: 12, gc: 28, sg: -16, zona: "rebaixamento" },
+    { pos: 20, time: "Mirassol",            pts: 8,  j: 13, v: 2,  e: 2, d: 9,  gp: 11, gc: 22, sg: -11, zona: "rebaixamento" },
   ],
   jogosPassados: [
-    // Rodada 6 — 02/05/2026
-    { data: "02/05/2026", hora: "16h00", timeA: "Botafogo",    timeB: "Remo",        placarA: 1, placarB: 2, estadio: "Nilton Santos",       rodada: 6 },
-    { data: "02/05/2026", hora: "18h30", timeA: "Palmeiras",   timeB: "Santos",      placarA: 1, placarB: 1, estadio: "Allianz Parque",      rodada: 6 },
-    { data: "02/05/2026", hora: "18h30", timeA: "Vitória",     timeB: "Coritiba",    placarA: 4, placarB: 1, estadio: "Barradão",            rodada: 6 },
-    { data: "02/05/2026", hora: "20h30", timeA: "Athletico-PR",timeB: "Grêmio",      placarA: 0, placarB: 0, estadio: "Arena da Baixada",    rodada: 6 },
-    { data: "03/05/2026", hora: "21h00", timeA: "Cruzeiro",    timeB: "Atlético-MG", placarA: 1, placarB: 3, estadio: "Mineirão",            rodada: 6 },
-    // Rodada 5 — 26/04/2026
-    { data: "26/04/2026", hora: "16h00", timeA: "Atlético-MG", timeB: "Flamengo",    placarA: 0, placarB: 4, estadio: "Arena MRV",           rodada: 5 },
-    { data: "27/04/2026", hora: "18h30", timeA: "Flamengo",    timeB: "Bahia",       placarA: 2, placarB: 0, estadio: "Maracanã",            rodada: 5 },
+    // ── Rodada 12 — 18-19/04/2026 ──
+    { data: "18/04/2026", hora: "18h30", timeA: "Vasco",          timeB: "São Paulo",    placarA: 2, placarB: 1, estadio: "São Januário",              rodada: 12 },
+    { data: "18/04/2026", hora: "18h30", timeA: "Chapecoense",    timeB: "Botafogo",     placarA: 1, placarB: 4, estadio: "Arena Condá",               rodada: 12 },
+    { data: "18/04/2026", hora: "20h00", timeA: "Vitória",        timeB: "Corinthians",  placarA: 0, placarB: 0, estadio: "Barradão",                  rodada: 12 },
+    { data: "18/04/2026", hora: "20h30", timeA: "Cruzeiro",       timeB: "Grêmio",       placarA: 2, placarB: 0, estadio: "Mineirão",                  rodada: 12 },
+    { data: "19/04/2026", hora: "11h00", timeA: "Internacional",  timeB: "Mirassol",     placarA: 1, placarB: 2, estadio: "Beira-Rio",                 rodada: 12 },
+    { data: "19/04/2026", hora: "16h00", timeA: "Santos",         timeB: "Fluminense",   placarA: 2, placarB: 3, estadio: "Vila Belmiro",              rodada: 12 },
+    { data: "19/04/2026", hora: "16h00", timeA: "Coritiba",       timeB: "Atlético-MG",  placarA: 2, placarB: 0, estadio: "Couto Pereira",             rodada: 12 },
+    { data: "19/04/2026", hora: "18h30", timeA: "Palmeiras",      timeB: "Athletico-PR", placarA: 1, placarB: 0, estadio: "Allianz Parque",            rodada: 12 },
+    { data: "19/04/2026", hora: "18h30", timeA: "Red Bull Bragantino",     timeB: "Remo",         placarA: 4, placarB: 2, estadio: "Cícero de Souza Marques",   rodada: 12 },
+    { data: "19/04/2026", hora: "19h30", timeA: "Flamengo",       timeB: "Bahia",        placarA: 2, placarB: 0, estadio: "Maracanã",                  rodada: 12 },
+
+    // ── Rodada 13 — 25-26/04/2026 ──
+    { data: "25/04/2026", hora: "18h30", timeA: "Botafogo",       timeB: "Internacional",placarA: 2, placarB: 2, estadio: "Mané Garrincha",            rodada: 13 },
+    { data: "25/04/2026", hora: "18h30", timeA: "Bahia",          timeB: "Santos",       placarA: 2, placarB: 2, estadio: "Arena Fonte Nova",          rodada: 13 },
+    { data: "25/04/2026", hora: "18h30", timeA: "Remo",           timeB: "Cruzeiro",     placarA: 0, placarB: 1, estadio: "Baenão",                    rodada: 13 },
+    { data: "25/04/2026", hora: "21h00", timeA: "São Paulo",      timeB: "Mirassol",     placarA: 1, placarB: 0, estadio: "Brinco de Ouro",            rodada: 13 },
+    { data: "26/04/2026", hora: "16h00", timeA: "Corinthians",    timeB: "Vasco",        placarA: 1, placarB: 0, estadio: "Neo Química Arena",         rodada: 13 },
+    { data: "26/04/2026", hora: "16h00", timeA: "Grêmio",         timeB: "Coritiba",     placarA: 1, placarB: 0, estadio: "Arena do Grêmio",           rodada: 13 },
+    { data: "26/04/2026", hora: "18h30", timeA: "Bragantino",     timeB: "Palmeiras",    placarA: 0, placarB: 1, estadio: "Cícero de Souza Marques",   rodada: 13 },
+    { data: "26/04/2026", hora: "18h30", timeA: "Athletico-PR",   timeB: "Vitória",      placarA: 3, placarB: 1, estadio: "Arena da Baixada",          rodada: 13 },
+    { data: "26/04/2026", hora: "20h30", timeA: "Fluminense",     timeB: "Chapecoense",  placarA: 2, placarB: 1, estadio: "Maracanã",                  rodada: 13 },
+    { data: "26/04/2026", hora: "20h30", timeA: "Atlético-MG",    timeB: "Flamengo",     placarA: 0, placarB: 4, estadio: "Arena MRV",                 rodada: 13 },
+
+    // ── Rodada 14 — 02-03/05/2026 ──
+    { data: "02/05/2026", hora: "16h00", timeA: "Botafogo",       timeB: "Remo",         placarA: 1, placarB: 2, estadio: "Nilton Santos",             rodada: 14 },
+    { data: "02/05/2026", hora: "18h30", timeA: "Palmeiras",      timeB: "Santos",       placarA: 1, placarB: 1, estadio: "Allianz Parque",            rodada: 14 },
+    { data: "02/05/2026", hora: "18h30", timeA: "Vitória",        timeB: "Coritiba",     placarA: 4, placarB: 1, estadio: "Barradão",                  rodada: 14 },
+    { data: "02/05/2026", hora: "20h30", timeA: "Athletico-PR",   timeB: "Grêmio",       placarA: 0, placarB: 0, estadio: "Arena da Baixada",          rodada: 14 },
+    { data: "02/05/2026", hora: "21h00", timeA: "Cruzeiro",       timeB: "Atlético-MG",  placarA: 1, placarB: 3, estadio: "Mineirão",                  rodada: 14 },
+    { data: "03/05/2026", hora: "16h00", timeA: "Flamengo",       timeB: "Vasco",        placarA: 2, placarB: 2, estadio: "Maracanã",                  rodada: 14 },
+    { data: "03/05/2026", hora: "16h00", timeA: "São Paulo",      timeB: "Bahia",        placarA: 2, placarB: 2, estadio: "Cícero de Souza Marques",   rodada: 14 },
+    { data: "03/05/2026", hora: "18h30", timeA: "Internacional",  timeB: "Fluminense",   placarA: 2, placarB: 0, estadio: "Beira-Rio",                 rodada: 14 },
+    { data: "03/05/2026", hora: "18h30", timeA: "Chapecoense",    timeB: "Red Bull Bragantino",   placarA: 1, placarB: 2, estadio: "Arena Condá",               rodada: 14 },
+    { data: "03/05/2026", hora: "20h30", timeA: "Mirassol",       timeB: "Corinthians",  placarA: 2, placarB: 1, estadio: "Maião",                     rodada: 14 },
+
+    // ── Rodada 15 — jogos já encerrados ──
+    { data: "09/05/2026", hora: "16h00", timeA: "Coritiba",       timeB: "Internacional",placarA: 2, placarB: 2, estadio: "Couto Pereira",             rodada: 15 },
   ],
   proximosJogos: [
-    { data: "10/05/2026", hora: "18h30", timeA: "Corinthians", timeB: "São Paulo",   estadio: "Neo Química Arena", rodada: 7 },
-    { data: "11/05/2026", hora: "16h00", timeA: "Flamengo",    timeB: "Grêmio",      estadio: "Maracanã",          rodada: 7 },
-    { data: "11/05/2026", hora: "18h30", timeA: "Palmeiras",   timeB: "Cruzeiro",    estadio: "Allianz Parque",    rodada: 7 },
-    { data: "11/05/2026", hora: "18h30", timeA: "Botafogo",    timeB: "Atlético-MG", estadio: "Nilton Santos",     rodada: 7 },
-    { data: "11/05/2026", hora: "20h30", timeA: "Vasco",       timeB: "Fluminense",  estadio: "São Januário",      rodada: 7 },
+    // ── Rodada 15 — jogos restantes ──
+    { data: "09/05/2026", hora: "18h00", timeA: "Fluminense",     timeB: "Vitória",      estadio: "Maracanã",                  rodada: 15 },
+    { data: "09/05/2026", hora: "21h00", timeA: "Bahia",          timeB: "Cruzeiro",     estadio: "Arena Fonte Nova",          rodada: 15 },
+    { data: "10/05/2026", hora: "16h00", timeA: "Atlético-MG",    timeB: "Botafogo",     estadio: "Arena MRV",                 rodada: 15 },
+    { data: "10/05/2026", hora: "16h00", timeA: "Remo",           timeB: "Palmeiras",    estadio: "Mangueirão",                rodada: 15 },
+    { data: "10/05/2026", hora: "18h30", timeA: "Santos",         timeB: "Red Bull Bragantino",   estadio: "Vila Belmiro",              rodada: 15 },
+    { data: "10/05/2026", hora: "18h30", timeA: "Corinthians",    timeB: "São Paulo",    estadio: "Neo Química Arena",         rodada: 15 },
+    { data: "10/05/2026", hora: "18h30", timeA: "Mirassol",       timeB: "Chapecoense",  estadio: "Maião",                     rodada: 15 },
+    { data: "10/05/2026", hora: "19h30", timeA: "Grêmio",         timeB: "Flamengo",     estadio: "Arena do Grêmio",           rodada: 15 },
+    { data: "10/05/2026", hora: "20h30", timeA: "Vasco",          timeB: "Athletico-PR", estadio: "São Januário",              rodada: 15 },
   ]
 };
 
@@ -224,15 +258,27 @@ export const paulista = {
   cor: "#003399",
   fase: "Encerrado",
   campeao: "Palmeiras",
-  vice: "São Paulo",
+  vice: "Novorizontino",
   tabela: [
-    { pos: 1, time: "Palmeiras",    pts: 28, j: 12, v: 9,  e: 1, d: 2,  gp: 25, gc: 10, sg: 15,  grupo: "A" },
-    { pos: 2, time: "São Paulo",    pts: 22, j: 12, v: 7,  e: 1, d: 4,  gp: 18, gc: 14, sg: 4,   grupo: "B" },
-    { pos: 3, time: "Corinthians",  pts: 20, j: 12, v: 6,  e: 2, d: 4,  gp: 16, gc: 13, sg: 3,   grupo: "C" },
-    { pos: 4, time: "Santos",       pts: 18, j: 12, v: 5,  e: 3, d: 4,  gp: 14, gc: 13, sg: 1,   grupo: "D" },
+    { pos: 1, time: "Palmeiras",     pts: 28, j: 12, v: 9, e: 1, d: 2, gp: 25, gc: 10, sg: 15, grupo: "A" },
+    { pos: 2, time: "São Paulo",     pts: 22, j: 12, v: 7, e: 1, d: 4, gp: 18, gc: 14, sg: 4,  grupo: "B" },
+    { pos: 3, time: "Corinthians",   pts: 20, j: 12, v: 6, e: 2, d: 4, gp: 16, gc: 13, sg: 3,  grupo: "C" },
+    { pos: 4, time: "Novorizontino", pts: 18, j: 12, v: 5, e: 3, d: 4, gp: 14, gc: 13, sg: 1,  grupo: "D" },
   ],
   jogosPassados: [
-    { data: "22/03/2026", hora: "16h00", timeA: "Palmeiras", timeB: "São Paulo", placarA: 2, placarB: 1, estadio: "Allianz Parque", fase: "Final" },
+    // ── Quartas de final ──
+    { data: "21/02/2026", hora: "18h30", timeA: "Red Bull Bragantino",  timeB: "São Paulo",    placarA: 1, placarB: 2, estadio: "Cícero de Souza Marques", fase: "Quartas de final" },
+    { data: "21/02/2026", hora: "20h30", timeA: "Palmeiras",   timeB: "Capivariano",  placarA: 4, placarB: 0, estadio: "Arena Barueri",            fase: "Quartas de final" },
+    { data: "22/02/2026", hora: "16h00", timeA: "Novorizontino",timeB: "Santos",      placarA: 2, placarB: 1, estadio: "Jorge Ismael de Biasi",     fase: "Quartas de final" },
+    { data: "22/02/2026", hora: "20h30", timeA: "Portuguesa",  timeB: "Corinthians",  placarA: 1, placarB: 1, estadio: "Canindé",                   fase: "Quartas de final (Corinthians avançou nos pênaltis 7x8)" },
+
+    // ── Semifinais ──
+    { data: "28/02/2026", hora: "20h30", timeA: "Novorizontino",timeB: "Corinthians", placarA: 1, placarB: 0, estadio: "Jorge Ismael de Biasi",     fase: "Semifinal" },
+    { data: "01/03/2026", hora: "20h30", timeA: "Palmeiras",   timeB: "São Paulo",    placarA: 2, placarB: 1, estadio: "Arena Barueri",              fase: "Semifinal" },
+
+    // ── Final ──
+    { data: "04/03/2026", hora: "20h00", timeA: "Palmeiras",   timeB: "Novorizontino",placarA: 1, placarB: 0, estadio: "Arena Barueri",              fase: "Final - ida" },
+    { data: "08/03/2026", hora: "20h30", timeA: "Novorizontino",timeB: "Palmeiras",   placarA: 1, placarB: 2, estadio: "Jorge Ismael de Biasi",      fase: "Final - volta" },
   ],
   proximosJogos: []
 };
@@ -248,13 +294,27 @@ export const carioca = {
   campeao: "Flamengo",
   vice: "Fluminense",
   tabela: [
-    { pos: 1, time: "Flamengo",    pts: 26, j: 11, v: 8, e: 2, d: 1, gp: 22, gc: 9,  sg: 13 },
-    { pos: 2, time: "Fluminense",  pts: 22, j: 11, v: 7, e: 1, d: 3, gp: 18, gc: 12, sg: 6  },
-    { pos: 3, time: "Botafogo",    pts: 19, j: 11, v: 6, e: 1, d: 4, gp: 16, gc: 14, sg: 2  },
-    { pos: 4, time: "Vasco",       pts: 15, j: 11, v: 4, e: 3, d: 4, gp: 13, gc: 14, sg: -1 },
+    { pos: 1, time: "Flamengo",   pts: 26, j: 11, v: 8, e: 2, d: 1, gp: 22, gc: 9,  sg: 13 },
+    { pos: 2, time: "Fluminense", pts: 22, j: 11, v: 7, e: 1, d: 3, gp: 18, gc: 12, sg: 6  },
+    { pos: 3, time: "Botafogo",   pts: 19, j: 11, v: 6, e: 1, d: 4, gp: 16, gc: 14, sg: 2  },
+    { pos: 4, time: "Vasco",      pts: 15, j: 11, v: 4, e: 3, d: 4, gp: 13, gc: 14, sg: -1 },
   ],
   jogosPassados: [
-    { data: "15/03/2026", hora: "16h00", timeA: "Flamengo", timeB: "Fluminense", placarA: 3, placarB: 1, estadio: "Maracanã", fase: "Final" },
+    // ── Quartas de final ──
+    { data: "13/02/2026", hora: "17h00", timeA: "Madureira",  timeB: "Boavista",    placarA: 2, placarB: 1, estadio: "Conselheiro Galvão",    fase: "Quartas de final" },
+    { data: "14/02/2026", hora: "21h30", timeA: "Vasco",      timeB: "Volta Redonda",placarA: 1, placarB: 1, estadio: "São Januário",          fase: "Quartas de final (5x3 nos pênaltis)" },
+    { data: "15/02/2026", hora: "17h30", timeA: "Botafogo",   timeB: "Flamengo",    placarA: 1, placarB: 2, estadio: "Nilton Santos",          fase: "Quartas de final" },
+    { data: "16/02/2026", hora: "18h00", timeA: "Fluminense", timeB: "Bangu",       placarA: 3, placarB: 1, estadio: "Maracanã",               fase: "Quartas de final" },
+
+    // ── Semifinais ──
+    { data: "22/02/2026", hora: "18h00", timeA: "Vasco",      timeB: "Fluminense",  placarA: 0, placarB: 1, estadio: "Nilton Santos",          fase: "Semifinal - ida" },
+    { data: "22/02/2026", hora: "20h30", timeA: "Flamengo",   timeB: "Madureira",   placarA: 3, placarB: 0, estadio: "Maracanã",               fase: "Semifinal - ida" },
+    { data: "01/03/2026", hora: "18h00", timeA: "Fluminense", timeB: "Vasco",       placarA: 1, placarB: 1, estadio: "Maracanã",               fase: "Semifinal - volta" },
+    { data: "02/03/2026", hora: "21h00", timeA: "Madureira",  timeB: "Flamengo",    placarA: 0, placarB: 8, estadio: "Maracanã",               fase: "Semifinal - volta" },
+
+    // ── Final ──
+    { data: "08/03/2026", hora: "18h00", timeA: "Fluminense", timeB: "Flamengo",    placarA: 0, placarB: 0, estadio: "Maracanã",               fase: "Final - ida (Flamengo venceu nos pênaltis 4x5)" },
+    { data: "15/03/2026", hora: "16h00", timeA: "Flamengo",   timeB: "Fluminense",  placarA: 3, placarB: 1, estadio: "Maracanã",               fase: "Final - volta" },
   ],
   proximosJogos: []
 };
@@ -267,16 +327,23 @@ export const mineiro = {
   logo: "https://a3.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F2360.png",
   cor: "#003366",
   fase: "Encerrado",
-  campeao: "Atlético-MG",
-  vice: "Cruzeiro",
+  campeao: "Cruzeiro",
+  vice: "Atlético-MG",
   tabela: [
     { pos: 1, time: "Atlético-MG", pts: 25, j: 11, v: 8, e: 1, d: 2, gp: 20, gc: 8,  sg: 12 },
     { pos: 2, time: "Cruzeiro",    pts: 21, j: 11, v: 6, e: 3, d: 2, gp: 17, gc: 11, sg: 6  },
-    { pos: 3, time: "America-MG",  pts: 16, j: 11, v: 5, e: 1, d: 5, gp: 13, gc: 14, sg: -1 },
+    { pos: 3, time: "América-MG",  pts: 16, j: 11, v: 5, e: 1, d: 5, gp: 13, gc: 14, sg: -1 },
     { pos: 4, time: "Villa Nova",  pts: 12, j: 11, v: 3, e: 3, d: 5, gp: 10, gc: 15, sg: -5 },
   ],
   jogosPassados: [
-    { data: "08/03/2026", hora: "16h00", timeA: "Atlético-MG", timeB: "Cruzeiro", placarA: 2, placarB: 0, estadio: "Arena MRV", fase: "Final" },
+    // ── Semifinais ──
+    { data: "21/02/2026", hora: "18h30", timeA: "Pouso Alegre", timeB: "Cruzeiro",   placarA: 1, placarB: 2, estadio: "Manduzão",      fase: "Semifinal - ida" },
+    { data: "22/02/2026", hora: "18h00", timeA: "Atlético-MG",  timeB: "América-MG", placarA: 1, placarB: 1, estadio: "Arena MRV",      fase: "Semifinal - ida" },
+    { data: "28/02/2026", hora: "18h30", timeA: "Cruzeiro",     timeB: "Pouso Alegre",placarA: 1, placarB: 0, estadio: "Mineirão",       fase: "Semifinal - volta" },
+    { data: "01/03/2026", hora: "18h00", timeA: "América-MG",   timeB: "Atlético-MG",placarA: 0, placarB: 0, estadio: "Independência",  fase: "Semifinal - volta (Atlético avançou nos pênaltis 2x4)" },
+
+    // ── Final ──
+    { data: "08/03/2026", hora: "18h00", timeA: "Cruzeiro",     timeB: "Atlético-MG",placarA: 1, placarB: 0, estadio: "Mineirão",       fase: "Final" },
   ],
   proximosJogos: []
 };
@@ -292,13 +359,27 @@ export const gauchao = {
   campeao: "Grêmio",
   vice: "Internacional",
   tabela: [
-    { pos: 1, time: "Grêmio",         pts: 24, j: 10, v: 7, e: 3, d: 0, gp: 18, gc: 6,  sg: 12 },
-    { pos: 2, time: "Internacional",  pts: 20, j: 10, v: 6, e: 2, d: 2, gp: 15, gc: 9,  sg: 6  },
-    { pos: 3, time: "Juventude",      pts: 14, j: 10, v: 4, e: 2, d: 4, gp: 11, gc: 12, sg: -1 },
-    { pos: 4, time: "Caxias",         pts: 10, j: 10, v: 3, e: 1, d: 6, gp: 8,  gc: 16, sg: -8 },
+    { pos: 1, time: "Grêmio",        pts: 24, j: 10, v: 7, e: 3, d: 0, gp: 18, gc: 6,  sg: 12 },
+    { pos: 2, time: "Internacional", pts: 20, j: 10, v: 6, e: 2, d: 2, gp: 15, gc: 9,  sg: 6  },
+    { pos: 3, time: "Juventude",     pts: 14, j: 10, v: 4, e: 2, d: 4, gp: 11, gc: 12, sg: -1 },
+    { pos: 4, time: "Caxias",        pts: 10, j: 10, v: 3, e: 1, d: 6, gp: 8,  gc: 16, sg: -8 },
   ],
   jogosPassados: [
-    { data: "05/04/2026", hora: "16h00", timeA: "Grêmio", timeB: "Internacional", placarA: 1, placarB: 0, estadio: "Arena do Grêmio", fase: "Final" },
+    // ── Quartas de final ──
+    { data: "06/02/2026", hora: "20h30", timeA: "Caxias",       timeB: "Ypiranga-RS",  placarA: 0, placarB: 2, estadio: "Centenário",      fase: "Quartas de final" },
+    { data: "07/02/2026", hora: "18h30", timeA: "Grêmio",       timeB: "Novo Hamburgo",placarA: 1, placarB: 0, estadio: "Arena do Grêmio",  fase: "Quartas de final" },
+    { data: "08/02/2026", hora: "18h00", timeA: "Internacional", timeB: "São Luiz",    placarA: 3, placarB: 1, estadio: "Beira-Rio",         fase: "Quartas de final" },
+    { data: "09/02/2026", hora: "20h00", timeA: "Juventude",    timeB: "São José-RS",  placarA: 3, placarB: 2, estadio: "Alfredo Jaconi",    fase: "Quartas de final" },
+
+    // ── Semifinais ──
+    { data: "15/02/2026", hora: "17h30", timeA: "Grêmio",       timeB: "Juventude",   placarA: 1, placarB: 1, estadio: "Arena do Grêmio",  fase: "Semifinal - ida" },
+    { data: "15/02/2026", hora: "20h30", timeA: "Ypiranga-RS",  timeB: "Internacional",placarA: 0, placarB: 3, estadio: "Colosso da Lagoa", fase: "Semifinal - ida" },
+    { data: "21/02/2026", hora: "18h30", timeA: "Internacional", timeB: "Ypiranga-RS", placarA: 4, placarB: 0, estadio: "Beira-Rio",         fase: "Semifinal - volta" },
+    { data: "22/02/2026", hora: "18h00", timeA: "Juventude",    timeB: "Grêmio",      placarA: 1, placarB: 1, estadio: "Alfredo Jaconi",    fase: "Semifinal - volta (Grêmio avançou nos pênaltis 1x4)" },
+
+    // ── Final ──
+    { data: "01/03/2026", hora: "18h00", timeA: "Grêmio",       timeB: "Internacional",placarA: 3, placarB: 0, estadio: "Arena do Grêmio",  fase: "Final - ida" },
+    { data: "08/03/2026", hora: "18h00", timeA: "Internacional", timeB: "Grêmio",      placarA: 1, placarB: 1, estadio: "Beira-Rio",         fase: "Final - volta" },
   ],
   proximosJogos: []
 };

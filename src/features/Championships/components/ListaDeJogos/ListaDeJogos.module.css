@@ -23,6 +23,7 @@
   cursor: pointer;
   color: var(--text-color);
   white-space: nowrap;
+  font-family: 'Sora', sans-serif;
 }
 
 .tabDataAtiva {

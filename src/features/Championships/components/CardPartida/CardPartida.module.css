@@ -28,8 +28,9 @@
   font-weight: 600;
   color: var(--text-color);
   text-align: center;
-  word-break: break-word;
-  max-width: 80px;
+  max-width: 90px;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 .nomeTimePendente {
@@ -54,7 +55,7 @@
 .fasePartida {
   font-size: 9px;
   color: #bbb;
-  white-space: nowrap;
+  max-width: 189px;
 }
 
 .placar {

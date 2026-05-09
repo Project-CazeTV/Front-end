@@ -1,0 +1,33 @@
+.logoTime {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logoVazio {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  opacity: 0.35;
+}
+
+.logoFallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #868e96;
+}
+
+@media (min-width: 1024px) {
+  .logoTime {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,7 +1,4 @@
-import { useEffect, useRef } from 'react';
-import styles from './HistoriaContent.module.css';
-
-const capitulos = [
+export const capitulos = [
   {
     numero: "01",
     titulo: "O quarto, o micro e um sonho",
@@ -38,61 +35,3 @@ A equipe que começou pequena virou uma operação profissional, mas com o DNA d
 Mas o espírito é o mesmo do quarto com o microfone. Porque no fim, o que a CazéTV sempre vendeu não foi imagem em alta definição ou câmeras caríssimas. Vendeu a sensação de estar junto. E essa sensação não tem preço.`,
   },
 ];
-
-const cores = ["#F97316", "#E20E0E", "#009C3B", "#0047BB", "#FFD700"];
-
-export default function HistoriaContent() {
-  const itemRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.visible);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    itemRefs.current.forEach((elemento) => {
-      if (elemento) {
-        observer.observe(elemento);
-      }
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <section className={styles.section}>
-      {capitulos.map((cap, i) => (
-        <div
-          key={cap.numero}
-          className={styles.capitulo}
-          ref={(el) => (itemRefs.current[i] = el)}
-        >
-          <div className={styles.separador}>
-            <span
-              className={styles.separadorLinha}
-              style={{ background: cores[i] }}
-            />
-            <span
-              className={styles.separadorNumero}
-              style={{ color: cores[i] }}
-            >
-              {cap.numero}
-            </span>
-          </div>
-          <div className={styles.conteudo}>
-            <h2 className={styles.titulo}>{cap.titulo}</h2>
-            {cap.texto.trim().split('\n\n').map((paragrafo, pIdx) => (
-              <p key={pIdx} className={styles.paragrafo}>
-                {paragrafo.trim()}
-              </p>
-            ))}
-          </div>
-
-        </div>
-      ))}
-    </section>
-  );
-}

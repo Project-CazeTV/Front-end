@@ -1,0 +1,54 @@
+.section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.capitulo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px 0;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paragrafo {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.85;
+  color: var(--text-color2);
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  .section {
+    padding: 64px 32px 100px;
+  }
+
+  .capitulo {
+    padding: 56px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 0px 0px 120px;
+  }
+
+  .capitulo {
+    padding: 64px 0;
+    gap: 28px;
+  }
+
+  .paragrafo {
+    max-width: 680px;
+  }
+}

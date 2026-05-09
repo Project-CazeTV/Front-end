@@ -1,0 +1,25 @@
+.cardGrupo {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.tituloGrupo {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b5bdb;
+  letter-spacing: 1.5px;
+  padding: 12px 16px 8px;
+  margin: 0;
+}
+
+.siglaCountry {
+  font-size: 10px;
+  color: #aaa;
+  margin-right: 4px;
+}
+
+.linhaClassificada td {
+  background: rgba(59, 91, 219, 0.03);
+}

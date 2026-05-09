@@ -1,0 +1,80 @@
+.tabelaWrapper {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 480px;
+}
+
+.tabela th {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+  padding: 8px 4px;
+}
+
+.tabela td {
+  text-align: center;
+  padding: 10px 4px;
+  color: var(--text-color);
+}
+
+.posicao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.indicadorZona {
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+}
+
+.colunaTime {
+  text-align: left !important;
+  min-width: 120px;
+}
+
+.pontos {
+  font-weight: 800;
+}
+
+.saldoPositivo {
+  color: #2f9e44;
+  font-weight: 700;
+}
+
+.saldoNegativo {
+  color: #e03131;
+  font-weight: 700;
+}
+
+.legendaTabela {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-color2);
+}
+
+.ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+@media (min-width: 600px) {
+    .legendaTabela {
+        margin: 70px;
+    }
+}

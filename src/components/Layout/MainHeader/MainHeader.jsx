@@ -83,6 +83,22 @@ export default function MainHeader({ isTransparent }) {
     navigate('/noticias/novidades');
   } else if (subItem === 'COMPRAR NA CAZÉ TV') {
   navigate('/shop');
+  } else if (subItem === 'BRASILEIRÃO BETANO') {
+  navigate('/brasileirao');
+  } else if (subItem === 'CAMPEONATO PAULISTA SICREDI') {
+  navigate('/paulistao');
+  } else if (subItem === 'CAMPEONATO CARIOCA SUPERBET') {
+  navigate('/carioca');
+  } else if (subItem === 'CAMPEONATO GAUCHÃO SUPERBET') {
+  navigate('/gaucho');
+  } else if (subItem === 'CAMPEONATO MINEIRO SICOOB') {
+  navigate('/mineiro');
+  } else if (subItem === 'CONMEBOL LIBERTADORES') {
+  navigate('/libertadores');
+  } else if (subItem === 'COPA DO BRASIL') {
+  navigate('/copa-do-brasil');
+  } else if (subItem === 'SUDAMERICANA') {
+  navigate('/sudamericana');
 }
 };
 

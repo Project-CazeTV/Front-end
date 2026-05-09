@@ -1,0 +1,88 @@
+.cardPartida {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cardPartida:last-child {
+  border-bottom: none;
+}
+
+.ladoTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.ladoDireito {
+  align-items: center;
+}
+
+.nomeTime {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+  word-break: break-word;
+  max-width: 80px;
+}
+
+.nomeTimePendente {
+  color: #bbb;
+  font-style: italic;
+}
+
+.infoPartida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.horario {
+  font-size: 10px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.fasePartida {
+  font-size: 9px;
+  color: #bbb;
+  white-space: nowrap;
+}
+
+.placar {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.versus {
+  font-size: 16px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.estadio {
+  font-size: 10px;
+  color: #7c7c7c;
+  margin-top: 2px;
+}
+
+.localJogo {
+  font-size: 10px;
+  color: #aaa;
+}
+
+@media (min-width: 1024px) {
+  .nomeTime {
+    font-size: 12px;
+    max-width: 100px;
+  }
+}

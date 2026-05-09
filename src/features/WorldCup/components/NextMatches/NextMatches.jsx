@@ -28,30 +28,25 @@ export default function NextMatches({ groups }) {
   const jogosDoDia = matchesByDate[dataAtual];
 
   const nextDate = () => {
-    if (currentDateIndex < datas.length - 1) {
-      setCurrentDateIndex((prev) => prev + 1);
-    }
+    if (currentDateIndex < datas.length - 1) setCurrentDateIndex((p) => p + 1);
   };
 
   const prevDate = () => {
-    if (currentDateIndex > 0) {
-      setCurrentDateIndex((prev) => prev - 1);
-    }
+    if (currentDateIndex > 0) setCurrentDateIndex((p) => p - 1);
   };
 
   const handlers = useSwipeable({
     onSwipedLeft: nextDate,
     onSwipedRight: prevDate,
-    trackMouse: true
+    trackMouse: true,
   });
 
   return (
     <section className={styles.container}>
       <h3 className={styles.title}>FASE DE GRUPOS</h3>
 
-      <div className={styles.carouselContainer}>
-        
-        <button 
+      <div className={styles.carouselWrapper}>
+        <button
           onClick={prevDate}
           disabled={currentDateIndex === 0}
           className={`${styles.navBtn} ${styles.prev}`}
@@ -64,36 +59,37 @@ export default function NextMatches({ groups }) {
 
           {jogosDoDia.map((jogo, idx) => (
             <div key={idx} className={styles.matchCard}>
-              
-              <img src={jogo.flagA} className={styles.flag} />
+
+              <div className={styles.teamSide}>
+                <img src={jogo.flagA} alt={jogo.timeA} className={styles.flag} />
+                <span className={styles.teamName}>{jogo.timeA}</span>
+              </div>
 
               <div className={styles.matchInfo}>
-                <span className={styles.time}>
-                  {jogo.hora} em Brasília
-                </span>
+                <span className={styles.time}>{jogo.hora} em Brasília</span>
 
-                <div className={styles.teams}>
-                  <span>{jogo.timeA}</span>
-
-                  {jogo.placarA !== null ? (
-                    <strong>{jogo.placarA} x {jogo.placarB}</strong>
-                  ) : (
-                    <span>x</span>
-                  )}
-
-                  <span>{jogo.timeB}</span>
-                </div>
+                {jogo.placarA !== null ? (
+                  <strong className={styles.score}>
+                    {jogo.placarA} x {jogo.placarB}
+                  </strong>
+                ) : (
+                  <span className={styles.vs}>x</span>
+                )}
 
                 <span className={styles.stadium}>{jogo.estadio}</span>
                 <span className={styles.location}>{jogo.local}</span>
               </div>
 
-              <img src={jogo.flagB} className={styles.flag} />
+              <div className={`${styles.teamSide} ${styles.teamRight}`}>
+                <img src={jogo.flagB} alt={jogo.timeB} className={styles.flag} />
+                <span className={styles.teamName}>{jogo.timeB}</span>
+              </div>
+
             </div>
           ))}
         </div>
 
-        <button 
+        <button
           onClick={nextDate}
           disabled={currentDateIndex === datas.length - 1}
           className={`${styles.navBtn} ${styles.next}`}

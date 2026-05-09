@@ -10,11 +10,9 @@ import { useSwipeable } from 'react-swipeable';
 import { groups } from '../../mocks/groups';
 
 export default function WorldCupPage() {
-
   const [activeFilter, setActiveFilter] = useState("Grupos");
   const [currentIndex, setCurrentIndex] = useState(0);
   const filtros = ["Grupos", "Fase de grupos", "Rodadas", "Notícias"];
-
 
   const nextGroup = () => {
     if (currentIndex < groups.length - 1) setCurrentIndex(prev => prev + 1);
@@ -32,11 +30,27 @@ export default function WorldCupPage() {
 
   const grupoAtual = groups[currentIndex];
 
+  const GroupCard = ({ grupo }) => (
+    <div className={styles.groupCard}>
+      <h3 className={styles.groupTitle}>GRUPO {grupo.grupo}</h3>
+      <div className={styles.countriesList}>
+        {grupo.paises.map((pais, pIdx) => (
+          <div key={pIdx} className={styles.countryRow}>
+            <div className={styles.flagWrapper}>
+              <img src={pais.imagem} alt={pais.nome} className={styles.flag} />
+            </div>
+            <span className={styles.countryName}>{pais.nome.toUpperCase()}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div className={styles.pageContainer}>
-        <ColoredHeader></ColoredHeader>
+      <ColoredHeader />
       <MainHeader isTransparent={true} />
-      
+
       <main className={styles.mainContent}>
         <div className={styles.DetailsBackground}>
           <p className={styles.DetailBackground}>2026</p>
@@ -45,63 +59,53 @@ export default function WorldCupPage() {
         <CountdownCard />
       </main>
 
-
-     <FilterSection 
-        filtros={filtros} 
-        filtroAtivo={activeFilter} 
-        setFiltroAtivo={setActiveFilter} 
+      <FilterSection
+        filtros={filtros}
+        filtroAtivo={activeFilter}
+        setFiltroAtivo={setActiveFilter}
       />
 
       {activeFilter === "Grupos" && (
-        <section className={styles.carouselContainer}>
-          <button 
-            className={`${styles.navBtn} ${styles.prev}`} 
-            onClick={prevGroup}
-            disabled={currentIndex === 0}
-          >
-            <span className="material-symbols-outlined">arrow_back_ios_new</span>
-          </button>
+        <>
+          <section className={`${styles.carouselContainer} ${styles.mobileOnly}`}>
+            <button
+              className={`${styles.navBtn} ${styles.prev}`}
+              onClick={prevGroup}
+              disabled={currentIndex === 0}
+            >
+              <span className="material-symbols-outlined">arrow_back_ios_new</span>
+            </button>
 
-          <div className={styles.groupCard} {...handlers}>
-            <h3 className={styles.groupTitle}>GRUPO {grupoAtual.grupo}</h3>
-            
-            <div className={styles.countriesList}>
-              {grupoAtual.paises.map((pais, pIdx) => (
-                <div key={pIdx} className={styles.countryRow}>
-                  <div className={styles.flagWrapper}>
-                    <img src={pais.imagem} alt={pais.nome} className={styles.flag} />
-                  </div>
-                  <span className={styles.countryName}>{pais.nome.toUpperCase()}</span>
-                </div>
-              ))}
+            <div {...handlers}>
+              <GroupCard grupo={grupoAtual} />
             </div>
-          </div>
 
-          <button 
-            className={`${styles.navBtn} ${styles.next}`} 
-            onClick={nextGroup}
-            disabled={currentIndex === groups.length - 1}
-          >
-            <span className="material-symbols-outlined">arrow_forward_ios</span>
-          </button>
-        </section>
+            <button
+              className={`${styles.navBtn} ${styles.next}`}
+              onClick={nextGroup}
+              disabled={currentIndex === groups.length - 1}
+            >
+              <span className="material-symbols-outlined">arrow_forward_ios</span>
+            </button>
+          </section>
+
+          <div className={`${styles.groupsRow} ${styles.desktopOnly}`}>
+            {groups.map((grupo, gIdx) => (
+              <GroupCard key={gIdx} grupo={grupo} />
+            ))}
+          </div>
+        </>
       )}
 
-      {activeFilter === "Fase de grupos" && (
-  <NextMatches groups={groups} />
-)}
+      {activeFilter === "Fase de grupos" && <NextMatches groups={groups} />}
 
-{activeFilter === "Rodadas" && (
-  <div className={styles.noInfo}>
-  <h3> Sem informações disponíveis</h3>
-  </div>
-)}
+      {activeFilter === "Rodadas" && (
+        <div className={styles.noInfo}><h3>Sem informações disponíveis</h3></div>
+      )}
 
-{activeFilter === "Notícias" && ( 
-  <div className={styles.noInfo}>
-  <h3> Sem informações disponíveis</h3>
-  </div>
-)}
+      {activeFilter === "Notícias" && (
+        <div className={styles.noInfo}><h3>Sem informações disponíveis</h3></div>
+      )}
 
       <CommonFooter />
     </div>

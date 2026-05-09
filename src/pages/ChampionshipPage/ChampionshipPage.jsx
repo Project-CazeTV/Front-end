@@ -53,14 +53,14 @@ export default function ChampionshipPage({ campeonato }) {
             <div className={styles.conteudo}>
                 {campeonato.tabela && (
                     <section className={styles.secao}>
-                        <SectionTitle title="Tabela" color={cor} inline />
+                        <SectionTitle title="Tabela" color={cor} number={"00"} inline />
                         <TabelaClassificacao tabela={campeonato.tabela} mostrarLegenda={campeonato.id === "brasileirao-2026"}/>
                     </section>
                 )}
 
                 {campeonato.grupos && (
                     <section className={styles.secao}>
-                        <SectionTitle title="Grupos" color={cor} inline />
+                        <SectionTitle title="Grupos" color={cor} number={"00"} inline />
                         <div className={styles.gradeGrupos}>
                             {campeonato.grupos.map((grupo, indice) => (
                                 <TabelaGrupo key={indice} grupo={grupo} />
@@ -71,21 +71,21 @@ export default function ChampionshipPage({ campeonato }) {
 
                 {proximosJogos.length > 0 && (
                     <section className={styles.secao}>
-                        <SectionTitle title="Próximos jogos" color={cor} inline />
+                        <SectionTitle title="Próximos jogos" color={cor} number={"00"} inline />
                         <ListaDeJogos jogos={proximosJogos} />
                     </section>
                 )}
 
                 {jogosPassados.length > 0 && (
                     <section className={styles.secao}>
-                        <SectionTitle title="Jogos passados" color={cor} inline />
+                        <SectionTitle title="Jogos passados" color={cor} number={"00"} inline />
                         <ListaDeJogos jogos={jogosPassados} />
                     </section>
                 )}
 
                 {campeonato.confrontos?.length > 0 && (
                     <section className={styles.secao}>
-                        <SectionTitle title="Confrontos" color={cor} inline />
+                        <SectionTitle title="Confrontos" color={cor} number={"00"} inline />
                         <ListaDeJogos jogos={campeonato.confrontos} />
                     </section>
                 )}

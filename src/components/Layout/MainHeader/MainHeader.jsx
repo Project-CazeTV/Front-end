@@ -60,22 +60,26 @@ export default function MainHeader({ isTransparent }) {
   };
 
   const handleSubItemClick = (subItem) => {
-    setIsMenuOpen(false);
-    setActiveSubmenu(null);
+  setIsMenuOpen(false);
+  setActiveSubmenu(null);
 
-    if (subItem === 'TABELA') {
-      navigate('/world-cup');
-    } else if (subItem === 'JOGOS OLÍMPICOS DE VERÃO') {
-      navigate('/olympics');
-    } else if (subItem === 'DE ONDE VEIO A CAZETV') {
-      navigate('/historia/cazetv');
-    } else if (subItem === 'NOVIDADES') {
-      navigate('/noticias/novidades');
-    }
-  };
+  if (subItem === 'TABELA') {
+    navigate('/world-cup');
+  } else if (subItem === 'PAÍSES-SEDE') { 
+    navigate('/world-cup');
+  } else if (subItem === 'FINAL') { 
+    navigate('/world-cup', { state: { filtroAtivo: 'Final' } });
+  } else if (subItem === 'JOGOS OLÍMPICOS DE VERÃO') {
+    navigate('/olympics');
+  } else if (subItem === 'DE ONDE VEIO A CAZETV') {
+    navigate('/historia/cazetv');
+  } else if (subItem === 'NOVIDADES') {
+    navigate('/noticias/novidades');
+  }
+};
 
   const menuData = [
-    { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'GRUPOS', 'CIDADES-SEDE'] },
+    { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'FINAL', 'PAÍSES-SEDE'] },
     { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO MINEIRO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
     { title: 'JOGOS OLÍMPICOS', items: ['JOGOS OLÍMPICOS DE INVERNO', 'JOGOS OLÍMPICOS DE VERÃO'] },
     { title: 'LIGAS E TAÇAS EUROPEIAS UEFA', items: ['SUPERLIGA'] },

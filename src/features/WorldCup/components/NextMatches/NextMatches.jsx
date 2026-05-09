@@ -2,7 +2,13 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import styles from "./NextMatches.module.css";
 
-export default function NextMatches({ groups }) {
+export default function NextMatches({ 
+  groups,
+  title,
+  subtitle,
+  description,
+  pendente = false
+}) {
   const [currentDateIndex, setCurrentDateIndex] = useState(0);
 
   const allMatches = groups.flatMap((g) => g.jogos || []);
@@ -41,11 +47,73 @@ export default function NextMatches({ groups }) {
     trackMouse: true,
   });
 
+  const MatchCard = ({ jogo }) => (
+    <div className={styles.matchCard}>
+      <div className={styles.teamSide}>
+        {jogo.flagA ? (
+          <img
+            src={jogo.flagA}
+            alt={jogo.timeA}
+            className={`${styles.flag} ${pendente ? styles.flagPendente : ""}`}
+          />
+        ) : (
+          <div className={`${styles.flagPlaceholder} ${pendente ? styles.flagPendente : ""}`} />
+        )}
+        <span className={`${styles.teamName} ${pendente ? styles.teamNamePendente : ""}`}>
+          {pendente ? "A definir" : jogo.timeA}
+        </span>
+      </div>
+
+      <div className={styles.matchInfo}>
+        <span className={styles.time}>{jogo.hora} em Brasília</span>
+        {jogo.placarA !== null ? (
+          <strong className={styles.score}>
+            {jogo.placarA} x {jogo.placarB}
+          </strong>
+        ) : (
+          <span className={styles.vs}>x</span>
+        )}
+        <span className={styles.stadium}>{jogo.estadio}</span>
+        <span className={styles.location}>{jogo.local}</span>
+      </div>
+
+      <div className={`${styles.teamSide} ${styles.teamRight}`}>
+        {jogo.flagB ? (
+          <img
+            src={jogo.flagB}
+            alt={jogo.timeB}
+            className={`${styles.flag} ${pendente ? styles.flagPendente : ""}`}
+          />
+        ) : (
+          <div className={`${styles.flagPlaceholder} ${pendente ? styles.flagPendente : ""}`} />
+        )}
+        <span className={`${styles.teamName} ${pendente ? styles.teamNamePendente : ""}`}>
+          {pendente ? "A definir" : jogo.timeB}
+        </span>
+      </div>
+    </div>
+  );
+
   return (
     <section className={styles.container}>
-      <h3 className={styles.title}>FASE DE GRUPOS</h3>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.subtitle}>{subtitle}</p>
+      <p className={styles.description}>{description}</p>
 
-      <div className={styles.carouselWrapper}>
+      <div className={`${styles.dateTabs} ${styles.desktopOnly}`}>
+        {datas.map((data, idx) => (
+          <button
+            key={data}
+            className={`${styles.dateTab} ${currentDateIndex === idx ? styles.dateTabActive : ""}`}
+            onClick={() => setCurrentDateIndex(idx)}
+          >
+            {data}
+          </button>
+        ))}
+      </div>
+
+      {/* MOBILE */}
+      <div className={`${styles.carouselWrapper} ${styles.mobileOnly}`}>
         <button
           onClick={prevDate}
           disabled={currentDateIndex === 0}
@@ -56,36 +124,8 @@ export default function NextMatches({ groups }) {
 
         <div className={styles.dayCard} {...handlers}>
           <span className={styles.date}>{dataAtual}</span>
-
           {jogosDoDia.map((jogo, idx) => (
-            <div key={idx} className={styles.matchCard}>
-
-              <div className={styles.teamSide}>
-                <img src={jogo.flagA} alt={jogo.timeA} className={styles.flag} />
-                <span className={styles.teamName}>{jogo.timeA}</span>
-              </div>
-
-              <div className={styles.matchInfo}>
-                <span className={styles.time}>{jogo.hora} em Brasília</span>
-
-                {jogo.placarA !== null ? (
-                  <strong className={styles.score}>
-                    {jogo.placarA} x {jogo.placarB}
-                  </strong>
-                ) : (
-                  <span className={styles.vs}>x</span>
-                )}
-
-                <span className={styles.stadium}>{jogo.estadio}</span>
-                <span className={styles.location}>{jogo.local}</span>
-              </div>
-
-              <div className={`${styles.teamSide} ${styles.teamRight}`}>
-                <img src={jogo.flagB} alt={jogo.timeB} className={styles.flag} />
-                <span className={styles.teamName}>{jogo.timeB}</span>
-              </div>
-
-            </div>
+            <MatchCard key={idx} jogo={jogo} />
           ))}
         </div>
 
@@ -96,6 +136,13 @@ export default function NextMatches({ groups }) {
         >
           ›
         </button>
+      </div>
+
+      {/* DESKTOP */}
+      <div className={`${styles.dayCard} ${styles.desktopOnly}`}>
+        {jogosDoDia.map((jogo, idx) => (
+          <MatchCard key={idx} jogo={jogo} />
+        ))}
       </div>
     </section>
   );

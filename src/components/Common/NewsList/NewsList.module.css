@@ -9,10 +9,18 @@
   overflow: hidden; 
 }
 
-.title {
+.sectionTitle {
   font-family: "Sora", sans-serif;
   font-weight: 700;
   font-size: 20px;
+}
+
+.sectionSubtitle {
+  font-size: 15px;
+  padding: 0;
+  position: relative;
+  bottom: 20px;
+  color: rgb(84, 84, 84);
 }
 
 .newsCard {
@@ -46,6 +54,18 @@
   margin-bottom: 10px;
 }
 
+.newsDescription {
+  font-size: 13px;
+  width: 60%;
+  color: #8f8f8f;
+  line-height: 1.5;
+  margin: 6px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -62,6 +82,9 @@
   gap: 5px;
   cursor: pointer;
   opacity: 0.8;
+  padding: 10px;
+  font-weight: 600;
+  font-family: 'Sora', sans-serif;
 }
 
 .tempo {
@@ -84,5 +107,10 @@
 
   .title {
   font-size: 30px;
+}
+
+
+.sectionSubtitle {
+  font-size: 15px;
 }
 }

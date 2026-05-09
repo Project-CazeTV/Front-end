@@ -1,0 +1,225 @@
+
+.section {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 0px 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.heroSub {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(26, 26, 26, 0.85);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.heroAno {
+  font-size: clamp(4rem, 22vw, 10rem);
+  font-family: 'Copa', sans-serif;
+  font-weight: 900;
+  line-height: 0.85;
+  color: #ffc803;
+  margin: 0;
+  user-select: none;
+}
+
+.heroDesc {
+  font-size: 0.72rem;
+  color: rgba(35, 35, 35, 0.8);
+  font-weight: 500;
+  margin: 24px 0 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.tacaCopa {
+  position: absolute;
+    width: 8vw;
+    max-width: 52px;
+    min-width: 28px;
+    left: 34%;
+    transform: translateX(-28%);
+    bottom: 22%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.sedeGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.sedeCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.sedeCard:hover {
+  opacity: 0.92;
+}
+
+.fotoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.fotoEstadio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.sedeCard:hover .fotoEstadio {
+  transform: scale(1.04);
+}
+
+.fotoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+}
+
+.estadioLabel {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sedeInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border-top: 5px solid #6aff00;
+}
+
+.bandeira {
+  width: 32px;
+  height: 22px;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.sedePais {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sedeJogos {
+  font-size: 0.7rem;
+  color: #888;
+  margin: 2px 0 0;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 0px 24px 40px;
+  }
+
+  .heroSub {
+    font-size: 0.75rem;
+  }
+
+  .heroDesc {
+    font-size: 0.8rem;
+    margin-top: 36px;
+  }
+
+  .sedeGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sedeInfo {
+    padding: 13px 15px;
+    gap: 12px;
+  }
+
+  .tacaCopa {
+    bottom: 25%;
+
+}
+
+  .bandeira {
+    width: 34px;
+    height: 23px;
+  }
+
+  .sedePais {
+    font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 0px 24px 48px;
+  }
+
+  .heroSub {
+    font-size: 0.8rem;
+  }
+
+  .heroDesc {
+    font-size: 0.85rem;
+    margin-top: 60px;
+  }
+
+  .estadioLabel {
+    font-size: 0.72rem;
+  }
+
+  .sedeInfo {
+    padding: 14px 16px;
+  }
+
+  .bandeira {
+    width: 36px;
+    height: 24px;
+  }
+
+  .sedePais {
+    font-size: 0.9rem;
+  }
+
+  .sedeJogos {
+    font-size: 0.75rem;
+  }
+}

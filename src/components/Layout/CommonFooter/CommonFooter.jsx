@@ -72,10 +72,10 @@ export default function CommonFooter() {
             
           <div className={styles.socialColumn}>
             <div className={styles.socialIcons}>
-              <a href="#" aria-label="YouTube">
+              <a href="https://www.youtube.com/@CazeTV" target="_blank" aria-label="YouTube">
                 <img src={currentYoutube} alt="YouTube" className={styles.socialImg} />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/cazetv/" target="_blank" aria-label="Instagram">
                 <img src={currentInstagram} alt="Instagram" className={styles.socialImg} />
               </a>
             </div>

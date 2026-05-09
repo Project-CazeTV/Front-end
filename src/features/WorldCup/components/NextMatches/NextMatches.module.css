@@ -14,18 +14,65 @@
   color: var(--text-color);
 }
 
-.carouselWrapper {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: -10px;
+  margin-bottom: 8px;
 }
 
-.dayCard {
-  width: 100%;
-  max-width: 560px;
-  padding: 0 48px;
-  box-sizing: border-box;
+.description {
+  text-align: left;
+  font-size: 13px;
+  color: #888;
+  max-width: 480px; 
+  margin: 0 auto 24px;  
+  line-height: 1.6;
+  padding: 12px 20px;
+  border-left: 3px solid var(--accent, #3b5bdb);
+  background: rgba(59, 91, 219, 0.04);
+  border-radius: 0 8px 8px 0;
+}
+
+.mobileOnly { display: flex; }
+.desktopOnly { display: none; }
+
+
+.dateTabs {
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.dateTab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.dateTab:hover {
+  border-color: var(--accent, #3b5bdb);
+}
+
+.dateTabActive {
+  background: var(--accent, #3b5bdb);
+  border-color: var(--accent, #3b5bdb);
+  color: #fff;
+}
+
+.carouselWrapper {
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .date {
@@ -36,6 +83,39 @@
   color: var(--text-color);
   margin-bottom: 16px;
 }
+
+.dayCard {
+  width: 100%;
+  max-width: 560px;
+  padding: 0 48px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.navBtn {
+  position: absolute;
+  top: 40px;
+  background: var(--bg-color);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
 
 .matchCard {
   display: grid;
@@ -56,10 +136,6 @@
   align-items: center;
   gap: 6px;
   text-align: center;
-}
-
-.teamRight {
-  align-items: center;
 }
 
 .flag {
@@ -115,37 +191,6 @@
   color: #aaa;
 }
 
-.navBtn {
-  position: absolute;
-  top: 40px;
-  background: var(--bg-color);
-  border: none;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  font-size: 22px;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.navBtn:disabled {
-  opacity: 0.25;
-  cursor: default;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
 .empty {
   text-align: center;
   color: #aaa;
@@ -153,17 +198,22 @@
 }
 
 @media (min-width: 1024px) {
+  .mobileOnly { display: none; }
+  .desktopOnly { display: flex; }
+
   .dayCard {
     max-width: 640px;
-  }
-
-  .teamName {
-    font-size: 12px;
-    max-width: 100px;
+    padding: 0 24px;
+    display: block;
   }
 
   .flag {
     width: 48px;
     height: 48px;
+  }
+
+  .teamName {
+    font-size: 12px;
+    max-width: 100px;
   }
 }

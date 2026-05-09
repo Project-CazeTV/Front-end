@@ -17,6 +17,7 @@
   box-sizing: border-box;
   top: -31px;
   z-index: 1;
+  border-radius: 0 0 30px 30px;
 }
 
 .bgDetails {

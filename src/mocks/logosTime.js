@@ -94,7 +94,7 @@ export const logosTime = {
   "São Luiz": "https://upload.wikimedia.org/wikipedia/en/0/00/Esporte_Clube_S%C3%A3o_Luiz_logo.svg",
   "São José-RS": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Esporte_Clube_S%C3%A3o_Jos%C3%A9_logo.png",
   "Pouso Alegre": "https://upload.wikimedia.org/wikipedia/pt/9/99/Pouso_Alegre_Futebol_Clube.png",
-  "América-MG": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE0fU5f906cJNyfW-5i_Szy48wOyCfMMqCgA&s",
+  "América-MG": "https://irp.cdn-website.com/05448cb5/files/uploaded/Logo-America-VERDE-LIMPA.png",
 
 
 };

@@ -1,76 +1,65 @@
 import styles from "./TabelaGrupo.module.css";
 
-export default function TabelaGrupo({ grupo }) {
-
+export default function TabelaGrupo({ grupo, cor = "#F5C518" }) {
   return (
     <div className={styles.cardGrupo}>
 
-      <h4 className={styles.tituloGrupo}>
-        GRUPO {grupo.grupo}
-      </h4>
+      <div className={styles.cabecalho} style={{ borderColor: cor }}>
+        <span className={styles.label}>GRUPO</span>
+        <span className={styles.letraGrupo} style={{ color: cor }}>
+          {grupo.grupo}
+        </span>
+      </div>
 
-      <table className={styles.tabela}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th className={styles.colunaTime}>Time</th>
-            <th>P</th>
-            <th>J</th>
-            <th>V</th>
-            <th>E</th>
-            <th>D</th>
-            <th>SG</th>
-          </tr>
-        </thead>
+      <div className={styles.corpo}>
+        <div className={styles.headerLinha}>
+          <span className={styles.headerPos}>#</span>
+          <span className={styles.headerTime}>Time</span>
+          <span className={styles.headerStat}>P</span>
+          <span className={styles.headerStat}>J</span>
+          <span className={styles.headerStat}>V</span>
+          <span className={styles.headerStat}>E</span>
+          <span className={styles.headerStat}>D</span>
+          <span className={styles.headerStat}>SG</span>
+        </div>
 
-        <tbody>
-          {grupo.tabela.map((linha) => (
-            <tr
+        {grupo.tabela.map((linha) => {
+          const classificado = linha.pos <= 2;
+          return (
+            <div
               key={linha.pos}
-              className={
-                linha.pos <= 2
-                  ? styles.linhaClassificada
-                  : ""
-              }
+              className={`${styles.linha} ${classificado ? styles.linhaClassificada : ""}`}
             >
+              {classificado && (
+                <span
+                  className={styles.indicador}
+                  style={{ background: cor }}
+                />
+              )}
 
-              <td>{linha.pos}</td>
+              <span className={styles.pos}>{linha.pos}</span>
 
-              <td className={styles.colunaTime}>
-                <span className={styles.siglaCountry}>
-                  {linha.pais}
-                </span>
+              <span className={styles.time}>
+                <span className={styles.pais}>{linha.pais}</span>
+                <span className={styles.nomeTime}>{linha.time}</span>
+              </span>
 
-                {linha.time}
-              </td>
-
-              <td className={styles.pontos}>
+              <span className={`${styles.stat} ${styles.pontos}`}>
                 {linha.pts}
-              </td>
-
-              <td>{linha.j}</td>
-              <td>{linha.v}</td>
-              <td>{linha.e}</td>
-              <td>{linha.d}</td>
-
-              <td
-                className={
-                  linha.sg > 0
-                    ? styles.saldoPositivo
-                    : linha.sg < 0
-                    ? styles.saldoNegativo
-                    : ""
-                }
-              >
-                {linha.sg > 0
-                  ? `+${linha.sg}`
-                  : linha.sg}
-              </td>
-
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              </span>
+              <span className={styles.stat}>{linha.j}</span>
+              <span className={styles.stat}>{linha.v}</span>
+              <span className={styles.stat}>{linha.e}</span>
+              <span className={styles.stat}>{linha.d}</span>
+              <span className={`${styles.stat} ${
+                linha.sg > 0 ? styles.saldoPos : linha.sg < 0 ? styles.saldoNeg : ""
+              }`}>
+                {linha.sg > 0 ? `+${linha.sg}` : linha.sg}
+              </span>
+            </div>
+          );
+        })}
+      </div>
 
     </div>
   );

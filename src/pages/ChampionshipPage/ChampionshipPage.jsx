@@ -63,7 +63,7 @@ export default function ChampionshipPage({ campeonato }) {
                         <SectionTitle title="Grupos" color={cor} number={"00"} inline />
                         <div className={styles.gradeGrupos}>
                             {campeonato.grupos.map((grupo, indice) => (
-                                <TabelaGrupo key={indice} grupo={grupo} />
+                                <TabelaGrupo key={indice} grupo={grupo} cor={cor} />
                             ))}
                         </div>
                     </section>

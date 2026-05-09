@@ -80,10 +80,10 @@ export default function MainHeader({ isTransparent }) {
 
   const menuData = [
     { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA', 'FINAL', 'PAÍSES-SEDE'] },
-    { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO MINEIRO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
+    { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO GAUCHÃO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
     { title: 'JOGOS OLÍMPICOS', items: ['JOGOS OLÍMPICOS DE INVERNO', 'JOGOS OLÍMPICOS DE VERÃO'] },
     { title: 'LIGAS E TAÇAS EUROPEIAS UEFA', items: ['SUPERLIGA'] },
-    { title: 'NOTÍCIAS', items: ['NOVIDADES'] },
+    { title: 'LOJA', items: ['COMPRAR NA CAZÉ TV'] },
     { title: 'HISTÓRIA', items: ['DE ONDE VEIO A CAZETV'] }
   ];
 

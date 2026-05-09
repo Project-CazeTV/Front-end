@@ -57,7 +57,7 @@ export const brasileirao = {
     { data: "25/04/2026", hora: "21h00", timeA: "São Paulo",      timeB: "Mirassol",     placarA: 1, placarB: 0, estadio: "Brinco de Ouro",            rodada: 13 },
     { data: "26/04/2026", hora: "16h00", timeA: "Corinthians",    timeB: "Vasco",        placarA: 1, placarB: 0, estadio: "Neo Química Arena",         rodada: 13 },
     { data: "26/04/2026", hora: "16h00", timeA: "Grêmio",         timeB: "Coritiba",     placarA: 1, placarB: 0, estadio: "Arena do Grêmio",           rodada: 13 },
-    { data: "26/04/2026", hora: "18h30", timeA: "Bragantino",     timeB: "Palmeiras",    placarA: 0, placarB: 1, estadio: "Cícero de Souza Marques",   rodada: 13 },
+    { data: "26/04/2026", hora: "18h30", timeA: "Red Bull Bragantino",     timeB: "Palmeiras",    placarA: 0, placarB: 1, estadio: "Cícero de Souza Marques",   rodada: 13 },
     { data: "26/04/2026", hora: "18h30", timeA: "Athletico-PR",   timeB: "Vitória",      placarA: 3, placarB: 1, estadio: "Arena da Baixada",          rodada: 13 },
     { data: "26/04/2026", hora: "20h30", timeA: "Fluminense",     timeB: "Chapecoense",  placarA: 2, placarB: 1, estadio: "Maracanã",                  rodada: 13 },
     { data: "26/04/2026", hora: "20h30", timeA: "Atlético-MG",    timeB: "Flamengo",     placarA: 0, placarB: 4, estadio: "Arena MRV",                 rodada: 13 },

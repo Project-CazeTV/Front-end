@@ -1,0 +1,32 @@
+.searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+}
+
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+.searchBar {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-buttom);
+    font-size: 16px;
+    color: var(--text-color);
+
+    box-sizing: border-box;
+}
+
+.searchBar:focus {
+    outline: none;
+}

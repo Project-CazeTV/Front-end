@@ -1,0 +1,56 @@
+.page {
+    width: 100%;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 85%;
+    margin-top: 20px;
+    max-width: 768px;
+    margin-bottom: 30px;
+}
+
+.header > img {
+    width: 100%;
+    height: auto;
+}
+
+.viewAdShop {
+    display: flex;
+    gap: 8px;
+}
+
+.productsArea {
+    width: 90%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.viewMoreButton {
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    background: var(--bg-buttom);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.viewMoreButton:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}

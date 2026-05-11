@@ -1,0 +1,59 @@
+.card {
+    width: 150px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.card > img {
+    border-radius: 20px;
+}
+
+.card > h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card > p {
+    margin: 0;
+}
+
+.card > .secaoPrecoCores {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card > .secaoPrecoCores > h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card > .secaoPrecoCores > .secaoCores {
+    display: flex;
+    gap: 5px;
+}
+
+.cardButton {
+    background-color: #0047BB;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.cardButton:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cardButton:hover {
+        cursor: pointer;
+    }
+}

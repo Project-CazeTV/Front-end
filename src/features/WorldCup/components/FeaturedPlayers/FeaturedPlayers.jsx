@@ -25,7 +25,6 @@ export default function FeaturedPlayers({ players }) {
         src={player.imagem}
         alt={player.nome}
         className={styles.playerPhoto}
-        onError={(e) => { e.target.src = "https://via.placeholder.com/300x400?text=?"; }}
       />
       <div className={styles.playerOverlay}>
         <span className={styles.playerPosition}>{player.posicao}</span>
@@ -40,7 +39,6 @@ export default function FeaturedPlayers({ players }) {
       <h3 className={styles.title}>JOGADORES DE DESTAQUE</h3>
       <p className={styles.subtitle}>Os craques que vão fazer história na Copa do Mundo 2026</p>
 
-      {/* ── MOBILE: carousel ── */}
       <div className={`${styles.carouselWrapper} ${styles.mobileOnly}`}>
         <button
           onClick={prev}
@@ -63,7 +61,6 @@ export default function FeaturedPlayers({ players }) {
         </button>
       </div>
 
-      {/* ── DESKTOP: grid ── */}
       <div className={`${styles.playersGrid} ${styles.desktopOnly}`}>
         {players.map((player, idx) => (
           <PlayerCard key={idx} player={player} />

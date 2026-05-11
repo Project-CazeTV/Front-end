@@ -21,11 +21,9 @@
   margin-bottom: 24px;
 }
 
-/* ── Visibilidade ── */
 .mobileOnly { display: flex; }
 .desktopOnly { display: none; }
 
-/* ── Card ── */
 .playerCard {
   position: relative;
   border-radius: 16px;
@@ -48,7 +46,6 @@
   transform: scale(1.04);
 }
 
-/* Gradiente embaixo */
 .playerOverlay {
   position: absolute;
   bottom: 0;
@@ -81,7 +78,6 @@
   color: rgba(255,255,255,0.65);
 }
 
-/* ── MOBILE: carousel ── */
 .carouselWrapper {
   position: relative;
   align-items: center;
@@ -120,17 +116,23 @@
 .prev { left: 0; }
 .next { right: 0; }
 
-/* ── DESKTOP: grid ── */
 @media (min-width: 1024px) {
-  .mobileOnly { display: none; }
-  .desktopOnly { display: grid; }
-
+  .mobileOnly { 
+    display: none; 
+  }
+  .desktopOnly { 
+    display: grid; 
+  }
   .playersGrid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 0 40px 40px;
   }
-
+  .playerCard {
+    height: 400px;
+  }
   .playerName {
     font-size: 14px;
   }

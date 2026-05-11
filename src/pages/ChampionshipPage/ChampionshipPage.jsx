@@ -5,6 +5,7 @@ import TabelaClassificacao from "../../features/Championships/components/TabelaC
 import SectionTitle from "../../components/Common/SectionTitle/SectionTitle";
 import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
+import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 
 export default function ChampionshipPage({ campeonato }) {
 
@@ -32,6 +33,7 @@ export default function ChampionshipPage({ campeonato }) {
 
     return (
         <div className={styles.pagina}>
+            <ColoredHeader />
             <MainHeader />
             <div
                 className={styles.cabecalho}

@@ -8,31 +8,49 @@ import Banner1 from "../../../../assets/image11.png";
 import Banner2 from "../../../../assets/image11.png";
 import Banner3 from "../../../../assets/image11.png";
 
-export default function ShopHeader() {
+export default function ShopHeader({
+    pesquisa,
+    setPesquisa
+}) {
 
     const banners = [Banner1, Banner2, Banner3];
 
     const [bannerAtual, setBannerAtual] = useState(0);
 
     useEffect(() => {
+
         const interval = setInterval(() => {
+
             setBannerAtual((prev) =>
                 prev === banners.length - 1 ? 0 : prev + 1
             );
+
         }, 6000);
+
         return () => clearInterval(interval);
+
     }, []);
 
     return (
         <div className={styles.header}>
-            <SearchBar placeHolder={"Procurar produto"} />
+
+            <SearchBar
+                placeHolder={"Procurar produto"}
+                value={pesquisa}
+                onChange={(e) =>
+                    setPesquisa(e.target.value)
+                }
+            />
+
             <div className={styles.carouselContainer}>
+
                 <div
                     className={styles.carouselTrack}
                     style={{
                         transform: `translateX(-${bannerAtual * 100}%)`
                     }}
                 >
+
                     {banners.map((banner, index) => (
                         <img
                             key={index}
@@ -41,8 +59,11 @@ export default function ShopHeader() {
                             className={styles.banner}
                         />
                     ))}
+
                 </div>
+
             </div>
+
             <div className={styles.viewAdShop}>
 
                 {banners.map((_, index) => (
@@ -57,6 +78,7 @@ export default function ShopHeader() {
                 ))}
 
             </div>
+
         </div>
     );
 }

@@ -1,0 +1,16 @@
+.progressContainer {
+    width: 65%;
+    max-width: 400px;
+    height: 5px;
+    background-color: var(--border-color);;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 50px;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #0047BB;
+    transition: width 0.3s ease;
+    border-radius: 50px;
+}

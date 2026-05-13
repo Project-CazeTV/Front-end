@@ -5,16 +5,15 @@ import FilterSection from "../../components/Common/FilterSection/FilterSection";
 import ProductCard from "../../features/Shop/components/ProductCard/ProductCard";
 import ShopHeader from "../../features/Shop/components/ShopHeader/ShopHeader";
 import ProgressBar from "../../features/Shop/components/ProgressBar/ProgressBar";
+import CartIcon from "../../features/Shop/components/CartIcon/CartIcon";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./ShopPage.module.css";
 
-// mock
 import { productsMock } from "../../mocks/products";
 
 export default function ShopPage() {
-
   const filtros = [
     "Todos",
     "Maior para menor preço",
@@ -30,6 +29,45 @@ export default function ShopPage() {
 
   const [pesquisa, setPesquisa] = useState("");
 
+  const [cartAmount, setCartAmount] = useState(0);
+
+  useEffect(() => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const amount = cart.reduce((total, item) => {
+      return total + item.amount;
+    }, 0);
+
+    setCartAmount(amount);
+  }, []);
+
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find(
+      (item) =>
+        item.id === product.id &&
+        item.color === product.color
+    );
+
+    if (existingProduct) {
+      existingProduct.amount += 1;
+    } else {
+      cart.push({
+        ...product,
+        amount: 1,
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    const amount = cart.reduce((total, item) => {
+      return total + item.amount;
+    }, 0);
+
+    setCartAmount(amount);
+  };
+
   const loadMoreProducts = () => {
     setMaxProductsLoaded((prev) => prev + 4);
   };
@@ -37,7 +75,6 @@ export default function ShopPage() {
   const produtosFiltrados = [...productsMock]
 
     .sort((a, b) => {
-
       if (filtroAtivo === "Maior para menor preço") {
         return b.preco - a.preco;
       }
@@ -47,11 +84,9 @@ export default function ShopPage() {
       }
 
       return 0;
-
     })
 
     .filter((produto) => {
-
       const nomeMatch = produto.nome
         .toLowerCase()
         .includes(pesquisa.toLowerCase());
@@ -73,7 +108,6 @@ export default function ShopPage() {
       }
 
       return true;
-
     });
 
   const productsLoaded = (maxLoaded, products) => {
@@ -84,7 +118,6 @@ export default function ShopPage() {
 
   return (
     <div className={styles.page}>
-
       <ColoredHeader />
 
       <MainHeader />
@@ -102,21 +135,19 @@ export default function ShopPage() {
       />
 
       <div className={styles.productsArea}>
-
         {produtosFiltrados
           .slice(0, maxProductsLoaded)
           .map((produto) => (
-
             <ProductCard
               key={produto.id}
+              id={produto.id}
               nome={produto.nome}
               preco={produto.preco}
               img={produto.img}
               cores={produto.coresDisponiveis}
+              addToCart={addToCart}
             />
-
           ))}
-
       </div>
 
       <p className={styles.amountProducts}>
@@ -144,8 +175,9 @@ export default function ShopPage() {
         </button>
       )}
 
-      <CommonFooter />
+      <CartIcon amount={cartAmount} />
 
+      <CommonFooter />
     </div>
   );
 }

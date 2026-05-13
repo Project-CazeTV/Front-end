@@ -2,7 +2,7 @@
     width: 65%;
     max-width: 400px;
     height: 5px;
-    background-color: var(--border-color);;
+    background-color: var(--border-color);
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 50px;

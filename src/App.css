@@ -1,4 +1,6 @@
-#root, body{
+#root, html, body{
   height: 100dvh;
   font-family: "Sora", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: none;
 }

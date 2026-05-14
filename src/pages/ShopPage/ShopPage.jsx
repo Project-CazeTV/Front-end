@@ -10,8 +10,15 @@ import { useState, useEffect } from "react";
 import styles from "./ShopPage.module.css";
 import { productsMock } from "../../mocks/products";
 import { filtros } from "../../mocks/filters/shopFilters.js";
+import CazeStore from '../../assets/CazeStore.png';
+import Banner1 from "../../assets/banners/banner1.png";
+import Banner2 from "../../assets/banners/banner2.png";
+import Banner3 from "../../assets/banners/banner3.png";
+
 
 export default function ShopPage() {
+
+  const banners = [Banner1, Banner2, Banner3];
 
   const [filtroAtivo, setFiltroAtivo] = useState("Todos");
 
@@ -115,6 +122,7 @@ export default function ShopPage() {
       <ShopHeader
         pesquisa={pesquisa}
         setPesquisa={setPesquisa}
+        banners={banners}
       />
 
       <FilterSection

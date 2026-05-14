@@ -1,13 +1,8 @@
 import SearchBar from "../SearchBar/SearchBar";
 import { useEffect, useState } from "react";
 import styles from "./ShopHeader.module.css";
-import Banner1 from "../../../../assets/image11.png";
-import Banner2 from "../../../../assets/image11.png";
-import Banner3 from "../../../../assets/image11.png";
 
-export default function ShopHeader({ pesquisa, setPesquisa }) {
-
-    const banners = [Banner1, Banner2, Banner3];
+export default function ShopHeader({ pesquisa, setPesquisa, banners, search = true }) {
 
     const [bannerAtual, setBannerAtual] = useState(0);
 
@@ -28,13 +23,15 @@ export default function ShopHeader({ pesquisa, setPesquisa }) {
     return (
         <div className={styles.header}>
 
-            <SearchBar
-                placeHolder={"Procurar produto"}
-                value={pesquisa}
-                onChange={(e) =>
-                    setPesquisa(e.target.value)
-                }
-            />
+            {search && (
+                <SearchBar
+                    placeHolder={"Procurar produto"}
+                    value={pesquisa}
+                    onChange={(e) =>
+                        setPesquisa(e.target.value)
+                    }
+                />
+            )}
 
             <div className={styles.carouselContainer}>
 

@@ -7,53 +7,10 @@ import MedalTable from "../../features/Olimpiadas/components/MedalTable/MedalTab
 import NewsList from "../../components/Common/NewsList/NewsList";
 import styles from "./OlympicsPage.module.css";
 import { useState } from "react";
+import { noticiasOlimpiadasMock } from "../../mocks/news.js";
+import { filtros, sports } from "../../mocks/filters/olympicsFilters.js";
+
 export default function OlympicsPage() {
-  const noticiasMenoresMock = [
-    {
-      id: 1,
-      categoria: "Apresentação de Abertura",
-      tagColor: "#1E40AF",
-      titulo: "Lady Gaga canta na abertura das Olimpíadas Paris 2024 | Gshow",
-      tempo: "12 DIAS",
-      imagem: "src/assets/gaga.png",
-    },
-    {
-      id: 2,
-      categoria: "Salto Artístico Feminino",
-      tagColor: "#DC2626",
-      titulo:
-        "É Brasil!!! Rebeca Andrade conquista ouro em Salto Artístico e supera Simone Biles.",
-      tempo: "1 DIA",
-      imagem: "src/assets/salto_fem.png",
-    },
-    {
-      id: 3,
-      categoria: "Paris 2024",
-      tagColor: "#22C55E",
-      titulo:
-        "Rio Sena, após anos, volta a se tornar banhável na França e agora é possível modalidades aquáticas.",
-      tempo: "20 DIAS",
-      imagem: "src/assets/identidade-visual-das-olimpiadas-de-paris-2024.png",
-    },
-  ];
-
-  const filtros = [
-    "Esportes Aquáticos",
-    "Atletismo",
-    "Ginástica",
-    "Esportes de Combate",
-    "Esportes de Equipe/Quadra",
-    "Ciclismo",
-  ];
-
-
-const sports = [
-  "Natação",
-  "Saltos Ornamentais",
-  "Maratona Aquática",
-  "Polo Aquático",
-  "Nado Artístico"
-];
 
   const [activeSport, setActiveSport] = useState("Natação");
 
@@ -91,20 +48,20 @@ const sports = [
           </div>
 
           <ul className={styles.sportsItems}>
-  {sports.map((sport) => (
-    <li
-      key={sport}
-      className={activeSport === sport ? styles.activeItem : ""}
-      onClick={() => setActiveSport(sport)}
-    >
-      {sport}
-    </li>
-  ))}
-</ul>
+            {sports.map((sport) => (
+              <li
+                key={sport}
+                className={activeSport === sport ? styles.activeItem : ""}
+                onClick={() => setActiveSport(sport)}
+              >
+                {sport}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <NewsList noticias={noticiasMenoresMock} />
+      <NewsList noticias={noticiasOlimpiadasMock} />
       <CommonFooter />
     </div>
   );

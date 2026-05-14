@@ -15,12 +15,12 @@ import { useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import { groups } from '../../mocks/groups';
 import { octaves, quarters, semis, final } from '../../mocks/roundsWorldCup';
+import { filtros } from '../../mocks/filters/worldCupFilters.js';
 
 export default function WorldCupPage() {
   const location = useLocation();
   const [activeFilter, setActiveFilter] = useState(location.state?.filtroAtivo ?? "Grupos");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const filtros = ["Grupos", "Fase de grupos", "Oitavas de final", "Quartas de final", "Semi-final", "Final", "Jogadores de destaque"];
 
   const nextGroup = () => {
     if (currentIndex < groups.length - 1) setCurrentIndex(prev => prev + 1);

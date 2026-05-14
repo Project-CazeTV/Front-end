@@ -13,7 +13,7 @@ import { auth } from '../../../services/firebase/firebaseConfig';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { navigationMap } from '../../../utils/navigationMap';
 
-export default function MainHeader({ isTransparent }) {
+export default function MainHeader({logo, isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
@@ -60,18 +60,18 @@ export default function MainHeader({ isTransparent }) {
   };
 
   const handleSubItemClick = (subItem) => {
-  setIsMenuOpen(false);
-  setActiveSubmenu(null);
+    setIsMenuOpen(false);
+    setActiveSubmenu(null);
 
-  const navInfo = navigationMap[subItem];
-  
-  if (navInfo) {
-    navigate(navInfo.path, { state: navInfo.state });
-  } else {
-    console.warn(`Nenhuma rota definida para o item: ${subItem}`);
-  }
-  
-};
+    const navInfo = navigationMap[subItem];
+
+    if (navInfo) {
+      navigate(navInfo.path, { state: navInfo.state });
+    } else {
+      console.warn(`Nenhuma rota definida para o item: ${subItem}`);
+    }
+
+  };
 
   return (
     <>
@@ -81,7 +81,7 @@ export default function MainHeader({ isTransparent }) {
       >
         <div className={styles.topBar}>
           <img
-            src={LogoCazeIcon}
+            src={logo || LogoCazeIcon} 
             alt="Cazé TV"
             className={styles.logo}
             onClick={() => navigate('/')}
@@ -147,7 +147,7 @@ export default function MainHeader({ isTransparent }) {
             </div>
 
             <button className={styles.hamburgerBtn} onClick={() => setIsMenuOpen(true)}>
-              <CgMenuRight size={40} id={styles.menuIcon}/>
+              <CgMenuRight size={40} id={styles.menuIcon} />
             </button>
           </div>
         </div>

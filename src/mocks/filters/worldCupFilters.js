@@ -1,0 +1,1 @@
+export const filtros = ["Grupos", "Fase de grupos", "Oitavas de final", "Quartas de final", "Semi-final", "Final", "Jogadores de destaque"];

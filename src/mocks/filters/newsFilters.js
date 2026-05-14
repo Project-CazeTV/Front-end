@@ -1,0 +1,1 @@
+export const filtros = ["Paulistão Sicredi", "Brasileirão Betano", "CONMEBOL Libertadores", "Copa do Mundo FIFA", "Futebol Feminino"];

@@ -46,15 +46,6 @@ export default function HomeNews({ news }) {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/*<div className={styles.progressBarContainer}>
-        <motion.div 
-          key={`bar-${index}-${isPaused}`}
-          className={styles.progressBar}
-          initial={{ width: "0%" }}
-          animate={{ width: isPaused ? "0%" : "100%" }}
-          transition={{ duration: isPaused ? 0 : 10, ease: "linear" }}
-        />
-      </div>*/}
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div
           key={current.id}

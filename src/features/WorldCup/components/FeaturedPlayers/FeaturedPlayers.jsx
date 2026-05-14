@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import styles from "./FeaturedPlayers.module.css";
+import PlayerCard from "./PlayerCard";
 
 export default function FeaturedPlayers({ players }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,20 +20,6 @@ export default function FeaturedPlayers({ players }) {
     trackMouse: true,
   });
 
-  const PlayerCard = ({ player }) => (
-    <div className={styles.playerCard}>
-      <img
-        src={player.imagem}
-        alt={player.nome}
-        className={styles.playerPhoto}
-      />
-      <div className={styles.playerOverlay}>
-        <span className={styles.playerPosition}>{player.posicao}</span>
-        <strong className={styles.playerName}>{player.nome}</strong>
-        <span className={styles.playerCountry}>{player.pais} · {player.clube}</span>
-      </div>
-    </div>
-  );
 
   return (
     <section className={styles.container}>

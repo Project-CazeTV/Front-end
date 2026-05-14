@@ -6,22 +6,12 @@ import ProductCard from "../../features/Shop/components/ProductCard/ProductCard"
 import ShopHeader from "../../features/Shop/components/ShopHeader/ShopHeader";
 import ProgressBar from "../../features/Shop/components/ProgressBar/ProgressBar";
 import CartIcon from "../../features/Shop/components/CartIcon/CartIcon";
-
 import { useState, useEffect } from "react";
-
 import styles from "./ShopPage.module.css";
-
 import { productsMock } from "../../mocks/products";
+import { filtros } from "../../mocks/filters/shopFilters.js";
 
 export default function ShopPage() {
-  const filtros = [
-    "Todos",
-    "Maior para menor preço",
-    "Menor para maior preço",
-    "Acima de R$100",
-    "Abaixo de R$100",
-    "Em promoção",
-  ];
 
   const [filtroAtivo, setFiltroAtivo] = useState("Todos");
 

@@ -8,10 +8,10 @@ import { useNavigate } from 'react-router-dom';
 import ThemeToggle from '../../Common/ThemeToggle/ThemeToggle';
 import { CgMenuRight } from "react-icons/cg";
 import { FaUser } from "react-icons/fa6";
-
-
+import { menuData } from '../../../mocks/navegacao/optionsHeader';
 import { auth } from '../../../services/firebase/firebaseConfig';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { navigationMap } from '../../../utils/navigationMap';
 
 export default function MainHeader({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,53 +63,15 @@ export default function MainHeader({ isTransparent }) {
   setIsMenuOpen(false);
   setActiveSubmenu(null);
 
-  if (subItem === 'TABELA') {
-    navigate('/world-cup');
-  } else if (subItem === 'PAÍSES-SEDE') { 
-    navigate('/world-cup');
-  } else if (subItem === 'OITAVAS DE FINAL') { 
-    navigate('/world-cup', { state: { filtroAtivo: 'Oitavas de final' } });
-    } else if (subItem === 'QUARTAS DE FINAL') { 
-    navigate('/world-cup', { state: { filtroAtivo: 'Quartas de final' } });
-    } else if (subItem === 'SEMI-FINAL') { 
-    navigate('/world-cup', { state: { filtroAtivo: 'Semi-final' } });
-  } else if (subItem === 'FINAL') { 
-    navigate('/world-cup', { state: { filtroAtivo: 'Final' } });
-  } else if (subItem === 'JOGOS OLÍMPICOS DE VERÃO') {
-    navigate('/olympics');
-  } else if (subItem === 'DE ONDE VEIO A CAZETV') {
-    navigate('/historia/cazetv');
-  } else if (subItem === 'NOVIDADES') {
-    navigate('/noticias/novidades');
-  } else if (subItem === 'COMPRAR NA CAZÉ TV') {
-  navigate('/shop');
-  } else if (subItem === 'BRASILEIRÃO BETANO') {
-  navigate('/brasileirao');
-  } else if (subItem === 'CAMPEONATO PAULISTA SICREDI') {
-  navigate('/paulistao');
-  } else if (subItem === 'CAMPEONATO CARIOCA SUPERBET') {
-  navigate('/carioca');
-  } else if (subItem === 'CAMPEONATO GAUCHÃO SUPERBET') {
-  navigate('/gaucho');
-  } else if (subItem === 'CAMPEONATO MINEIRO SICOOB') {
-  navigate('/mineiro');
-  } else if (subItem === 'CONMEBOL LIBERTADORES') {
-  navigate('/libertadores');
-  } else if (subItem === 'COPA DO BRASIL') {
-  navigate('/copa-do-brasil');
-  } else if (subItem === 'SUDAMERICANA') {
-  navigate('/sudamericana');
-}
+  const navInfo = navigationMap[subItem];
+  
+  if (navInfo) {
+    navigate(navInfo.path, { state: navInfo.state });
+  } else {
+    console.warn(`Nenhuma rota definida para o item: ${subItem}`);
+  }
+  
 };
-
-  const menuData = [
-    { title: 'COPA DO MUNDO FIFA 2026', items: ['TABELA','OITAVAS DE FINAL','QUARTAS DE FINAL','SEMI-FINAL', 'FINAL', 'PAÍSES-SEDE'] },
-    { title: 'CAMPEONATOS ESTADUAIS', items: ['CAMPEONATO PAULISTA SICREDI', 'CAMPEONATO CARIOCA SUPERBET', 'CAMPEONATO GAUCHÃO SUPERBET', 'CAMPEONATO MINEIRO SICOOB'] },
-    { title: 'JOGOS OLÍMPICOS', items: ['JOGOS OLÍMPICOS DE INVERNO', 'JOGOS OLÍMPICOS DE VERÃO'] },
-    { title: 'OUTROS CAMPEONATOS', items: ['BRASILEIRÃO BETANO', 'COPA DO BRASIL', 'CONMEBOL LIBERTADORES', 'SUDAMERICANA'] },
-    { title: 'LOJA', items: ['COMPRAR NA CAZÉ TV'] },
-    { title: 'HISTÓRIA', items: ['DE ONDE VEIO A CAZETV'] }
-  ];
 
   return (
     <>

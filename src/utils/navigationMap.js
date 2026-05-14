@@ -1,0 +1,20 @@
+export const navigationMap = {
+    'TABELA': { path: '/world-cup', state: {} },
+    'PAÍSES-SEDE': { path: '/world-cup', state: {} },
+    'OITAVAS DE FINAL': { path: '/world-cup', state: { filtroAtivo: 'Oitavas de final' } },
+    'QUARTAS DE FINAL': { path: '/world-cup', state: { filtroAtivo: 'Quartas de final' } },
+    'SEMI-FINAL': { path: '/world-cup', state: { filtroAtivo: 'Semi-final' } },
+    'FINAL': { path: '/world-cup', state: { filtroAtivo: 'Final' } },
+    'JOGOS OLÍMPICOS DE VERÃO': { path: '/olympics', state: {} },
+    'DE ONDE VEIO A CAZETV': { path: '/historia/cazetv', state: {} },
+    'NOVIDADES': { path: '/noticias/novidades', state: {} },
+    'COMPRAR NA CAZÉ TV': { path: '/shop', state: {} },
+    'BRASILEIRÃO BETANO': { path: '/brasileirao', state: {} },
+    'CAMPEONATO PAULISTA SICREDI': { path: '/paulistao', state: {} },
+    'CAMPEONATO CARIOCA SUPERBET': { path: '/carioca', state: {} },
+    'CAMPEONATO GAUCHÃO SUPERBET': { path: '/gaucho', state: {} },
+    'CAMPEONATO MINEIRO SICOOB': { path: '/mineiro', state: {} },
+    'CONMEBOL LIBERTADORES': { path: '/libertadores', state: {} },
+    'COPA DO BRASIL': { path: '/copa-do-brasil', state: {} },
+    'SUDAMERICANA': { path: '/sudamericana', state: {} }
+}

@@ -59,6 +59,13 @@
     margin-bottom: 10px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .viewMoreButton {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
 @media screen and (min-width: 768px) {
     .productsArea {
         grid-template-columns: repeat(auto-fit, minmax(190px, max-content));

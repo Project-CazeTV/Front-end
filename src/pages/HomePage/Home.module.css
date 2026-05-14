@@ -64,14 +64,13 @@
 }
 
 
-/* TABLET */
 @media (min-width: 521px) {
   .homeKitSection {
     padding: 28px;
   }
 
   .homeKitText h2 {
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(32px, 4vw, 2.6rem);
   }
 
   .homeKitText p {
@@ -85,7 +84,6 @@
 }
 
 
-/* DESKTOP */
 @media (min-width: 901px) {
   .homeKitSection {
     width: 100%;

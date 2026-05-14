@@ -33,16 +33,16 @@
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 100px;
     background-color: var(--border-color);
     transition: 0.3s;
 }
 
 .active {
-    width: 30px;
-    height: 10px;
+    width: 24px;
+    height: 8px;
     border-radius: 100px;
     background-color: #0047BB;
     transition: 0.3s;

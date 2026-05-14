@@ -5,7 +5,9 @@ import styles from "./ProductCard.module.css";
 export default function ProductCard({id,nome,img,preco,cores,addToCart,}) {
   return (
     <div className={styles.card}>
-      <img src={img} alt={nome} />
+      <div className={styles.imgContainer}>
+        <img src={img} alt={nome} />
+      </div>
 
       <h4>{truncateString(nome, 16)}</h4>
 

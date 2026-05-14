@@ -72,9 +72,8 @@
 .description {
   font-size: 1rem;
   line-height: 1.5;
-  opacity: 0.7;
   margin-bottom: 25px;
-  color: var(--text-color);
+  color: var(--text-color2);
 }
 
 .btn {
@@ -102,7 +101,7 @@
   height: 8px;
   border: none;
   border-radius: 50%;
-  background-color: #555;
+  background-color: var(--border-color);
   transition: 0.3s;
   cursor: pointer;
   padding: 0;

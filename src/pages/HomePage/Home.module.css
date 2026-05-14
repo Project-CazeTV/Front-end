@@ -1,24 +1,23 @@
 .homeKitSection {
-  width: 100%;
-  max-width: 1180px;
-  margin: 20px auto;
-  padding: 0 40px;
+  width: 90%;
+  margin: 48px auto;
+  padding: 22px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
+  gap: 32px;
 }
 
 .homeKitText {
-  flex: 0.9;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  text-align: center;
 }
 
 .homeKitText h2 {
   margin: 0 0 16px;
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: 30px;
   line-height: 1.05;
   font-weight: 800;
   color: var(--text-color);
@@ -26,14 +25,16 @@
 
 .homeKitText p {
   margin: 0 0 28px;
-  max-width: 440px;
-  font-size: 18px;
+  width: 100%;
+  font-size: 16px;
   line-height: 1.55;
   font-weight: 400;
-  color: #555555;
+  color: var(--text-color2);
 }
 
 .homeKitText button {
+  width: 60%;
+  align-self: center;
   padding: 14px 30px;
   border: none;
   background: #edba00;
@@ -51,8 +52,9 @@
 }
 
 .homeKitBanner {
-  flex: 1.3;
-  min-width: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .homeKitBanner img {
@@ -62,42 +64,54 @@
 }
 
 
-@media (max-width: 900px) {
+/* TABLET */
+@media (min-width: 521px) {
   .homeKitSection {
-    margin: 48px auto;
     padding: 28px;
-    flex-direction: column;
-    gap: 32px;
-    width: 90%;
-  }
-
-  .homeKitText {
-    width: 80%;
-    align-items: flex-start;
-  }
-
-  .homeKitText p {
-    max-width: 100%;
-    font-size: 16px;
-  }
-
-  .homeKitBanner {
-    width: 100%;
-  }
-}
-
-@media (max-width: 520px) {
-  .homeKitSection {
-    padding: 22px;
-    border-radius: 20px;
   }
 
   .homeKitText h2 {
-    font-size: 30px;
+    font-size: clamp(32px, 4vw, 52px);
+  }
+
+  .homeKitText p {
+    font-size: 18px;
   }
 
   .homeKitText button {
-    width: 80%;
-    align-self: center;
+    width: auto;
+    align-self: left;
+  }
+}
+
+
+/* DESKTOP */
+@media (min-width: 901px) {
+  .homeKitSection {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .homeKitText {
+    flex: 0.9;
+    text-align: left;
+  }
+
+  .homeKitText p {
+    max-width: 440px;
+  }
+
+  .homeKitText button {
+    align-self: flex-start;
+  }
+
+  .homeKitBanner {
+    flex: 1.3;
+    min-width: 0;
   }
 }

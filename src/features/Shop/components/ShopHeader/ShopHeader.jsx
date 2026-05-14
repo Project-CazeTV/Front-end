@@ -1,17 +1,11 @@
 import SearchBar from "../SearchBar/SearchBar";
-
 import { useEffect, useState } from "react";
-
 import styles from "./ShopHeader.module.css";
-
 import Banner1 from "../../../../assets/image11.png";
 import Banner2 from "../../../../assets/image11.png";
 import Banner3 from "../../../../assets/image11.png";
 
-export default function ShopHeader({
-    pesquisa,
-    setPesquisa
-}) {
+export default function ShopHeader({ pesquisa, setPesquisa }) {
 
     const banners = [Banner1, Banner2, Banner3];
 

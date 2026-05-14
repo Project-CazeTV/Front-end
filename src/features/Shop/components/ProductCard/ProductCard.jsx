@@ -2,14 +2,7 @@ import { truncateString } from "../../utils/ProductCardUtil";
 
 import styles from "./ProductCard.module.css";
 
-export default function ProductCard({
-  id,
-  nome,
-  img,
-  preco,
-  cores,
-  addToCart,
-}) {
+export default function ProductCard({id,nome,img,preco,cores,addToCart,}) {
   return (
     <div className={styles.card}>
       <img src={img} alt={nome} />

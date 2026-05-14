@@ -1,6 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { useEffect, useState } from "react";
-
 import styles from "./CartIcon.module.css";
 
 export default function CartIcon({ amount = 0 }) {

@@ -1,11 +1,7 @@
 import styles from "./SearchBar.module.css";
 import { CiSearch } from "react-icons/ci";
 
-export default function SearchBar({
-    placeHolder,
-    value,
-    onChange
-}) {
+export default function SearchBar({placeHolder,value,onChange}) {
 
     return (
         <div className={styles.searchContainer}>

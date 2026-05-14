@@ -22,7 +22,6 @@
   padding: 8px;
   border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  
   color: var(--text-color, #333); 
 }
 
@@ -81,11 +80,12 @@
 .input {
   width: 100%;
   padding: 15px 20px;
-  background-color: #e0e0e0;
+  background-color: var(--bg-buttom);
   border: none;
   border-radius: 12px;
   font-size: 16px;
   color: #333;
+  border: 0.5px solid color-mix(in srgb, var(--text-color) 20%, transparent);
 }
 
 .submitBtn {

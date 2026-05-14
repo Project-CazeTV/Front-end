@@ -7,6 +7,7 @@ import CommonFooter from '../../components/Layout/CommonFooter/CommonFooter.jsx'
 import { mainNewsMock } from '../../mocks/news';
 import { filtros } from '../../mocks/filters/newsFilters.js';
 import { noticiasMenoresMock } from '../../mocks/news.js';
+import { useNavigate } from 'react-router-dom';
 import ShopHeader from '../../features/Shop/components/ShopHeader/ShopHeader.jsx';
 import Banner1 from "../../assets/banners/banner1.png";
 import Banner2 from "../../assets/banners/banner2.png";
@@ -16,6 +17,7 @@ import styles from './Home.module.css';
 export default function Home() {
 
   const banners = [Banner1, Banner2, Banner3];
+  const navigation = useNavigate()
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function Home() {
             Escolha seus produtos favoritos e acompanhe cada campeonato com estilo,
             praticidade e a energia de quem vive o esporte de verdade.
           </p>
-          <button onClick={() => window.location.href = '/shop'}>montar meu kit</button>
+          <button onClick={() => navigation("/shop")}>montar meu kit</button>
         </div>
         <div className={styles.homeKitBanner}>
           <ShopHeader banners={banners} search={false} />

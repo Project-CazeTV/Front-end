@@ -15,7 +15,6 @@ import Banner1 from "../../assets/banners/banner1.png";
 import Banner2 from "../../assets/banners/banner2.png";
 import Banner3 from "../../assets/banners/banner3.png";
 
-
 export default function ShopPage() {
 
   const banners = [Banner1, Banner2, Banner3];

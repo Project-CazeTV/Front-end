@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './MainHeader.module.css';
 import LogoCazeIcon from '../../../assets/caze.png';
@@ -10,7 +9,8 @@ import { CgMenuRight } from "react-icons/cg";
 import { FaUser } from "react-icons/fa6";
 import { menuData } from '../../../mocks/navegacao/optionsHeader';
 import { auth } from '../../../services/firebase/firebaseConfig';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
+import { userAuth } from '../../../hooks/UserAuth/UserAuth';
 import { navigationMap } from '../../../utils/navigationMap';
 
 export default function MainHeader({logo, isTransparent }) {
@@ -19,13 +19,12 @@ export default function MainHeader({logo, isTransparent }) {
   const [mobileSubOpen, setMobileSubOpen] = useState(null);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [drawerLogo, setDrawerLogo] = useState(LogoCazeBlackText);
-  const [user, setUser] = useState(null);
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
+  const user = userAuth();
+
+   useEffect(() => {
 
     const updateDrawerLogo = () => {
       const isDark = document.body.getAttribute('data-theme') === 'dark';
@@ -33,13 +32,18 @@ export default function MainHeader({logo, isTransparent }) {
     };
 
     updateDrawerLogo();
+
     const observer = new MutationObserver(updateDrawerLogo);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
 
     return () => {
       observer.disconnect();
-      unsubscribe();
     };
+
   }, []);
 
   const handleLogout = async () => {

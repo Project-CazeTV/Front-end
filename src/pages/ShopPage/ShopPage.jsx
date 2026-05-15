@@ -10,12 +10,18 @@ import { useState, useEffect } from "react";
 import styles from "./ShopPage.module.css";
 import { productsMock } from "../../mocks/products";
 import { filtros } from "../../mocks/filters/shopFilters.js";
+import { userAuth } from "../../hooks/UserAuth/UserAuth.js";
+import { useNavigate } from "react-router-dom";
 import CazeStore from '../../assets/CazeStore.png';
 import Banner1 from "../../assets/banners/banner1.png";
 import Banner2 from "../../assets/banners/banner2.png";
 import Banner3 from "../../assets/banners/banner3.png";
 
 export default function ShopPage() {
+
+  const user = userAuth()
+
+  const navigate = useNavigate()
 
   const banners = [Banner1, Banner2, Banner3];
 
@@ -38,6 +44,11 @@ export default function ShopPage() {
   }, []);
 
   const addToCart = (product) => {
+
+    if(!user) {
+      navigate("/login")
+    }
+
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const existingProduct = cart.find(

@@ -46,7 +46,7 @@ export default function ShopPage() {
   const addToCart = (product) => {
 
     if(!user) {
-      navigate("/login")
+      return navigate("/login")
     }
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

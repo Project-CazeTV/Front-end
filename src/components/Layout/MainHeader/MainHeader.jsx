@@ -22,7 +22,7 @@ export default function MainHeader({logo, isTransparent }) {
 
   const navigate = useNavigate();
 
-  const user = userAuth();
+  const { user } = userAuth();
 
    useEffect(() => {
 

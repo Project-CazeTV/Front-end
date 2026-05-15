@@ -19,7 +19,7 @@ import Banner3 from "../../assets/banners/banner3.png";
 
 export default function ShopPage() {
 
-  const user = userAuth()
+  const { user, loading } = userAuth()
 
   const navigate = useNavigate()
 
@@ -42,6 +42,15 @@ export default function ShopPage() {
 
     setCartAmount(amount);
   }, []);
+
+  useEffect(() => {
+    if (loading) return;
+
+    if (!user) {
+      localStorage.removeItem("cart");
+    }
+}, [user, loading]);
+  
 
   const addToCart = (product) => {
 

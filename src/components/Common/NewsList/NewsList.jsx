@@ -9,8 +9,11 @@ export default function NewsList({ noticias = [], title, subtitle, onVerMais }) 
 
   return (
     <section className={styles.listContainer}>
-      {title && <h2 className={styles.sectionTitle}>{title}</h2>}
-      {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}
+      <section className={styles.header}>
+        {title && <h2 className={styles.sectionTitle}>{title}</h2>}
+        <div className={styles.line} />
+        {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}
+      </section>
 
       {noticias.map((noticia) => (
         <article key={noticia.id} className={styles.newsCard}>
@@ -35,7 +38,7 @@ export default function NewsList({ noticias = [], title, subtitle, onVerMais }) 
                 className={styles.verMais}
                 onClick={() => onVerMais?.(noticia)}
               >
-              Ver mais <FaRegArrowAltCircleRight size={16}/>
+                Ver mais <FaRegArrowAltCircleRight size={16} />
               </button>
               <span className={styles.tempo}>
                 <TbClockHour9 size={19} /> {noticia.tempo}

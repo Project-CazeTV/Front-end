@@ -13,6 +13,8 @@ import Banner1 from "../../assets/banners/banner1.png";
 import Banner2 from "../../assets/banners/banner2.png";
 import Banner3 from "../../assets/banners/banner3.png";
 import styles from './Home.module.css';
+import VideoList from '../../components/Common/VideoList/VideoList.jsx';
+import { videosHome } from '../../mocks/videos/videos.js';
 
 export default function Home() {
 
@@ -37,8 +39,8 @@ export default function Home() {
           <ShopHeader banners={banners} search={false} />
         </div>
       </section>
-      <FilterSection titulo="Cazé News" filtros={filtros} />
-      <NewsList noticias={noticiasMenoresMock} />
+      <VideoList videos={videosHome} title="Em Alta na Cazé" />
+      <NewsList title="Cazé News" noticias={noticiasMenoresMock} />
       <CommonFooter />
     </>
   )

@@ -2,14 +2,14 @@ import styles from './NewsList.module.css';
 import { TbClockHour9 } from "react-icons/tb";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
-export default function NewsList({ noticias = [], title, subtitle, onVerMais }) {
+export default function NewsList({ noticias = [], flex=true, title, subtitle, onVerMais }) {
   if (!noticias.length) {
     return <p className={styles.empty}>Nenhuma notícia disponível.</p>;
   }
 
   return (
     <section className={styles.listContainer}>
-      <section className={styles.header}>
+      <section className={styles.header} style={{ flexDirection: flex ? 'row' : 'column'}}>
         {title && <h2 className={styles.sectionTitle}>{title}</h2>}
         <div className={styles.line} />
         {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}

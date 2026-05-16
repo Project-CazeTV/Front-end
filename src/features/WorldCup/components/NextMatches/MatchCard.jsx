@@ -1,6 +1,6 @@
 import styles from "./NextMatches.module.css";
 
-export default function MatchCard({ jogo }) {
+export default function MatchCard({ jogo, pendente = false }) {
     return (
         <div className={styles.matchCard}>
             <div className={styles.teamSide}>

@@ -8,12 +8,14 @@
   box-sizing: border-box;
   overflow: hidden; 
   justify-self: center;
+  align-self: center;
 }
 
 .header {
     display: flex;
     align-items: center;
     gap: 16px;
+    
 }
 
 .sectionTitle {

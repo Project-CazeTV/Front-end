@@ -175,6 +175,7 @@ export default function WorldCupPage() {
         subtitle={"Acompanhe os principais acontecimentos do futebol nacional e internacional."}
         noticias={newsWorldCup}
         onVerMais={handleVerMais}
+        flex={false}
       />
 
       <CommonFooter />

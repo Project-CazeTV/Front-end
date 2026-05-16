@@ -13,7 +13,7 @@ import imgMousepadOficial from "../assets/products/mousepad_oficial.png";
 import imgCamisaOficial from "../assets/products/camisa_oficial.png";
 import imgAlbum from "../assets/products/album_copa_mundo.png";
 import imgAdesivos from "../assets/products/figurinhas.png";
-import imgCordao from "../assets/products/cordao.png";
+import imgCordao from "../assets/products/Cordao.png";
 import imgCapinha from "../assets/products/Capinha_Iphone.png";
 import imgCopoTermico from "../assets/products/copo_termico.png";
 

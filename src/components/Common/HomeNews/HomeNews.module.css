@@ -133,7 +133,7 @@
 @media (min-width: 1024px) {
   .newsWrapper {
     flex-direction: row;
-    padding: 60px 5%;
+    padding: 40px 5%;
     max-width: 1200px;
     margin: 0 auto;
     gap: 50px;

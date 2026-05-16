@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../LoginPage/LoginPage.module.css';
+import styles from './SignUpPage.module.css';
 import LogoCazeBlackText from '../../assets/Logotipo_da_CazéTV.png';
 import LogoCazeWhiteText from '../../assets/CazéTVNomeBranco.png';
 import LogoFIFA from '../../assets/logo-copa-escuro.png';

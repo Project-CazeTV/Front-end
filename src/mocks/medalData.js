@@ -1,4 +1,12 @@
-export const medalData = [
+export const edicoes = [
+  { id: "milano-2026", nome: "Milano Cortina 2026", ano: 2026, tipo: "inverno" },
+  { id: "beijing-2022", nome: "Beijing 2022",        ano: 2022, tipo: "inverno" },
+  { id: "pyeongchang-2018", nome: "PyeongChang 2018", ano: 2018, tipo: "inverno" },
+  { id: "sochi-2014", nome: "Sochi 2014",            ano: 2014, tipo: "inverno" },
+  { id: "vancouver-2010", nome: "Vancouver 2010",    ano: 2010, tipo: "inverno" },
+];
+
+export const Summer2024 = [
   { id: 1, country: 'Estados Unidos', flag: 'https://flagcdn.com/w320/us.png', gold: 40, silver: 44, bronze: 42, total: 126 },
   { id: 2, country: 'China', flag: 'https://flagcdn.com/w320/cn.png', gold: 40, silver: 27, bronze: 24, total: 91 },
   { id: 3, country: 'Japão', flag: 'https://flagcdn.com/w320/jp.png', gold: 20, silver: 12, bronze: 13, total: 45 },
@@ -90,4 +98,37 @@ export const medalData = [
   { id: 89, country: 'Singapura', flag: 'https://flagcdn.com/w320/sg.png', gold: 0, silver: 0, bronze: 1, total: 1 },
   { id: 90, country: 'Eslováquia', flag: 'https://flagcdn.com/w320/sk.png', gold: 0, silver: 0, bronze: 1, total: 1 },
   { id: 91, country: 'Zâmbia', flag: 'https://flagcdn.com/w320/zm.png', gold: 0, silver: 0, bronze: 1, total: 1 }
+];
+
+export const winter2026 = [
+  { id: 1,  country: "Noruega",              flag: "https://flagcdn.com/w320/no.png", gold: 18, silver: 12, bronze: 11, total: 41 },
+  { id: 2,  country: "Estados Unidos",       flag: "https://flagcdn.com/w320/us.png", gold: 12, silver: 12, bronze: 9,  total: 33 },
+  { id: 3,  country: "Países Baixos",        flag: "https://flagcdn.com/w320/nl.png", gold: 10, silver: 7,  bronze: 3,  total: 20 },
+  { id: 4,  country: "Itália",               flag: "https://flagcdn.com/w320/it.png", gold: 10, silver: 6,  bronze: 14, total: 30 },
+  { id: 5,  country: "Alemanha",             flag: "https://flagcdn.com/w320/de.png", gold: 8,  silver: 10, bronze: 8,  total: 26 },
+  { id: 6,  country: "França",               flag: "https://flagcdn.com/w320/fr.png", gold: 8,  silver: 9,  bronze: 6,  total: 23 },
+  { id: 7,  country: "Suécia",               flag: "https://flagcdn.com/w320/se.png", gold: 8,  silver: 6,  bronze: 4,  total: 18 },
+  { id: 8,  country: "Suíça",                flag: "https://flagcdn.com/w320/ch.png", gold: 6,  silver: 9,  bronze: 8,  total: 23 },
+  { id: 9,  country: "Áustria",              flag: "https://flagcdn.com/w320/at.png", gold: 5,  silver: 8,  bronze: 5,  total: 18 },
+  { id: 10, country: "Japão",                flag: "https://flagcdn.com/w320/jp.png", gold: 5,  silver: 7,  bronze: 12, total: 24 },
+  { id: 11, country: "Canadá",               flag: "https://flagcdn.com/w320/ca.png", gold: 5,  silver: 7,  bronze: 9,  total: 21 },
+  { id: 12, country: "China",                flag: "https://flagcdn.com/w320/cn.png", gold: 5,  silver: 4,  bronze: 6,  total: 15 },
+  { id: 13, country: "Coreia do Sul",        flag: "https://flagcdn.com/w320/kr.png", gold: 3,  silver: 4,  bronze: 3,  total: 10 },
+  { id: 14, country: "Austrália",            flag: "https://flagcdn.com/w320/au.png", gold: 3,  silver: 2,  bronze: 1,  total: 6  },
+  { id: 15, country: "Grã-Bretanha",         flag: "https://flagcdn.com/w320/gb.png", gold: 3,  silver: 1,  bronze: 1,  total: 5  },
+  { id: 16, country: "República Tcheca",     flag: "https://flagcdn.com/w320/cz.png", gold: 2,  silver: 2,  bronze: 1,  total: 5  },
+  { id: 17, country: "Eslovênia",            flag: "https://flagcdn.com/w320/si.png", gold: 2,  silver: 1,  bronze: 1,  total: 4  },
+  { id: 18, country: "Espanha",              flag: "https://flagcdn.com/w320/es.png", gold: 1,  silver: 0,  bronze: 2,  total: 3  },
+  { id: 19, country: "Cazaquistão",          flag: "https://flagcdn.com/w320/kz.png", gold: 1,  silver: 0,  bronze: 0,  total: 1  },
+  { id: 20, country: "Brasil",               flag: "https://flagcdn.com/w320/br.png", gold: 1,  silver: 0,  bronze: 0,  total: 1  },
+  { id: 21, country: "Polônia",              flag: "https://flagcdn.com/w320/pl.png", gold: 0,  silver: 3,  bronze: 1,  total: 4  },
+  { id: 22, country: "Nova Zelândia",        flag: "https://flagcdn.com/w320/nz.png", gold: 0,  silver: 2,  bronze: 1,  total: 3  },
+  { id: 23, country: "Finlândia",            flag: "https://flagcdn.com/w320/fi.png", gold: 0,  silver: 1,  bronze: 5,  total: 6  },
+  { id: 24, country: "Letônia",              flag: "https://flagcdn.com/w320/lv.png", gold: 0,  silver: 1,  bronze: 1,  total: 2  },
+  { id: 25, country: "Dinamarca",            flag: "https://flagcdn.com/w320/dk.png", gold: 0,  silver: 1,  bronze: 0,  total: 1  },
+  { id: 26, country: "Estônia",              flag: "https://flagcdn.com/w320/ee.png", gold: 0,  silver: 1,  bronze: 0,  total: 1  },
+  { id: 27, country: "Geórgia",              flag: "https://flagcdn.com/w320/ge.png", gold: 0,  silver: 1,  bronze: 0,  total: 1  },
+  { id: 28, country: "AIN",                  flag: "https://flagcdn.com/w320/un.png", gold: 0,  silver: 1,  bronze: 0,  total: 1  },
+  { id: 29, country: "Bulgária",             flag: "https://flagcdn.com/w320/bg.png", gold: 0,  silver: 0,  bronze: 2,  total: 2  },
+  { id: 30, country: "Bélgica",              flag: "https://flagcdn.com/w320/be.png", gold: 0,  silver: 0,  bronze: 1,  total: 1  },
 ];

@@ -1,100 +1,177 @@
-.sectionContainer {
+.section {
   width: 100%;
-  padding: 0 16px;
+  padding: 32px 16px 0;
   box-sizing: border-box;
-  margin-top: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.titleBar {
+  display: block;
+  width: 4px;
+  height: 24px;
+  background: #3b6ef8;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text-color);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
 }
 
-.flag{
-  width: 32px;
-}
-
-.responsiveWrapper {
+.tableWrapper {
   width: 100%;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, rgba(255,255,255,0.08));
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  text-align: center;
-  background-color: #EDEFF2; 
+  background-color: var(--card-bg, #fff);
+  min-width: 480px;
 }
 
-:global([data-theme="dark"]) .table {
-  background-color: #26242C;
+[data-theme="dark"] .table {
+  background-color: #252525;
 }
 
-.table th {
-  padding: 12px 5px;
-  color: var(--text-color);
-  opacity: 0.7;
-  font-size: 0.8rem;
+.headRow {
+  border-bottom: 2px solid var(--border-color, rgba(0,0,0,0.08));
 }
 
-.medalIcon {
-  width: 22px;
-  height: 22px;
-  display: block;
-  margin: 0 auto;
-}
-
-.row {
-  border-bottom: 1px solid var(--border-color);
-  
-}
-
-.rankCell {
+.headRow th {
+  padding: 14px 8px;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--text-color);
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
-.countryCell {
+.thOrdem { text-align: center; width: 60px; }
+.thPais  { text-align: left; padding-left: 12px !important; }
+.thMedal { width: 52px; }
+.thTotal { width: 60px; }
+
+.medalDot {
+  font-size: 1rem;
+  line-height: 1;
+}
+.medalDot.gold   { color: #D4AF37; }
+.medalDot.silver { color: #9EA3A8; }
+.medalDot.bronze { color: #b87333; }
+
+.row {
+  border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.06));
+  transition: background 0.15s ease;
+}
+
+.row:hover {
+  background: rgba(59, 110, 248, 0.05);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.tdOrdem {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  padding: 12px 8px;
+  width: 60px;
+}
+
+.tdPais {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 4px;
+  gap: 10px;
+  padding: 12px;
   text-align: left;
+  place-self: anchor-center;
+  width: 20%;
+}
+
+.flag {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .countryName {
+  font-size: 0.88rem;
   font-weight: 600;
-  font-size: 0.85rem;
   color: var(--text-color);
+  white-space: nowrap;
 }
 
-.medalCell {
-  width: 42px;
-  font-weight: 700;
-  color: #000;
-}
-
-:global([data-theme="light"]) .gold,
-:global(:not([data-theme="dark"])) .gold { background-color: #E6D340; 
-  color: var(--text-color); }
-
-:global([data-theme="light"]) .silver,
-:global(:not([data-theme="dark"])) .silver { background-color: #E9F4FD; 
-  color: var(--text-color); }
-
-:global([data-theme="light"]) .bronze,
-:global(:not([data-theme="dark"])) .bronze { background-color: #E4B78F; 
-  color: var(--text-color); }
-
-:global([data-theme="dark"]) .gold { background-color: #D9C425; }
-:global([data-theme="dark"]) .silver { background-color: #98A2A2; }
-:global([data-theme="dark"]) .bronze { background-color: #CA8B53; }
-
-.total {
+.tdMedal {
+  text-align: center;
   font-weight: 800;
+  font-size: 0.9rem;
+  padding: 12px 4px;
+  width: 52px;
+}
+
+.tdMedal.gold   { color: #C9A824; }
+.tdMedal.silver { color: #8A9197; }
+.tdMedal.bronze { color: #A0622A; }
+
+[data-theme="dark"] .tdMedal.gold   { color: #FFD700; }
+[data-theme="dark"] .tdMedal.silver { color: #C0C7CF; }
+[data-theme="dark"] .tdMedal.bronze { color: #CD7F32; }
+
+
+.tdTotal {
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.9rem;
   color: var(--text-color);
+  padding: 12px 8px;
+  width: 60px;
+}
+
+@media (min-width: 600px) {
+  .section {
+    padding: 40px 24px 0;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .flag {
+    width: 32px;
+    height: 22px;
+  }
+
+  .countryName {
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 48px 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

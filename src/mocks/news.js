@@ -50,7 +50,7 @@ export const noticiasOlimpiadasMock = [
     tagColor: "#1E40AF",
     titulo: "Lady Gaga canta na abertura das Olimpíadas Paris 2024 | Gshow",
     tempo: "12 DIAS",
-    imagem: "src/assets/gaga.png",
+    imagem: "https://s2-gshow.glbimg.com/AIH3OwmicbnkZIEYQCScA1TenDw=/0x0:1471x981/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2024/x/h/uWziwYQAmT9jUeLX8D8g/2024-07-26t180128z-1722016886-dpaf240726x99x854574-rtrfipp-4-olympics-sport-oly-olympicgames-summergames-paris2024-paris24-paris202.jpg",
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ export const noticiasOlimpiadasMock = [
     titulo:
       "É Brasil!!! Rebeca Andrade conquista ouro em Salto Artístico e supera Simone Biles.",
     tempo: "1 DIA",
-    imagem: "src/assets/salto_fem.png",
+    imagem: "https://p2.trrsf.com/image/fget/cf/500/0/filters:quality(100)/images.terra.com/2024/08/05/2024-08-05t140835z_1046787905_up1ek8513a8q4_rtrmadp_3_olympics-2024-artisticgymnastics-socc3a3wt6ia.JPG",
   },
   {
     id: 3,
@@ -68,6 +68,6 @@ export const noticiasOlimpiadasMock = [
     titulo:
       "Rio Sena, após anos, volta a se tornar banhável na França e agora é possível modalidades aquáticas.",
     tempo: "20 DIAS",
-    imagem: "src/assets/identidade-visual-das-olimpiadas-de-paris-2024.png",
+    imagem: "https://paranaibamais.com.br/wp-content/uploads/2025/07/banhistas-rio-sena-paris.jpg",
   },
 ];

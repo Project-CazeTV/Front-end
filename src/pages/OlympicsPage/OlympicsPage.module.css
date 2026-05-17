@@ -1,98 +1,184 @@
 .pageContainer {
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
 }
 
-.liveSection {
-  padding: 20px;
-}
+.heroSection {
+    padding: 30px 20px 0;
+  }
 
-.liveHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-color);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.liveHeader img {
-  width: 16px;
-}
-
-.liveBanner {
+.heroBanner {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.liveBanner img {
-  width: 100%;
-  max-width: 900px;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
   border-radius: 16px;
-  transition: transform 0.3s ease;
-  border: 2px var(--text-color) solid;
 }
 
-.liveBanner img:hover {
+.heroBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.heroBanner:hover img {
   transform: scale(1.02);
 }
 
+
 .liveInfo {
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 16px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
-.sportsContainer {
-  margin-top: 20px;
-  max-width: 100vw;
-  padding: 20px;
+.filterWrapper {
+  margin-top: 32px;
+}
+
+.sportsSection {
+  padding: 32px 16px 0;
   box-sizing: border-box;
 }
 
-.sportsTop {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+.sportsHeader {
+  display: flex;
   align-items: center;
+  gap: 10px;
   margin-bottom: 16px;
 }
 
-.sportsIcon {
-  text-align: right;
-  color: var(--text-color);
-  font-size: 18px;
+.sportsTitleBar {
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: #3b6ef8;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
-.sportsItems {
+.sportsTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-color);
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sportsActiveLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.sportsIcon {
+  font-size: 1.2rem;
+}
+
+.sportsList {
   list-style: none;
   padding: 0;
   margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.08));
 }
 
-.sportsItems li:last-child {
+[data-theme="dark"] .sportsList {
+  border-color: rgba(255,255,255,0.07);
+}
+
+.sportItem {
+  position: relative;
+  text-align: center;
+  padding: 16px 12px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.06));
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  background: var(--card-bg, #fff);
+}
+
+[data-theme="dark"] .sportItem {
+  background: #1e1e2e;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.sportItem:last-child {
   border-bottom: none;
 }
 
-.sportsItems li {
-  text-align: center;
-  padding: 14px 0;
-  color: var(--text-color);
-  border-bottom: 1px solid #2a2a2a;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.sportsItems li:hover {
-  color: var(--text-color);
-  background: rgba(255, 255, 255, 0.04);
+.sportItem:hover {
+  background: rgba(59, 110, 248, 0.06);
 }
 
 .activeItem {
-  color: var(--text-color);
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+  color: #3b6ef8 !important;
+  background: rgba(59, 110, 248, 0.07) !important;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #3b6ef8;
+  border-radius: 0 2px 2px 0;
+}
+
+@media (min-width: 600px) {
+  .heroSection {
+    padding: 0 24px;
+  }
+
+  .liveBadge {
+    top: 20px;
+    left: 20px;
+    font-size: 0.78rem;
+  }
+
+  .sportsSection {
+    padding: 32px 24px 0;
+  }
+
+  .sportsList {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 68px 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sportsSection {
+    padding: 40px 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

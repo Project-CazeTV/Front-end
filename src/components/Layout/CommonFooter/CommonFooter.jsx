@@ -1,36 +1,10 @@
 import { useState, useEffect } from 'react';
 import styles from './CommonFooter.module.css';
-import logoWhite from '../../../assets/logo-apenas-nome-branco.png';
-import logoBlack from '../../../assets/logo-apenas-nome.png';
-import youtubeIconWhite from '../../../assets/logo-youtube-white.png';
-import youtubeIconBlack from '../../../assets/logo-youtube.png';
-import instagramIconWhite from '../../../assets/logo-instagram-white.png';
-import instagramIconBlack from '../../../assets/logo-instagram.png';
+import { useThemeLogosFooter } from '../../../hooks/ThemeLogos/useThemeLogos.js';
 
 export default function CommonFooter() {
-  const [currentLogo, setCurrentLogo] = useState(logoBlack);
-  const [currentYoutube, setCurrentYoutube] = useState(youtubeIconBlack);
-  const [currentInstagram, setCurrentInstagram] = useState(instagramIconBlack);
 
-  useEffect(() => {
-    const updateAssets = () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      setCurrentLogo(isDark ? logoWhite : logoBlack);
-      setCurrentYoutube(isDark ? youtubeIconWhite : youtubeIconBlack);
-      setCurrentInstagram(isDark ? instagramIconWhite : instagramIconBlack);
-    };
-
-    updateAssets();
-
-    const observer = new MutationObserver(updateAssets);
-
-    observer.observe(document.body, { 
-      attributes: true, 
-      attributeFilter: ['data-theme'] 
-    });
-    
-    return () => observer.disconnect();
-  }, []);
+  const { currentLogo, currentYoutube, currentInstagram } = useThemeLogosFooter();
 
   return (
     <footer className={styles.footer}>
@@ -54,7 +28,7 @@ export default function CommonFooter() {
             <div className={styles.column}>
               <h3 className={styles.title}>SOBRE NÓS</h3>
               <ul>
-                <li><a href="#">História</a></li>
+                <li><a href="/historia/cazetv">História</a></li>
                 <li><a href="#">Carreiras</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Central de Ajuda</a></li>
@@ -69,18 +43,18 @@ export default function CommonFooter() {
               </ul>
             </div>
 
-            
-          <div className={styles.socialColumn}>
-            <div className={styles.socialIcons}>
-              <a href="https://www.youtube.com/@CazeTV" target="_blank" aria-label="YouTube">
-                <img src={currentYoutube} alt="YouTube" className={styles.socialImg} />
-              </a>
-              <a href="https://www.instagram.com/cazetv/" target="_blank" aria-label="Instagram">
-                <img src={currentInstagram} alt="Instagram" className={styles.socialImg} />
-              </a>
-            </div>
 
-          </div>
+            <div className={styles.socialColumn}>
+              <div className={styles.socialIcons}>
+                <a href="https://www.youtube.com/@CazeTV" target="_blank" aria-label="YouTube">
+                  <img src={currentYoutube} alt="YouTube" className={styles.socialImg} />
+                </a>
+                <a href="https://www.instagram.com/cazetv/" target="_blank" aria-label="Instagram">
+                  <img src={currentInstagram} alt="Instagram" className={styles.socialImg} />
+                </a>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>

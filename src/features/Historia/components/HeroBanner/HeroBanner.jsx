@@ -1,5 +1,5 @@
 import styles from './HeroBanner.module.css'
-import ImagemHero from '../../../../assets/caze-tv-historia.jpg' 
+import ImagemHero from '../../../../assets/historia/historia2.png' 
 import CommonFooter from '../../../../components/Layout/CommonFooter/CommonFooter';
 
 export default function HeroBanner() {

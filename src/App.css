@@ -4,19 +4,4 @@
   font-family: "Sora", sans-serif;
   overflow-x: hidden;
   scroll-behavior: none;
-  scrollbar-gutter: stable;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ffcc00;
-  border-radius: 999px;
-  border: 2px solid var(--bg-color);
 }

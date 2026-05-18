@@ -1,10 +1,10 @@
 .homeKitSection {
   width: 90%;
-  margin: auto;
-  padding: 22px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-self: center;
+  position: relative;
+  margin: 10px 0;
   gap: 32px;
 }
 

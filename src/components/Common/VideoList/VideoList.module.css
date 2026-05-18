@@ -1,7 +1,7 @@
 .section {
     padding: 25px 0;
     width: 90%;
-    justify-self: center;
+    margin: 0 auto;
 }
 
 .header {

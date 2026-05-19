@@ -88,7 +88,24 @@ export const brasileirao = {
     { data: "10/05/2026", hora: "18h30", timeA: "Mirassol",       timeB: "Chapecoense",  estadio: "Maião",                     rodada: 15 },
     { data: "10/05/2026", hora: "19h30", timeA: "Grêmio",         timeB: "Flamengo",     estadio: "Arena do Grêmio",           rodada: 15 },
     { data: "10/05/2026", hora: "20h30", timeA: "Vasco",          timeB: "Athletico-PR", estadio: "São Januário",              rodada: 15 },
-  ]
+  ],
+  artilharia: [
+  { nome: "Pedro",         gols: 9, clube: "Flamengo",        },
+  { nome: "John Kennedy",  gols: 8, clube: "Fluminense",      },
+  { nome: "Kevin Viveros", gols: 8, clube: "Athletico-PR",    },
+  { nome: "Luciano Juba",  gols: 7, clube: "Bahia",           },
+  { nome: "Arthur",        gols: 7, clube: "Botafogo",        },
+  { nome: "Danilo Santos", gols: 7, clube: "Botafogo",        },
+  { nome: "Breno",         gols: 7, clube: "Coritiba",        },
+  { nome: "Vinicius",      gols: 7, clube: "Grêmio",          },
+  { nome: "Calleri",       gols: 6, clube: "São Paulo",       },
+  { nome: "Luciano",       gols: 5, clube: "São Paulo",       },
+  { nome: "Lopez",         gols: 5, clube: "Palmeiras",       },
+  { nome: "Christian",     gols: 5, clube: "Cruzeiro",        },
+  { nome: "Mendoza",       gols: 5, clube: "Athletico-PR",    },
+  { nome: "Edenilson",     gols: 4, clube: "Botafogo",        },
+  { nome: "Pedro Rocha",   gols: 4, clube: "Coritiba",        },
+]
 };
 
 export const copaDoBrasil = {

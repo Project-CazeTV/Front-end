@@ -10,28 +10,8 @@
 
 @media (min-width: 600px) {
     .header {
-        width: 56%;
-        justify-self: center;
-    }
-}
-
-@media (min-width: 1000px) {
-    .header {
         width: 70%;
         justify-self: center;
     }
 }
 
-@media (min-width: 1200px) {
-    .header {
-        width: 56%;
-        justify-self: center;
-    }
-}
-
-@media (min-width: 1600px) {
-    .header {
-        width: 55%;
-        justify-self: center;
-    }
-}

@@ -1,3 +1,19 @@
+import pedro from "../assets/artilharias/brasileirao/pedro.png";
+import john from "../assets/artilharias/brasileirao/jonh.png";
+import kevin from "../assets/artilharias/brasileirao/kevin.png";
+import juba from "../assets/artilharias/brasileirao/juba.png";
+import arthur from "../assets/artilharias/brasileirao/arthur.png";
+import danilo from "../assets/artilharias/brasileirao/danilo.png";
+import breno from "../assets/artilharias/brasileirao/breno.png";
+import vini from "../assets/artilharias/brasileirao/vini.png";
+import calleri from "../assets/artilharias/brasileirao/calleri.png";
+import luciano from "../assets/artilharias/brasileirao/luciano.png";
+import lopez from "../assets/artilharias/brasileirao/lopez.png";
+import christian from "../assets/artilharias/brasileirao/christian.png";
+import mendonza from "../assets/artilharias/brasileirao/mendonza.png";
+import edenilson from "../assets/artilharias/brasileirao/edenilson.png";
+import pedroRocha from "../assets/artilharias/brasileirao/pedrorocha.png";
+
 // ─────────────────────────────────────────────
 // CAMPEONATOS.JS
 // Dados atualizados até 09/05/2026
@@ -90,21 +106,21 @@ export const brasileirao = {
     { data: "10/05/2026", hora: "20h30", timeA: "Vasco",          timeB: "Athletico-PR", estadio: "São Januário",              rodada: 15 },
   ],
   artilharia: [
-  { nome: "Pedro",         gols: 9, clube: "Flamengo",     imagem: "https://s2-ge.glbimg.com/PZSI3bS8HNZrEk_sTb3KmScg3IQ=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/y/s/EtLVJBQKCLKkovgELPkA/thumbnail-dur-3636.jpg" },
-  { nome: "John Kennedy",  gols: 8, clube: "Fluminense",   imagem: "https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/01/55061360725_940ea82803_o-scaled-aspect-ratio-512-320.jpg" },
-  { nome: "Kevin Viveros", gols: 8, clube: "Athletico-PR", imagem: "https://lncimg.lance.com.br/uploads/2025/06/Kevin-Viveros-Atletico-Nacional-aspect-ratio-512-320.jpg" },
-  { nome: "Luciano Juba",  gols: 7, clube: "Bahia",        imagem: "https://media.antenadosnofutebol.com.br/wp-content/uploads/sites/31/2026/05/08135526/AGIF26040610023192-e1778259349138-714x535.webp" },
-  { nome: "Arthur",        gols: 7, clube: "Botafogo",     imagem: "https://mancheterio.com.br/wp-content/uploads/2025/09/2025-BOTAFOGO-ATACANTE-ARTHUR-CABRAL.jpg" },
-  { nome: "Danilo Santos", gols: 7, clube: "Botafogo",     imagem: "https://i0.wp.com/rtiesporte.com.br/wp-content/uploads/2026/04/2026-COPA-LIBERTADORES-DA-AMERICA-BOTAFOGO-VOLANTE-DANILO-SANTOS.webp" },
-  { nome: "Breno",         gols: 7, clube: "Coritiba",     imagem: "https://s2-ge.glbimg.com/5kpXTiqqg2xd2EWlK0XJt9kg_Jk=/2048x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/8/J/WAi2cvQZeIXcE7yC5r5g/gol-breno-lopes-jp-pacheco.jpg.jpeg" },
-  { nome: "Vinicius",      gols: 7, clube: "Grêmio",       imagem: "https://gremio.blob.core.windows.net/imgs-site/lg-noticias-com-3-gols-de-carlos-vinicius--gra-mio-bate-o-juventude-na-arena-45226.jpg" },
-  { nome: "Calleri",       gols: 6, clube: "São Paulo",    imagem: "https://www.arqtricolor.com/wp-content/uploads/2025/12/Screenshot_20251208_182110_Instagram-860x957.jpg" },
-  { nome: "Luciano",       gols: 5, clube: "São Paulo",    imagem: "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0812%2Fr1530996_1296x729_16%2D9.jpg" },
-  { nome: "Lopez",         gols: 5, clube: "Palmeiras",    imagem: "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/flaco_palmeiras-e1761306192276.jpg?w=1200&h=675&crop=1" },
-  { nome: "Christian",     gols: 5, clube: "Cruzeiro",     imagem: "https://otempo.scene7.com/is/image/sempreeditora/cruzeiro-christian-cruzeiro-numeros-1775839290?qlt=90&ts=1775839383053&dpr=off" },
-  { nome: "Mendoza",       gols: 5, clube: "Athletico-PR", imagem: "https://tntsports.cl/__export/1751587954744/sites/esporteinterativo/img/2025/07/03/apresentacao-mendoza-2025_07_02-foto-jose-tramontin-72811.jpg_423682103.jpg" },
-  { nome: "Edenilson",     gols: 4, clube: "Botafogo",     imagem: "https://static.gazetaesportiva.com/uploads/2026/03/55147077582_20f1388457_o.webp" },
-  { nome: "Pedro Rocha",   gols: 4, clube: "Coritiba",     imagem: "https://cdn.bandnewsfmcuritiba.com/band/wp-content/uploads/2025/12/coxa-pedro.png" },
+  { nome: "Pedro", gols: 9, clube: "Flamengo", imagem: pedro },
+  { nome: "John Kennedy", gols: 8, clube: "Fluminense", imagem: john },
+  { nome: "Kevin Viveros", gols: 8, clube: "Athletico-PR", imagem: kevin },
+  { nome: "Luciano Juba", gols: 7, clube: "Bahia", imagem: juba },
+  { nome: "Arthur", gols: 7, clube: "Botafogo", imagem: arthur },
+  { nome: "Danilo Santos", gols: 7, clube: "Botafogo", imagem: danilo },
+  { nome: "Breno", gols: 7, clube: "Coritiba", imagem: breno },
+  { nome: "Vinicius", gols: 7, clube: "Grêmio", imagem: vini },
+  { nome: "Calleri", gols: 6, clube: "São Paulo", imagem: calleri },
+  { nome: "Luciano", gols: 5, clube: "São Paulo", imagem: luciano },
+  { nome: "Lopez", gols: 5, clube: "Palmeiras", imagem: lopez },
+  { nome: "Christian", gols: 5, clube: "Cruzeiro", imagem: christian },
+  { nome: "Mendoza", gols: 5, clube: "Athletico-PR", imagem: mendonza },
+  { nome: "Edenilson", gols: 4, clube: "Botafogo", imagem: edenilson },
+  { nome: "Pedro Rocha", gols: 4, clube: "Coritiba", imagem: pedroRocha },
 ]
 };
 

@@ -58,3 +58,11 @@
 .playerPosition {
   display: none;
 }
+
+@media (min-width: 600px) {
+  .playerOverlay {
+    width: 70%;
+    padding: 0 70px;
+  }
+
+}

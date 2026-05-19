@@ -1,0 +1,85 @@
+.h2Cart {
+    font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.h3Cart {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.h4Cart {
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.cardProduto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    border-bottom: 1px solid var(--bg-buttom);
+}
+
+.divInfoProduto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+}
+
+.divInfoProduto > .divInfoProdutoTexto > h2 {
+    margin-top: 7px;
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+.imgProduto {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.divBotoesQuantidade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnQuantidadeMais {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #0047d6;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btnQuantidadeMenos {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--bg-buttom);
+    color: #0047d6;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.divTotalProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.btnRemover {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--bg-buttom);
+    color: #0047d6;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}

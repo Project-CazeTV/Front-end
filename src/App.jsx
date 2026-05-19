@@ -7,6 +7,7 @@ import WorldCupPage from './pages/WorldCupPage/WorldCupPage'
 import OlympicsPage from './pages/OlympicsPage/OlympicsPage'
 import HistoriaPage from './pages/HistoriaPage/HistoriaPage'
 import ShopPage from './pages/ShopPage/ShopPage'
+import CartPage from './pages/CartPage/CartPage'
 import ChampionshipPage from './pages/ChampionshipPage/ChampionshipPage'
 import {brasileirao, libertadores, copaDoBrasil, paulista, mineiro, gauchao, carioca, sulAmericana} from './mocks/campeonatos'
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/olympics" element={<OlympicsPage />}/>
         <Route path="/historia/cazetv" element={<HistoriaPage />}/>
         <Route path="/shop" element={<ShopPage />}/>
+        <Route path="/cart" element={<CartPage />}/>
         {/* CAMPEONATOS */}
         <Route path="/brasileirao" element={<ChampionshipPage campeonato={brasileirao}/>}/>
         <Route path="/paulistao" element={<ChampionshipPage campeonato={paulista}/>}/>

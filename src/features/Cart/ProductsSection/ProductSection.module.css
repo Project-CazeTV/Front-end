@@ -1,0 +1,27 @@
+.h2Ex6 {
+    font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.h3Ex6 {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.h4Ex6 {
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.cabecalhoCarrinho {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--bg-buttom);
+}
+
+.carrinho {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 40px;
+}

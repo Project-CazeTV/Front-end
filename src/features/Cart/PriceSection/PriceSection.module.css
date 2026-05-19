@@ -1,0 +1,31 @@
+.h2Cart {
+    font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.h4Cart {
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.resumo {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.conteudoResumo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.btnFinalizar {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #0047d6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}

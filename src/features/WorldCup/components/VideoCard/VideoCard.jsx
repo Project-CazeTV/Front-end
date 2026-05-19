@@ -9,12 +9,12 @@ export default function VideoCard({ src, title, subtitle, flex=true }) {
                 {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}
             </section>
             <video
-  className={styles.video}
-  src={src}
-  autoPlay
-  loop
-  playsInline
-/>
+                className={styles.video}
+                src={src}
+                autoPlay
+                loop
+                controls
+                />
         </div>
     );
 }

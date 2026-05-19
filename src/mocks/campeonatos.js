@@ -13,6 +13,21 @@ import christian from "../assets/artilharias/brasileirao/christian.png";
 import mendonza from "../assets/artilharias/brasileirao/mendonza.png";
 import edenilson from "../assets/artilharias/brasileirao/edenilson.png";
 import pedroRocha from "../assets/artilharias/brasileirao/pedrorocha.png";
+import Carlos from "../assets/artilharias/libertadores/Carlos.png";
+import Arce from "../assets/artilharias/libertadores/Arce.png";
+import Barrandeguy from "../assets/artilharias/libertadores/Barrandeguy.png";
+import Fydriszewski from "../assets/artilharias/libertadores/Fydriszewski.png";
+import Tiago from "../assets/artilharias/libertadores/Tiago.png";
+import Melgarejo from "../assets/artilharias/libertadores/Melgarejo.png";
+import Gustavo from "../assets/artilharias/libertadores/Gustavo.png";
+import Chancellor from "../assets/artilharias/libertadores/Chancellor.png";
+import Fajardo from "../assets/artilharias/libertadores/Fajardo.png";
+import Yotun from "../assets/artilharias/libertadores/Yotún.png";
+import Tortolero from "../assets/artilharias/libertadores/Tortolero.png";
+import Hayen from "../assets/artilharias/libertadores/Hayen.png";
+import Francisco from "../assets/artilharias/libertadores/Francisco.png";
+import Willian from "../assets/artilharias/libertadores/Willian.png";
+import Villalba from "../assets/artilharias/libertadores/Villalba.png";
 
 // ─────────────────────────────────────────────
 // CAMPEONATOS.JS
@@ -452,6 +467,23 @@ proximosJogos: [
   // ── Grupo H — 6ª rodada ──
   { data: "27/05/2026", hora: "19h00", timeA: "Independiente del Valle", timeB: "Rosario Central", estadio: "Banco Guayaquil", fase: "Fase de grupos • 6ª rodada" },
   { data: "27/05/2026", hora: "19h00", timeA: "Libertad", timeB: "Universidad Central", estadio: "Tigo La Huerta", fase: "Fase de grupos • 6ª rodada" },
+],
+artilharia: [
+  { nome: "Carlos González", gols: 5, clube: "Independiente del Valle", imagem: Carlos },
+  { nome: "Arce", gols: 5, clube: "Independiente Rivadavia", imagem: Arce },
+  { nome: "Barrandeguy", gols: 3, clube: "Juventud", imagem: Barrandeguy },
+  { nome: "Fydriszewski", gols: 3, clube: "Independiente Medellín", imagem: Fydriszewski },
+  { nome: "Tiago Palacios", gols: 3, clube: "Estudiantes", imagem: Tiago },
+  { nome: "Melgarejo", gols: 3, clube: "Libertad", imagem: Melgarejo },
+  { nome: "Gustavo Henrique", gols: 3, clube: "Corinthians", imagem: Gustavo },
+  { nome: "Chancellor", gols: 2, clube: "Universidad de Quito", imagem: Chancellor },
+  { nome: "Fajardo", gols: 2, clube: "Universidad de Quito", imagem: Fajardo },
+  { nome: "Yotún", gols: 2, clube: "Sporting Cristal", imagem: Yotun },
+  { nome: "Tortolero", gols: 2, clube: "Carabobo", imagem: Tortolero },
+  { nome: "Hayen Palacios", gols: 2, clube: "Independiente Medellín", imagem: Hayen },
+  { nome: "Francisco González", gols: 2, clube: "O'Higgins", imagem: Francisco },
+  { nome: "Willian José", gols: 2, clube: "Bahia", imagem: Willian },
+  { nome: "Villalba", gols: 2, clube: "Barcelona de Guayaquil", imagem: Villalba },
 ]
 };
 

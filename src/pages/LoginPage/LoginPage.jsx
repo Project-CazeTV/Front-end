@@ -8,10 +8,12 @@ import { useNavigate } from 'react-router-dom';
 import { useThemeLogos } from '../../hooks/ThemeLogos/useThemeLogos.js';
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../../services/firebase/firebaseConfig";
+import { BiErrorCircle } from "react-icons/bi";
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [error, setError] = useState('');
   const { currentLogo, currentLogoFifa } = useThemeLogos({logoLight: LogoCazeBlackText,logoDark: LogoCazeWhiteText,fifaLight: LogoFIFALight,fifaDark: LogoFIFA});
   const navigate = useNavigate();
 
@@ -25,11 +27,12 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
       await signInWithEmailAndPassword(auth, email, senha);
       navigate('/');
     } catch (error) {
-      alert("Email ou senha incorretos.");
+      setError('Insira dados válidos.')
     }
   };
 
@@ -61,14 +64,13 @@ export default function LoginPage() {
           Seja bem-vindo a <strong>Cazé TV</strong>. Entre com seus dados abaixo para continuar.
         </p>
 
-        <form onSubmit={handleLogin} className={styles.form}>
+        <form onSubmit={handleLogin} className={styles.form} noValidate>
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={styles.input}
-            required
           />
           <input
             type="password"
@@ -76,8 +78,9 @@ export default function LoginPage() {
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             className={styles.input}
-            required
           />
+
+          {error && <p className={styles.errorText}><BiErrorCircle /> {error}</p>}
 
           <button type="submit" className={styles.submitBtn} >
             <span className="material-symbols-outlined">arrow_forward</span>

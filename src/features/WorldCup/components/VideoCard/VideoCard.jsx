@@ -8,8 +8,13 @@ export default function VideoCard({ src, title, subtitle, flex=true }) {
                 <div className={styles.line} />
                 {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}
             </section>
-            <video className={styles.video} src={src} autoPlay loop controls />
-            <div className={styles.bar}></div>
+            <video
+  className={styles.video}
+  src={src}
+  autoPlay
+  loop
+  playsInline
+/>
         </div>
     );
 }

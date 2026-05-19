@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import styles from "./FeaturedPlayers.module.css";
 import PlayerCard from "./PlayerCard";
+import stylesCardPlayer from "./FeaturedPlayers.module.css";
 
 export default function FeaturedPlayers({ players }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,7 +37,7 @@ export default function FeaturedPlayers({ players }) {
         </button>
 
         <div className={styles.carouselCard} {...handlers}>
-          <PlayerCard player={players[currentIndex]} />
+          <PlayerCard styles={stylesCardPlayer} player={players[currentIndex]} />
         </div>
 
         <button
@@ -50,7 +51,7 @@ export default function FeaturedPlayers({ players }) {
 
       <div className={`${styles.playersGrid} ${styles.desktopOnly}`}>
         {players.map((player, idx) => (
-          <PlayerCard key={idx} player={player} />
+          <PlayerCard key={idx} styles={stylesCardPlayer} player={player} />
         ))}
       </div>
     </section>

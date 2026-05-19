@@ -16,7 +16,10 @@ import { useSwipeable } from 'react-swipeable';
 import { groups } from '../../mocks/groups';
 import { octaves, quarters, semis, final } from '../../mocks/roundsWorldCup';
 import { filtros } from '../../mocks/filters/worldCupFilters.js';
-
+import VideoCard from '../../features/WorldCup/components/VideoCard/VideoCard.jsx';
+import videoConvocacao from '../../assets/copa/convocacao.mp4';
+import { convocadosBrasil } from '../../mocks/players.js';
+import PlayersNational from '../../features/WorldCup/components/NationalSoccerTeam/PlayersNational.jsx';
 export default function WorldCupPage() {
   const location = useLocation();
   const [activeFilter, setActiveFilter] = useState(location.state?.filtroAtivo ?? "Grupos");
@@ -169,6 +172,15 @@ export default function WorldCupPage() {
       {activeFilter === "Jogadores de destaque" && (
         <FeaturedPlayers players={players} />
       )}
+
+      <div className={styles.convocadosSection}>
+      <VideoCard src={videoConvocacao} 
+      title="Convocação" 
+      subtitle="Veja como foi a convocação dos jogadores para a Copa do Mundo 2026."
+      flex={false}
+       />
+       <PlayersNational players={convocadosBrasil} title="Convocados" subtitle="Copa do Mundo 2026" />
+       </div>
 
       <NewsList
         title="O que ta rolando por aí?"

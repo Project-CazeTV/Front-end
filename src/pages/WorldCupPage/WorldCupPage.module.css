@@ -197,12 +197,20 @@
   letter-spacing: 0.5px;
 }
 
-
 .noInfo {
   margin: auto;
 }
 
-@media (min-width: 1024px) {
+.convocadosSection {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+@media (min-width: 900px) {
   .mainContent {
     margin-top: 0;
   }
@@ -250,4 +258,15 @@
     padding: 24px 40px 40px;
     justify-content: center;
   }
+  .convocadosSection {
+    display: grid;
+    grid-template-columns: 520px 460px;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
 }

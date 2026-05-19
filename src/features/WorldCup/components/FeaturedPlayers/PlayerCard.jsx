@@ -1,6 +1,4 @@
-import styles from "./FeaturedPlayers.module.css";
-
-export default function PlayerCard({ player }) {
+export default function PlayerCard({ player, styles }) {
   return (
     <div className={styles.playerCard}>
       <img

@@ -1,4 +1,4 @@
-export default function PlayerCard({ player, styles, showGoals = false }) {
+export default function PlayerCard({ player, styles, logoTeam, showGoals = false }) {
   return (
     <div className={styles.playerCard}>
       <img
@@ -9,9 +9,9 @@ export default function PlayerCard({ player, styles, showGoals = false }) {
       <div className={styles.playerOverlay}>
         <span className={styles.playerPosition}>{player.posicao}</span>
         <strong className={styles.playerName}>{player.nome}</strong>
-        <span className={styles.playerCountry}>{player.pais} · {player.clube}</span>
+        <span className={styles.playerCountry}>{player.pais} {logoTeam ? <img className={styles.teamLogo} src={logoTeam} alt={player.clube} /> : <span> · {player.clube}</span>}</span>
         {showGoals && (
-          <span className={styles.playerGoals}>{player.gols} gols</span>
+          <span className={styles.playerGoals}>{player.gols}</span>
         )}
       </div>
     </div>

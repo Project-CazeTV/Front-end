@@ -1,0 +1,60 @@
+.playerCard {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  min-height: 100px;
+}
+
+.playerPhoto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.playerOverlay {
+  display: grid;
+  grid-template-columns: 1fr 40px 60px;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+.playerName {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.teamLogo {
+  width: 40px;
+  justify-self: center;
+}
+
+.playerGoals {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  text-align: center;
+  justify-self: center;
+}
+
+.playerPosition,
+.playerCountry {
+  display: none;
+}
+
+.playerCountry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerCountry > span {
+  display: none;
+}
+
+.playerPosition {
+  display: none;
+}

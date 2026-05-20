@@ -1,8 +1,8 @@
 import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
 import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
-import ProductSection from "../../features/Cart/ProductsSection/ProductSection";
-import PriceSection from "../../features/Cart/PriceSection/PriceSection";
+import ProductSection from "../../features/Cart/Components/ProductsSection/ProductSection";
+import PriceSection from "../../features/Cart//Components/PriceSection/PriceSection";
 
 import styles from "./CartPage.module.css"
 

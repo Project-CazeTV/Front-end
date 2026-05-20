@@ -92,14 +92,18 @@
 }
 
 .subItemsWrapper {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
+  transition: grid-template-rows 0.22s ease-out, opacity 0.18s ease-out;
+}
+
+.subItemsWrapper > ul {
   overflow: hidden;
-  transition: max-height 0.22s ease-out, opacity 0.18s ease-out;
 }
 
 .isExpanded {
-  max-height: 260px;
+  grid-template-rows: 1fr;
   opacity: 1;
 }
 

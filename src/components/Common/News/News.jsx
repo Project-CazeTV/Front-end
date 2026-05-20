@@ -1,8 +1,18 @@
 import styles from './News.module.css';
 import { TbClockHour9 } from "react-icons/tb";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function News({id, imagem, titulo, categoria, tempo, descricao, tagColor, onVerMais}) {
+export default function News({id, imagem, titulo, categoria, corpo, tempo, descricao, tagColor}) {
+
+    const navigate = useNavigate();
+
+    const avancar = () => {
+        navigate('/news', { 
+        state: { titulo, imagem, descricao, tempo, corpo, categoria, tagColor }
+        });
+    }
 
     return (
         <article key={id} className={styles.newsCard}>
@@ -24,7 +34,7 @@ export default function News({id, imagem, titulo, categoria, tempo, descricao, t
                 <div className={styles.footer}>
                     <button
                         className={styles.verMais}
-                        onClick={() => onVerMais?.("Ver mais: " + titulo)}
+                        onClick={() => avancar()}
                     >
                         Ver mais <FaRegArrowAltCircleRight size={16} />
                     </button>

@@ -5,6 +5,7 @@ export default function NewsList({ noticias = [], flex = true, title, subtitle }
   if (!noticias.length) {
     return <p className={styles.empty}>Nenhuma notícia disponível.</p>;
   }
+  
 
   return (
     <section className={styles.listContainer}>
@@ -22,10 +23,10 @@ export default function NewsList({ noticias = [], flex = true, title, subtitle }
           descricao={noticia.descricao}
           imagem={noticia.imagem}
           tempo={noticia.tempo}
+          corpo={noticia.corpo}
           categoria={noticia.categoria}
-          tagColor={noticia.tagColor}
-          onVerMais={() => { }}
-        />
+          tagColor={noticia.tagColor}        
+          />
       ))}
     </section>
   );

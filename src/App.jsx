@@ -10,6 +10,7 @@ import ShopPage from './pages/ShopPage/ShopPage'
 import CartPage from './pages/CartPage/CartPage'
 import ChampionshipPage from './pages/ChampionshipPage/ChampionshipPage'
 import {brasileirao, libertadores, copaDoBrasil, paulista, mineiro, gauchao, carioca, sulAmericana} from './mocks/campeonatos'
+import NewsPage from './pages/NewPage/NewsPage'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/libertadores" element={<ChampionshipPage campeonato={libertadores} />} />
         <Route path="/copa-do-brasil" element={<ChampionshipPage campeonato={copaDoBrasil}/>}/>
         <Route path="/sudamericana" element={<ChampionshipPage campeonato={sulAmericana}/>}/>
+        <Route path="/news" element={<NewsPage />}/>
       </Routes>
     </Router>
   )

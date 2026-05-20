@@ -7,6 +7,7 @@ import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
 import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 import Artilharia from "../../features/Championships/components/Artilharia/Artilharia";
+import VideoList from "../../components/Common/VideoList/VideoList";
 
 export default function ChampionshipPage({ campeonato }) {
 
@@ -96,6 +97,11 @@ export default function ChampionshipPage({ campeonato }) {
                     <section className={styles.secao}>
                         <SectionTitle title="Artilharia" color={cor} number={"00"} inline />
                         <Artilharia artilheiros={campeonato.artilharia} />
+                    </section>
+                )}
+                {campeonato.momentos && (
+                    <section className={styles.secao}>
+                        <VideoList videos={campeonato.momentos} title="Melhores momentos" />
                     </section>
                 )}
             </div>

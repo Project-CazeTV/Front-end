@@ -543,7 +543,24 @@ export const paulista = {
     { data: "04/03/2026", hora: "20h00", timeA: "Palmeiras", timeB: "Novorizontino", placarA: 1, placarB: 0, estadio: "Arena Barueri", fase: "Final - ida" },
     { data: "08/03/2026", hora: "20h30", timeA: "Novorizontino", timeB: "Palmeiras", placarA: 1, placarB: 2, estadio: "Jorge Ismael de Biasi", fase: "Final - volta" },
   ],
-  proximosJogos: []
+  proximosJogos: [],
+  momentos: [
+    {
+        id: "Py-VijRbNPg",
+        title: "Portuguesa x Palmeiras - Melhores Momentos - Paulista 2026",
+        category: "Paulistão"
+    },
+    {
+        id: "HNJYf5yfIMA",
+        title: "Santos x Novorizontino - Melhores Momentos - Paulista 2026",
+        category: "Paulistão"
+    },
+    {
+        id: "lZbSK0DVIDk",
+        title: "São Paulo x Palmeiras - Melhores Momentos - Paulista 2026",
+        category: "Paulistão"
+    }
+]
 };
 
 export const carioca = {
@@ -579,7 +596,24 @@ export const carioca = {
     { data: "08/03/2026", hora: "18h00", timeA: "Fluminense", timeB: "Flamengo", placarA: 0, placarB: 0, estadio: "Maracanã", fase: "Final - ida (Flamengo venceu nos pênaltis 4x5)" },
     { data: "15/03/2026", hora: "16h00", timeA: "Flamengo", timeB: "Fluminense", placarA: 3, placarB: 1, estadio: "Maracanã", fase: "Final - volta" },
   ],
-  proximosJogos: []
+  proximosJogos: [],
+  momentos: [
+    {
+        id: "bdWdPX5LLrw",
+        title: "Flamengo x Fluminense - Melhores Momentos - Carioca 2026",
+        category: "Carioca"
+    },
+    {
+        id: "wTQFlJri9Qw",
+        title: "Vasco x Botafogo - Melhores Momentos - Carioca 2026",
+        category: "Carioca"
+    },
+    {
+        id: "XM663YVgw1s",
+        title: "Bangu x Flamengo - Melhores Momentos - Carioca 2026",
+        category: "Carioca"
+    }
+]
 };
 
 export const mineiro = {
@@ -608,7 +642,24 @@ export const mineiro = {
     // ── Final ──
     { data: "08/03/2026", hora: "18h00", timeA: "Cruzeiro", timeB: "Atlético-MG", placarA: 1, placarB: 0, estadio: "Mineirão", fase: "Final" },
   ],
-  proximosJogos: []
+  proximosJogos: [],
+  momentos: [
+    {
+        id: "JPSLqpvMCOY",
+        title: "Cruzeiro x Atlético-MG - Melhores Momentos - Mineiro 2026",
+        category: "Mineiro"
+    },
+    {
+        id: "zK9pwkdBF2w",
+        title: "Atlético-MG x América-MG - Melhores Momentos - Mineiro 2026",
+        category: "Mineiro"
+    },
+    {
+        id: "MAkjnzJWrU0",
+        title: "Atlético-MG x Pouso Alegre - Melhores Momentos - Mineiro 2026",
+        category: "Mineiro"
+    }
+]
 };
 
 export const gauchao = {
@@ -644,5 +695,22 @@ export const gauchao = {
     { data: "01/03/2026", hora: "18h00", timeA: "Grêmio", timeB: "Internacional", placarA: 3, placarB: 0, estadio: "Arena do Grêmio", fase: "Final - ida" },
     { data: "08/03/2026", hora: "18h00", timeA: "Internacional", timeB: "Grêmio", placarA: 1, placarB: 1, estadio: "Beira-Rio", fase: "Final - volta" },
   ],
-  proximosJogos: []
+  proximosJogos: [],
+  momentos: [
+    {
+        id: "V1mm6ry2Jk0",
+        title: "Internacional x Grêmio - Melhores Momentos - Gauchão 2026",
+        category: "Gauchão"
+    },
+    {
+        id: "zkiF29q6L_s",
+        title: "Internacional x Ypiranga-RS - Melhores Momentos - Gauchão 2026",
+        category: "Gauchão"
+    },
+    {
+        id: "FLd8lP5c5gg",
+        title: "Grêmio x Guarany - Melhores Momentos - Gauchão 2026",
+        category: "Gauchão"
+    }
+]
 };

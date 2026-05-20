@@ -24,7 +24,7 @@ export default function VideoCard({ videoId, title, category }) {
                             className={styles.thumbnailImg}
                             onError={(e) => {
                                 e.target.onerror = null;
-                                e.target.src = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
+                                e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                             }}
                         />
                     </>

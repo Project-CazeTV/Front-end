@@ -39,7 +39,9 @@ export default function Home() {
           <ShopHeader banners={banners} search={false} />
         </div>
       </section>
+      <section className={styles.videosSection}>
       <VideoList videos={videosHome} title="Em Alta na Cazé" />
+      </section>
       <NewsList title="Cazé News" noticias={noticiasMenoresMock} />
       <CommonFooter />
     </>

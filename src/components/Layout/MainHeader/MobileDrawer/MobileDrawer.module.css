@@ -92,26 +92,17 @@
 }
 
 .subItemsWrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows 0.22s ease-out, opacity 0.18s ease-out;
-}
-
-.subItemsWrapper > ul {
-  overflow: hidden;
+  display: none;
 }
 
 .isExpanded {
-  grid-template-rows: 1fr;
-  opacity: 1;
+  display: block;
 }
 
 .mobileSubList {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: hidden;
 }
 
 .subItemMobile {

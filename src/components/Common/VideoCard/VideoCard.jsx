@@ -10,9 +10,8 @@ export default function VideoCard({ videoId, title, category }) {
             <div className={styles.thumbnail} onClick={() => setPlaying(true)}>
                 {playing ? (
                     <iframe
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                        src={`https://www.youtube.com/embed/${videoId}`}
                         title={title}
-                        allow="autoplay"
                         className={styles.iframe}
                     />
                 ) : (

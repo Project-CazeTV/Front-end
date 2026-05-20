@@ -180,9 +180,9 @@ export default function WorldCupPage() {
       title="Convocação" 
       subtitle="Veja como foi a convocação dos jogadores para a Copa do Mundo 2026."
       flex={false}
-       />
-       <PlayersNational players={convocadosBrasil} title="Convocados" subtitle="Copa do Mundo 2026" />
-       </div>
+      />
+      <PlayersNational players={convocadosBrasil} title="Convocados" subtitle="Copa do Mundo 2026" />
+      </div>
 
       <NewsList
         title="O que ta rolando por aí?"

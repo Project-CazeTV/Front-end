@@ -12,7 +12,6 @@ export default function VideoCard({ videoId, title, category }) {
                     <iframe
                         src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                         title={title}
-                        allowFullScreen
                         allow="autoplay"
                         className={styles.iframe}
                     />

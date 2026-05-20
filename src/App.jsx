@@ -10,7 +10,7 @@ import ShopPage from './pages/ShopPage/ShopPage'
 import CartPage from './pages/CartPage/CartPage'
 import ChampionshipPage from './pages/ChampionshipPage/ChampionshipPage'
 import {brasileirao, libertadores, copaDoBrasil, paulista, mineiro, gauchao, carioca, sulAmericana} from './mocks/campeonatos'
-import NewsPage from './pages/NewPage/NewsPage'
+import NewsPage from './pages/NewsPage/NewsPage'
 
 function App() {
 

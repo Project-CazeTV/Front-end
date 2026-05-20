@@ -24,7 +24,7 @@ export default function NewsPage() {
             <h1 className={styles.title}>{titulo}</h1>
             <img src={imagem} alt={titulo} />
             <p className={styles.description}>{descricao}</p>
-            <p className={styles.body}>{corpo}</p>
+            <div className={styles.body}>{corpo?.split('\n\n').map((paragrafo, index) => (<p key={index}>{paragrafo}</p>))}</div>
         </div>
         </>
     );

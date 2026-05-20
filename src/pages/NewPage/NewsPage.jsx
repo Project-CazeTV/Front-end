@@ -2,12 +2,15 @@ import { useLocation } from 'react-router-dom';
 import styles from './NewsPage.module.css';
 import ColoredHeader from '../../components/Layout/ColoredHeader/ColoredHeader';
 import MainHeader from '../../components/Layout/MainHeader/MainHeader';
-
+import { useEffect } from 'react';
+import useScrollTop from '../../hooks/useScrollTop/useScrollTop';
 
 export default function NewsPage() {
 
     const { state } = useLocation();
     const { titulo, imagem, descricao, tempo, corpo, categoria, tagColor } = state || {};
+
+    useScrollTop();
 
     return (
         <>

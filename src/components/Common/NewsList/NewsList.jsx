@@ -2,11 +2,11 @@ import styles from './NewsList.module.css';
 import News from '../News/News';
 
 export default function NewsList({ noticias = [], flex = true, title, subtitle }) {
+  
   if (!noticias.length) {
     return <p className={styles.empty}>Nenhuma notícia disponível.</p>;
   }
   
-
   return (
     <section className={styles.listContainer}>
       <section className={styles.header} style={{ flexDirection: flex ? 'row' : 'column' }}>

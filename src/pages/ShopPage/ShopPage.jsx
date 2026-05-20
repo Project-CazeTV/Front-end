@@ -16,8 +16,11 @@ import CazeStore from '../../assets/CazeStore.png';
 import Banner1 from "../../assets/banners/banner1.png";
 import Banner2 from "../../assets/banners/banner2.png";
 import Banner3 from "../../assets/banners/banner3.png";
+import useScrollTop from "../../hooks/useScrollTop/useScrollTop.js";
 
 export default function ShopPage() {
+
+  useScrollTop()
 
   const { user, loading } = userAuth()
 

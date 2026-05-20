@@ -3,6 +3,7 @@ import { TbClockHour9 } from "react-icons/tb";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function News({id, imagem, titulo, categoria, corpo, tempo, descricao, tagColor}) {
 
@@ -32,11 +33,12 @@ export default function News({id, imagem, titulo, categoria, corpo, tempo, descr
                     <p className={styles.newsDescription}>{descricao}</p>
                 )}
                 <div className={styles.footer}>
-                    <button
-                        className={styles.verMais}
-                        onClick={() => avancar()}
-                    >
-                        Ver mais <FaRegArrowAltCircleRight size={16} />
+                        <button
+                        
+                            className={styles.verMais}
+                            onClick={() => avancar()}
+                        >
+                            Ver mais <FaRegArrowAltCircleRight size={16} />
                     </button>
                     <span className={styles.tempo}>
                         <TbClockHour9 size={19} /> {tempo}

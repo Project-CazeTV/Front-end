@@ -11,6 +11,7 @@ import { createUserWithEmailAndPassword, updateProfile, signInWithPopup } from "
 import { registerWithEmail, registerWithGoogle } from '../../services/firebase/authService.js';
 import { buscarCep } from '../../services/cepService';
 import { useThemeLogos } from '../../hooks/ThemeLogos/useThemeLogos.js';
+import InputMask from "@mona-health/react-input-mask";
 
 export default function SignUpPage() {
   const navigate = useNavigate();
@@ -20,7 +21,13 @@ export default function SignUpPage() {
   const handleBack = () => { navigate('/login'); };
 
   const handleCepChange = async (e) => {
-    const cep = e.target.value.replace(/\D/g, '');
+
+    const cep = e.target.value.replace("-", "");
+
+    if (cep.length < 8) {
+      setFormData(prev => ({ ...prev, cidade: '', estado: ''}));
+    }
+
     setFormData(prev => ({ ...prev, cep }));
 
     if (cep.length !== 8) return;
@@ -75,7 +82,7 @@ export default function SignUpPage() {
 
           <input className={styles.input} placeholder="Nome" required onChange={e => setFormData({ ...formData, nome: e.target.value })} />
           <input className={styles.input} placeholder="Email" type="email" required onChange={e => setFormData({ ...formData, email: e.target.value })} />
-          <input className={styles.input} placeholder="CEP" value={formData.cep} onChange={handleCepChange} maxLength="8" required />
+          <InputMask className={styles.input} placeholder="CEP" value={formData.cep} onChange={handleCepChange} mask="99999-999" required />
           <input className={styles.input} placeholder="Cidade" value={formData.cidade} readOnly style={{ opacity: 0.6 }} />
           <input className={styles.input} placeholder="Estado" value={formData.estado} readOnly style={{ opacity: 0.6 }} />
           <input className={styles.input} placeholder="Senha" type="password" required onChange={e => setFormData({ ...formData, senha: e.target.value })} />

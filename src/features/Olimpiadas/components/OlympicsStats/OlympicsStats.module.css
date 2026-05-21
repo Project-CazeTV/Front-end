@@ -4,7 +4,7 @@
   box-sizing: border-box;
   border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
   border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
-  margin: 40px 20px 0;
+  margin: 40px 0 0 0;
 }
 
 .grid {

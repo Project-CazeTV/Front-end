@@ -4,8 +4,8 @@ import styles from './MedalTable.module.css';
 const ROWS_PER_PAGE = 10;
 
 export default function MedalTable({ edicao }) {
+  
   const [currentPage, setCurrentPage] = useState(1);
-
   const totalPages = Math.ceil(edicao.length / ROWS_PER_PAGE);
   const pageStart = (currentPage - 1) * ROWS_PER_PAGE;
   const visibleRows = edicao.slice(pageStart, pageStart + ROWS_PER_PAGE);

@@ -6,11 +6,11 @@ import MedalTable from "../../features/Olimpiadas/components/MedalTable/MedalTab
 import NewsList from "../../components/Common/NewsList/NewsList";
 import styles from "./OlympicsPage.module.css";
 import { useState } from "react";
-import { filtros, sports } from "../../mocks/filters/olympicsFilters.js";
+import FeaturedAthletes from "../../features/Olimpiadas/components/FeaturedAthletes/FeaturedAthletes.jsx";
+import OlympicsStats from "../../features/Olimpiadas/components/OlympicsStats/OlympicsStats.jsx";
+import { olympicsStats } from "../../mocks/olimpiadas.js";
 
-
-export default function OlympicsPage({image, medalData, noticias}) {
-  const [activeCategory, setActiveCategory] = useState(filtros[0]);
+export default function OlympicsPage({image, medalData, news, athletes}) {
 
   return (
     <div className={styles.pageContainer}>
@@ -27,42 +27,15 @@ export default function OlympicsPage({image, medalData, noticias}) {
         </div>
       </section>
 
+      <OlympicsStats className={styles.olympicsStats} stats={olympicsStats} />
+
       <MedalTable edicao={medalData} />  
 
-
-      {/*<div className={styles.filterWrapper}>
-        <FilterSection
-          titulo="Categorias Esportivas"
-          filtros={filtros}
-          filtroAtivo={activeCategory}
-          setFiltroAtivo={setActiveCategory}
-        />
-      </div>
-
-      <section className={styles.sportsSection}>
-        <div className={styles.sportsHeader}>
-          <span className={styles.sportsTitleBar} />
-          <span className={styles.sportsTitle}>Esportes</span>
-          <span className={styles.sportsActiveLabel}>Esportes Aquáticos</span>
-        </div>
-
-        <ul className={styles.sportsList}>
-          {sports.map((sport) => (
-            <li
-              key={sport}
-              className={`${styles.sportItem} ${activeSport === sport ? styles.activeItem : ""}`}
-              onClick={() => setActiveSport(sport)}
-            >
-              {sport}
-              {activeSport === sport && <span className={styles.activeIndicator} />}
-            </li>
-          ))}
-        </ul>
-      </section>*/}
+      <FeaturedAthletes athletes={athletes} />
 
       <NewsList
         title="Notícias das Olimpíadas"
-        noticias={noticias}
+        noticias={news}
       />
 
       <CommonFooter />

@@ -98,6 +98,7 @@ export const noticiasOlimpiadasMock = [
     categoria: "Apresentação de Abertura",
     tagColor: "#1E40AF",
     titulo: "Lady Gaga canta na abertura das Olimpíadas Paris 2024 | Gshow",
+    descricao: "Performance histórica às margens do Sena marcou a cerimônia mais criativa da história dos Jogos.",
     corpo: `A cerimônia de abertura das Olimpíadas de Paris 2024 ficará para sempre na memória de quem assistiu. Transmitida ao vivo para todo o mundo, a apresentação ao longo do Rio Sena surpreendeu pelo ineditismo e pela grandiosidade — e teve como um de seus momentos mais marcantes a apresentação de Lady Gaga.
 
 A cantora americana subiu ao palco montado às margens do Sena vestida de preto e dourado, em uma performance que misturou o glamour do cabaré francês com sua identidade pop única. O repertório incluiu clássicos do cancioneiro francês, numa homenagem à rica tradição cultural da cidade-sede.
@@ -115,6 +116,7 @@ Paris confirmou sua fama de cidade da arte, da moda e da cultura com uma abertur
     categoria: "Salto Artístico Feminino",
     tagColor: "#DC2626",
     titulo: "É Brasil!!! Rebeca Andrade conquista ouro em Salto Artístico e supera Simone Biles.",
+    descricao: "A maior ginasta da história do Brasil supera a lenda americana e sobe ao topo do pódio em Paris.",
     corpo: `O Brasil parou. Rebeca Andrade, a menina de Guarulhos que cresceu entre dificuldades e se tornou a maior ginasta da história do país, conquistou a medalha de ouro no salto artístico feminino nas Olimpíadas de Paris 2024 — superando ninguém menos que Simone Biles, a maior atleta da modalidade de todos os tempos.
 
 A final foi um espetáculo à parte. Rebeca executou dois saltos de altíssima dificuldade com uma precisão impressionante, somando uma pontuação que deixou o ginásio em silêncio por alguns segundos — seguido de uma explosão de gritos quando o placar foi confirmado. Ouro para o Brasil.
@@ -132,6 +134,7 @@ Para Rebeca, o ouro tem um significado que vai além da medalha. Criada em uma f
     categoria: "Paris 2024",
     tagColor: "#22C55E",
     titulo: "Rio Sena, após anos, volta a se tornar banhável na França e agora é possível modalidades aquáticas.",
+    descricao: "Investimento de 1,4 bilhão de euros transformou o famoso rio parisiense em palco das provas aquáticas.",
     corpo: `Por décadas, o Rio Sena foi símbolo de poluição urbana. Nadar naquelas águas parecia um sonho distante — ou uma loucura. Mas a realização das Olimpíadas de Paris 2024 veio acompanhada de uma conquista histórica para a capital francesa: o Sena voltou a ser banhável após mais de cem anos de restrições.
 
 O feito foi resultado de um investimento bilionário iniciado ainda nos anos 1990 e intensificado na última década. O governo francês destinou mais de 1,4 bilhão de euros para a despoluição do rio, incluindo a modernização do sistema de esgoto da cidade e a fiscalização rigorosa de descartes industriais.

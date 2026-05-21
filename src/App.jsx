@@ -14,6 +14,7 @@ import NewsPage from './pages/NewsPage/NewsPage'
 import { noticiasOlimpiadasMock } from "../src/mocks/news.js";
 import imgHero from "../src/assets/olimpiadas/jogos_paris_2024.png";
 import { Summer2024 } from '../src/mocks/medalData.js';
+import { featuredAthletes } from '../src/mocks/olimpiadas.js';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/signup" element={<SignUpPage />}/>
         <Route path="/world-cup" element={<WorldCupPage />}/>
-        <Route path="/olympics/summer" element={<OlympicsPage image={imgHero} medalData={Summer2024} noticias={noticiasOlimpiadasMock} />}/>
+        <Route path="/olympics/summer" element={<OlympicsPage image={imgHero} medalData={Summer2024} news={noticiasOlimpiadasMock} athletes={featuredAthletes} />}/>
         <Route path="/olympics/winter" element={<OlympicsPage />}/>
         <Route path="/historia/cazetv" element={<HistoriaPage />}/>
         <Route path="/shop" element={<ShopPage />}/>

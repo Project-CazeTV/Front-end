@@ -11,6 +11,9 @@ import CartPage from './pages/CartPage/CartPage'
 import ChampionshipPage from './pages/ChampionshipPage/ChampionshipPage'
 import {brasileirao, libertadores, copaDoBrasil, paulista, mineiro, gauchao, carioca, sulAmericana} from './mocks/campeonatos'
 import NewsPage from './pages/NewsPage/NewsPage'
+import { noticiasOlimpiadasMock } from "../src/mocks/news.js";
+import imgHero from "../src/assets/olimpiadas/jogos_paris_2024.png";
+import { Summer2024 } from '../src/mocks/medalData.js';
 
 function App() {
 
@@ -21,7 +24,8 @@ function App() {
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/signup" element={<SignUpPage />}/>
         <Route path="/world-cup" element={<WorldCupPage />}/>
-        <Route path="/olympics" element={<OlympicsPage />}/>
+        <Route path="/olympics/summer" element={<OlympicsPage image={imgHero} medalData={Summer2024} noticias={noticiasOlimpiadasMock} />}/>
+        <Route path="/olympics/winter" element={<OlympicsPage />}/>
         <Route path="/historia/cazetv" element={<HistoriaPage />}/>
         <Route path="/shop" element={<ShopPage />}/>
         <Route path="/cart" element={<CartPage />}/>

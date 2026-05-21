@@ -6,13 +6,10 @@ import MedalTable from "../../features/Olimpiadas/components/MedalTable/MedalTab
 import NewsList from "../../components/Common/NewsList/NewsList";
 import styles from "./OlympicsPage.module.css";
 import { useState } from "react";
-import { noticiasOlimpiadasMock } from "../../mocks/news.js";
 import { filtros, sports } from "../../mocks/filters/olympicsFilters.js";
-import imgHero from "../../assets/olimpiadas/jogos_paris_2024.png";
-import { Summer2024 } from '../../mocks/medalData.js';
 
-export default function OlympicsPage() {
-  const [activeSport, setActiveSport] = useState("Natação");
+
+export default function OlympicsPage({image, medalData, noticias}) {
   const [activeCategory, setActiveCategory] = useState(filtros[0]);
 
   return (
@@ -22,7 +19,7 @@ export default function OlympicsPage() {
 
       <section className={styles.heroSection}>
         <div className={styles.heroBanner}>
-          <img src={imgHero} alt="Jogos Olímpicos na CazéTV" />
+          <img src={image} alt="Jogos Olímpicos na CazéTV" />
 
           <div className={styles.liveInfo}>
             Salto Artístico Feminino — Grupo A
@@ -30,7 +27,7 @@ export default function OlympicsPage() {
         </div>
       </section>
 
-      <MedalTable edicao={Summer2024} />  
+      <MedalTable edicao={medalData} />  
 
 
       {/*<div className={styles.filterWrapper}>
@@ -65,7 +62,7 @@ export default function OlympicsPage() {
 
       <NewsList
         title="Notícias das Olimpíadas"
-        noticias={noticiasOlimpiadasMock}
+        noticias={noticias}
       />
 
       <CommonFooter />

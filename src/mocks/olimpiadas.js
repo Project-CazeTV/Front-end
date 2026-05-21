@@ -81,6 +81,33 @@ export const featuredAthletes = [
     }
 ];
 
+export const featuredAthletes2026 = [
+  {
+    id: 1,
+    name: "Lucas Pinheiro Braathen",
+    modality: "Esqui Alpino — Slalom Gigante",
+    country: "Brasil",
+    medals: ["gold"],
+    image: "https://www.bloomberglinea.com/resizer/v2/W3STI4LZLRGOZOBWO76YZRZDOI.jpg?auth=d007cfcdc69399dda4e0a8fa804b04b73c69d7a801912032bfa8df68add00674&width=800&height=516&quality=80&smart=true",
+  },
+  {
+    id: 2,
+    name: "Nicole Silveira",
+    modality: "Skeleton",
+    country: "Brasil",
+    medals: [],
+    image: "https://forbes.com.br/wp-content/uploads/2026/02/nicole-silveira-1-860x484.jpg",
+  },
+  {
+    id: 3,
+    name: "Pat Burgener",
+    modality: "Snowboard Halfpipe",
+    country: "Brasil",
+    medals: [],
+    image: "https://img.dhost.cloud/ux5o5nwK8chyALIITEOSEQ_Om84=/770x480/smart/https://tdan.nyc3.digitaloceanspaces.com/images/fea77/e242c15c8c4aeb93062e073ff71c7b47dde.png?name=pat-burgener.png",
+  },
+];
+
 export const olympicsStats = [
     {
         id: 1,
@@ -110,4 +137,35 @@ export const olympicsStats = [
         suffix: "",
         label: "Modalidades olímpicas",
     },
+];
+
+export const olympicsStats2026 = [
+  {
+    id: 1,
+    value: 92,
+    prefix: "",
+    suffix: "",
+    label: "Países participantes",
+  },
+  {
+    id: 2,
+    value: 2880,
+    prefix: "",
+    suffix: "",
+    label: "Atletas competindo",
+  },
+  {
+    id: 3,
+    value: 116,
+    prefix: "",
+    suffix: "",
+    label: "Provas disputadas",
+  },
+  {
+    id: 4,
+    value: 16,
+    prefix: "",
+    suffix: "",
+    label: "Disciplinas olímpicas",
+  },
 ];

@@ -149,6 +149,63 @@ Ambientalistas celebraram a conquista como um exemplo para cidades do mundo inte
   },
 ];
 
+export const noticiasOlimpiadasMock2026 = [
+  {
+    id: 1,
+    categoria: "Cerimônia de Abertura",
+    tagColor: "#1E40AF",
+    titulo: "San Siro recebe abertura histórica de Milão-Cortina 2026 com show de Bocelli e Mariah Carey",
+    descricao: "Pela primeira vez na história, a cerimônia foi dividida entre duas cidades: Milão e Cortina d'Ampezzo.",
+    corpo: `O estádio San Siro, um dos templos do futebol mundial, se transformou em palco olímpico na noite de 6 de fevereiro de 2026. A cerimônia de abertura dos Jogos Olímpicos de Inverno de Milão-Cortina foi um espetáculo à italiana — grandioso, elegante e emocionante.
+
+Pela primeira vez na história dos Jogos, a cerimônia foi distribuída entre duas cidades. Enquanto o desfile principal acontecia em Milão, atletas também marcharam simultaneamente em Cortina d'Ampezzo, Livigno e Predazzo, cada sede recebendo sua própria celebração. Ao final, duas piras olímpicas foram acesas: uma no Arco della Pace, em Milão, pelas mãos das lendas do esqui Deborah Compagnoni e Alberto Tomba, e outra em Cortina, acesa pela campeã olímpica Sofia Goggia.
+
+O espetáculo musical ficou por conta de Andrea Bocelli, que emocionou o estádio com "Nessun Dorma", de Puccini, e de Mariah Carey e Laura Pausini, que celebraram a diversidade cultural dos Jogos. Mais de 1.300 artistas e voluntários de 27 países participaram da produção, assinada pelo Balich Wonder Studio.
+
+O Brasil teve presença marcante na noite. Rebeca Andrade, a maior medalhista olímpica da história do país, foi escolhida para carregar a bandeira olímpica durante o desfile — uma das maiores honrarias da cerimônia. Nicole Silveira e Lucas Pinheiro Braathen desfilaram como porta-bandeiras da delegação brasileira, que entrou no San Siro com dança, passinho e muito verde e amarelo.
+
+A cerimônia foi considerada por especialistas uma das mais criativas e inovadoras da história dos Jogos de Inverno, combinando a riqueza cultural italiana com a modernidade de uma produção olímpica do século XXI.`,
+    tempo: "15 DIAS",
+    imagem: "https://s2-ge.glbimg.com/pK5M6bE42pacd9tlWHK9Jm7hgNo=/0x0:2152x1490/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/j/8/L0DUqSRnWkoMUZR1PnRQ/2026-02-06t192155z-1632113319-up1em261hsiib-rtrmadp-3-olympics-2026-opening.jpg",
+  },
+  {
+    id: 2,
+    categoria: "Esqui Alpino",
+    tagColor: "#DC2626",
+    titulo: "É ouro, Brasil! Lucas Pinheiro Braathen conquista a primeira medalha da América do Sul nos Jogos de Inverno",
+    descricao: "No dia dos namorados, o esquiador brasileiro-norueguês fez história na pista Stelvio e levou o Brasil ao topo do mundo.",
+    corpo: `O Brasil nunca tinha subido ao pódio de uns Jogos Olímpicos de Inverno. Em 34 anos de participação, a melhor marca era um nono lugar. Tudo mudou em 14 de fevereiro de 2026 — e não poderia ter sido num dia mais simbólico: o Dia dos Namorados.
+
+Lucas Pinheiro Braathen desceu a pista Stelvio, em Bormio, como se a neve fosse sua. Na primeira bateria, registrou 1min13s92 — quase um segundo à frente do favorito suíço Marco Odermatt, bicampeão mundial e principal candidato ao ouro. Na segunda descida, controlou a vantagem com frieza e cruzou a linha com tempo total de 2min25s00, garantindo o ouro de forma incontestável.
+
+Odermatt ficou com a prata e Loïc Meillard com o bronze. O nível técnico foi altíssimo — o que tornou a vitória ainda mais expressiva. Braathen não apenas ganhou. Ele dominou.
+
+Nascido em Oslo, filho de pai norueguês e mãe brasileira, Lucas carregou nas costas a trajetória improvável de quem trocou a bandeira da Noruega — país onde já havia conquistado o Globo de Cristal do slalom em 2023 — pelo verde e amarelo do Brasil. Desde 2024 vestindo a camisa brasileira, ele prometeu trazer o Brasil ao pódio de inverno. E cumpriu, no mais alto degrau.
+
+A emoção tomou conta quando o Hino Nacional Brasileiro começou a tocar no San Siro enquanto Braathen subia ao lugar mais alto do pódio. "Eu e o Brasil não estávamos aqui só para participar. Estávamos aqui para fazer a diferença", disse o campeão. A imagem dele cantando o hino com os olhos cheios de lágrimas já entrou para a história do esporte brasileiro.`,
+    tempo: "8 DIAS",
+    imagem: "https://mtesporte.com.br/wp-content/uploads/2026/02/lucas-696x368.jpg",
+  },
+  {
+    id: 3,
+    categoria: "Milão-Cortina 2026",
+    tagColor: "#22C55E",
+    titulo: "Ski mountaineering estreia nos Jogos e abre nova era para o esporte olímpico de inverno",
+    descricao: "Nova modalidade combina subida e descida de montanha e conquistou o público com seu formato emocionante e inédito.",
+    corpo: `Entre todas as novidades de Milão-Cortina 2026, uma se destacou pelo impacto visual e pelo ineditismo: a estreia do ski mountaineering — o skimo — como esporte olímpico. A modalidade, popular nas regiões alpinas da Europa mas pouco conhecida pelo grande público, conquistou espectadores do mundo inteiro com um formato simples e fascinante.
+
+A lógica do skimo é direta: os atletas sobem e descem montanhas o mais rápido possível, alternando entre esquis e percursos a pé. A prova de sprint, com largadas individuais e eliminatórias, entregou momentos de adrenalina pura. Já o revezamento misto colocou duplas de países diferentes dividindo a mesma corrida — um formato colaborativo raro no universo olímpico individual.
+
+Foram distribuídas medalhas em quatro provas: sprint masculino, sprint feminino, revezamento misto e, como estreia, também no formato individual de longa distância. A Suíça e a França dominaram o pódio nas primeiras disputas, confirmando a tradição alpina na modalidade.
+
+A inclusão do skimo nos Jogos foi aprovada pelo COI em 2021 e representou um esforço de modernização do programa olímpico de inverno. Com perfil jovem e forte presença nas redes sociais, a modalidade atraiu um público diferente — e saiu de Milão-Cortina com uma base de fãs muito maior do que tinha quando chegou.
+
+Para os organizadores, o saldo foi amplamente positivo. "O skimo mostrou que é possível trazer emoção pura sem abrir mão da tradição olímpica", afirmou um porta-voz da federação internacional da modalidade. A expectativa é que Los Angeles 2028 — os próximos Jogos de Verão — inspire outras modalidades urbanas a seguir o mesmo caminho.`,
+    tempo: "20 DIAS",
+    imagem: "https://img.olympics.com/images/image/private/t_social_share_thumb/f_auto/v1769625908/primary/z61fipgl64s9cyirsc3h",
+  },
+];
+
 export const newsWorldCup = [
   {
     id: 1,

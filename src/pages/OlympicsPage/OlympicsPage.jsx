@@ -8,9 +8,8 @@ import styles from "./OlympicsPage.module.css";
 import { useState } from "react";
 import FeaturedAthletes from "../../features/Olimpiadas/components/FeaturedAthletes/FeaturedAthletes.jsx";
 import OlympicsStats from "../../features/Olimpiadas/components/OlympicsStats/OlympicsStats.jsx";
-import { olympicsStats } from "../../mocks/olimpiadas.js";
 
-export default function OlympicsPage({image, medalData, news, athletes}) {
+export default function OlympicsPage({image, medalData, news, athletes, stats}) {
 
   return (
     <div className={styles.pageContainer}>
@@ -27,7 +26,7 @@ export default function OlympicsPage({image, medalData, news, athletes}) {
         </div>
       </section>
 
-      <OlympicsStats className={styles.olympicsStats} stats={olympicsStats} />
+      <OlympicsStats className={styles.olympicsStats} stats={stats} />
 
       <MedalTable edicao={medalData} />  
 

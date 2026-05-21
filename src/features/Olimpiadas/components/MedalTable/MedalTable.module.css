@@ -7,117 +7,99 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
-.titleBar {
-  display: block;
-  width: 4px;
-  height: 24px;
-  background: #3b6ef8;
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
 .title {
-  font-size: 1rem;
+  font-size: 22px;
   font-weight: 800;
   color: var(--text-color);
-  letter-spacing: 0.06em;
+  letter-spacing: -0.3px;
   margin: 0;
+  white-space: nowrap;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--text-color) 12%, transparent);
 }
 
 .tableWrapper {
   width: 100%;
   overflow-x: auto;
-  border-radius: 12px;
-  border: 1px solid var(--border-color, rgba(255,255,255,0.08));
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--card-bg, #fff);
   min-width: 480px;
 }
 
-[data-theme="dark"] .table {
-  background-color: #252525;
-}
-
 .headRow {
-  border-bottom: 2px solid var(--border-color, rgba(0,0,0,0.08));
+  border-bottom: 2px solid color-mix(in srgb, var(--text-color) 10%, transparent);
 }
 
 .headRow th {
-  padding: 14px 8px;
-  font-size: 0.72rem;
+  padding: 10px 8px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--text-color);
-  opacity: 0.5;
+  opacity: 0.4;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   text-align: center;
 }
 
-.thOrdem { text-align: center; width: 60px; }
-.thPais  { text-align: left; padding-left: 12px !important; }
-.thMedal { width: 52px; }
-.thTotal { width: 60px; }
+.thRank    { width: 48px; }
+.thCountry { text-align: left; padding-left: 12px !important; }
+.thMedal   { width: 52px; }
+.thTotal   { width: 60px; }
 
-.medalDot {
-  font-size: 1rem;
-  line-height: 1;
-}
-.medalDot.gold   { color: #D4AF37; }
-.medalDot.silver { color: #9EA3A8; }
-.medalDot.bronze { color: #b87333; }
+.dot         { font-size: 12px; }
+.dot.gold    { color: #D4AF37; }
+.dot.silver  { color: #A8A8A8; }
+.dot.bronze  { color: #b87333; }
+
 
 .row {
-  border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.06));
-  transition: background 0.15s ease;
+  border-bottom: 1px solid color-mix(in srgb, var(--text-color) 7%, transparent);
+  transition: background 0.12s;
 }
 
 .row:hover {
-  background: rgba(59, 110, 248, 0.05);
+  background: color-mix(in srgb, var(--text-color) 4%, transparent);
 }
 
-.row:last-child {
-  border-bottom: none;
-}
+.row:last-child { border-bottom: none; }
 
-.tdOrdem {
+.tdRank {
   text-align: center;
+  font-size: 13px;
   font-weight: 700;
-  font-size: 0.85rem;
   color: var(--text-color);
-  opacity: 0.5;
-  padding: 12px 8px;
-  width: 60px;
+  opacity: 0.35;
+  padding: 14px 8px;
 }
 
-.tdPais {
+.tdCountry {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px;
-  text-align: left;
-  place-self: anchor-center;
-  width: 20%;
+  padding: 14px 8px 14px 12px;
 }
 
 .flag {
-  width: 28px;
-  height: 20px;
+  width: 26px;
+  height: 18px;
   object-fit: cover;
   border-radius: 2px;
   flex-shrink: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.countryName {
-  font-size: 0.88rem;
+.tdCountry span {
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-color);
   white-space: nowrap;
@@ -126,51 +108,61 @@
 .tdMedal {
   text-align: center;
   font-weight: 800;
-  font-size: 0.9rem;
-  padding: 12px 4px;
-  width: 52px;
+  font-size: 14px;
+  padding: 14px 4px;
 }
 
-.tdMedal.gold   { color: #C9A824; }
-.tdMedal.silver { color: #8A9197; }
-.tdMedal.bronze { color: #A0622A; }
+.tdMedal.gold    { color: #C9A824; }
+.tdMedal.silver  { color: #8A9197; }
+.tdMedal.bronze  { color: #A0622A; }
 
 [data-theme="dark"] .tdMedal.gold   { color: #FFD700; }
 [data-theme="dark"] .tdMedal.silver { color: #C0C7CF; }
 [data-theme="dark"] .tdMedal.bronze { color: #CD7F32; }
 
-
 .tdTotal {
   text-align: center;
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--text-color);
-  padding: 12px 8px;
-  width: 60px;
+  padding: 14px 8px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.pageBtn {
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-color) 40%, transparent);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.pageBtn:hover {
+  color: var(--text-color);
+}
+
+.pageBtn.active {
+  color: #f5a700;
 }
 
 @media (min-width: 600px) {
-  .section {
-    padding: 40px 24px 0;
-  }
-
-  .title {
-    font-size: 1.05rem;
-  }
-
-  .flag {
-    width: 32px;
-    height: 22px;
-  }
-
-  .countryName {
-    font-size: 0.92rem;
-  }
+  .section { padding: 40px 24px 0; }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding: 48px 40px 0;
+    padding: 48px 0 0;
     max-width: 1200px;
     margin: 0 auto;
   }

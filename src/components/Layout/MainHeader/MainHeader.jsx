@@ -1,217 +1,102 @@
-import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa6';
+import { CgMenuRight } from 'react-icons/cg';
 import styles from './MainHeader.module.css';
 import LogoCazeIcon from '../../../assets/caze.png';
-import LogoCazeBlackText from '../../../assets/Logotipo_da_CazéTV.png';
-import LogoCazeWhiteText from '../../../assets/CazéTVNomeBranco.png';
-import { useNavigate } from 'react-router-dom';
-import ThemeToggle from '../../Common/ThemeToggle/ThemeToggle';
-import { CgMenuRight } from "react-icons/cg";
-import { FaUser } from "react-icons/fa6";
-import { menuData } from '../../../mocks/navegacao/optionsHeader';
-import { auth } from '../../../services/firebase/firebaseConfig';
-import { signOut } from 'firebase/auth';
+import DesktopNav from './DesktopNav/DesktopNav';
+import MobileDrawer from './MobileDrawer/MobileDrawer';
+import AccountPopover from './AccountPopover/AccountPopover';
+import { useMobileMenu } from '../../../hooks/useMobileMenu/useMobileMenu';
+import { useMobileMenuLogo } from '../../../hooks/useMobileMenuLogo/useMobileMenuLogo';
+import { useAccountMenu } from '../../../hooks/useAccountMenu/useAccountMenu';
 import { userAuth } from '../../../hooks/UserAuth/UserAuth';
 import { navigationMap } from '../../../utils/navigationMap';
+import { menuData } from '../../../mocks/navegacao/optionsHeader';
 
-export default function MainHeader({logo, isTransparent }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const [mobileSubOpen, setMobileSubOpen] = useState(null);
-  const [isAccountOpen, setIsAccountOpen] = useState(false);
-  const [drawerLogo, setDrawerLogo] = useState(LogoCazeBlackText);
-
+export default function MainHeader({ logo, isTransparent }) {
   const navigate = useNavigate();
-
   const { user } = userAuth();
+  const mobileMenu = useMobileMenu();
+  const mobileMenuLogo = useMobileMenuLogo();
+  const accountMenu = useAccountMenu();
 
-   useEffect(() => {
+  function goToPage(itemName) {
+    mobileMenu.close();
 
-    const updateDrawerLogo = () => {
-      const isDark = document.body.getAttribute('data-theme') === 'dark';
-      setDrawerLogo(isDark ? LogoCazeWhiteText : LogoCazeBlackText);
-    };
-
-    updateDrawerLogo();
-
-    const observer = new MutationObserver(updateDrawerLogo);
-
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['data-theme']
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-
-  }, []);
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      setIsAccountOpen(false);
-      navigate('/');
-    } catch (error) {
-      console.error("Erro ao sair:", error);
-    }
-  };
-
-  const renderUserIcon = () => {
-    if (user?.displayName) {
-      return <div className={styles.avatarInitial}>Olá, {user?.displayName.split(" ")[0]}</div>;
-    }
-    return <FaUser size={25} className={styles.userIcon} />;
-  };
-
-  const handleSubItemClick = (subItem) => {
-    setIsMenuOpen(false);
-    setActiveSubmenu(null);
-
-    const navInfo = navigationMap[subItem];
-
-    if (navInfo) {
-      navigate(navInfo.path, { state: navInfo.state });
-    } else {
-      console.warn(`Nenhuma rota definida para o item: ${subItem}`);
+    const page = navigationMap[itemName];
+    if (!page) {
+      console.warn(`Nenhuma rota definida para o item: ${itemName}`);
+      return;
     }
 
-  };
+    navigate(page.path, { state: page.state });
+  }
+
+  function renderUserButtonContent() {
+    if (!user?.displayName) {
+      return <FaUser size={25} className={styles.userIcon} />;
+    }
+
+    const firstName = user.displayName.split(' ')[0];
+    return <div className={styles.avatarInitial}>Olá, {firstName}</div>;
+  }
 
   return (
     <>
-      <header
-        className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}
-        onMouseLeave={() => setActiveSubmenu(null)}
-      >
+      <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
         <div className={styles.topBar}>
           <img
-            src={logo || LogoCazeIcon} 
+            src={logo || LogoCazeIcon}
             alt="Cazé TV"
             className={styles.logo}
             onClick={() => navigate('/')}
-            style={{ cursor: 'pointer' }}
+            loading="eager"
           />
 
-          <nav className={styles.desktopNav}>
-            <ul className={styles.mainList}>
-              {menuData.map((menu) => (
-                <li
-                  key={menu.title}
-                  onMouseEnter={() => setActiveSubmenu(menu)}
-                  className={`${styles.mainListItem} ${activeSubmenu?.title === menu.title ? styles.active : ''}`}
-                >
-                  {menu.title}
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <DesktopNav onNavigate={goToPage} isTransparent={isTransparent} />
 
           <div className={styles.headerControls}>
             <div className={styles.accountArea}>
-              <button className={styles.accButton} onClick={() => setIsAccountOpen(!isAccountOpen)}>
-                {renderUserIcon()}
+              <button
+                type="button"
+                className={styles.accButton}
+                onClick={accountMenu.toggle}
+                aria-label="Abrir área da conta"
+              >
+                {renderUserButtonContent()}
               </button>
 
-              {isAccountOpen && (
-                <>
-                  <div className={styles.popoverOverlay} onClick={() => setIsAccountOpen(false)} />
-                  <div className={styles.accountPopover}>
-                    <div className={styles.popoverArrow} />
-                    <div className={styles.popoverContent}>
-
-                      {user ? (
-                        <div className={styles.userInfoSection}>
-                          <p className={styles.welcomeText}>Coé, <strong>{user.displayName?.split(' ')[0]}</strong>!</p>
-                          <button className={styles.logoutBtn} onClick={handleLogout}>
-                            <span className="material-symbols-outlined">logout</span>
-                            Sair
-                          </button>
-                        </div>
-                      ) : (
-                        <button
-                          className={styles.loginBtn}
-                          onClick={() => {
-                            navigate('/login');
-                            setIsAccountOpen(false);
-                          }}
-                        >
-                          Entrar / Cadastrar
-                        </button>
-                      )}
-
-                      <div className={styles.divider} />
-                      <div className={styles.themeRow}>
-                        <span>Tema</span>
-                        <ThemeToggle />
-                      </div>
-                    </div>
-                  </div>
-                </>
+              {accountMenu.isOpen && (
+                <AccountPopover
+                  user={user}
+                  onClose={accountMenu.close}
+                  onLogout={accountMenu.logout}
+                />
               )}
             </div>
 
-            <button className={styles.hamburgerBtn} onClick={() => setIsMenuOpen(true)}>
+            <button
+              type="button"
+              className={styles.hamburgerBtn}
+              onClick={mobileMenu.open}
+              aria-label="Abrir menu"
+              aria-expanded={mobileMenu.isOpen}
+            >
               <CgMenuRight size={40} id={styles.menuIcon} />
             </button>
           </div>
         </div>
-
-        <div className={`${styles.subHeaderDesktop} ${activeSubmenu ? styles.showSub : ''}`}>
-          <ul className={styles.subListHorizontal}>
-            {activeSubmenu?.items.map(item => (
-              <li
-                key={item}
-                onClick={() => handleSubItemClick(item)}
-                style={{ cursor: 'pointer' }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
       </header>
 
-      <div className={`${styles.overlay} ${isMenuOpen ? styles.visible : ''}`} onClick={() => setIsMenuOpen(false)} />
-
-      <aside className={`${styles.drawer} ${isMenuOpen ? styles.drawerOpen : ''}`}>
-        <div className={styles.drawerHeader}>
-          <img src={drawerLogo} alt="Cazé TV" className={styles.logoSmall} />
-          <button className={styles.closeBtn} onClick={() => setIsMenuOpen(false)}>
-            <span className="material-symbols-outlined" id={styles.closeIcon}>close</span>
-          </button>
-        </div>
-
-        <nav className={styles.mobileNav}>
-          {menuData.map(menu => (
-            <div key={menu.title} className={styles.accordion}>
-              <button
-                className={styles.mobileItem}
-                onClick={() => setMobileSubOpen(mobileSubOpen === menu.title ? null : menu.title)}
-              >
-                {menu.title}
-                <span className={`material-symbols-outlined ${mobileSubOpen === menu.title ? styles.rotate : ''}`}>
-                  expand_more
-                </span>
-              </button>
-
-              <div className={`${styles.subItemsWrapper} ${mobileSubOpen === menu.title ? styles.isExpanded : ''}`}>
-                <ul className={styles.mobileSubList}>
-                  {menu.items.map(sub => (
-                    <li
-                      key={sub}
-                      className={styles.subItemMobile}
-                      onClick={() => handleSubItemClick(sub)}
-                      style={{ cursor: 'pointer' }}
-                    >
-                      {sub}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </nav>
-      </aside>
+      <MobileDrawer
+        isOpen={mobileMenu.isOpen}
+        logo={mobileMenuLogo}
+        onClose={mobileMenu.close}
+        menuData={menuData}
+        openMenuItem={mobileMenu.openMenuItem}
+        onToggleMenuItem={mobileMenu.toggleMenuItem}
+        onNavigate={goToPage}
+      />
     </>
   );
 }

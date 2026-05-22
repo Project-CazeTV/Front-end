@@ -5,12 +5,12 @@ export const videosHome = [
         category: "Brasileirão"
     },
     {
-        id: "r5RFZMSyvpw",
+        id: "AROS7Qs48sM",
         title: "Mirassol x LDU - Melhores Momentos - Libertadores 2026",
         category: "Libertadores"
     },
     {
-        id: "g1FaWyLjw-M",
+        id: "HWFNlErlGbg",
         title: "Flamengo x Medellín - Melhores Momentos - Libertadores 2026",
         category: "Libertadores"
     }

@@ -10,18 +10,20 @@ export default function VideoCard({ videoId, title, category }) {
             <div className={styles.thumbnail} onClick={() => setPlaying(true)}>
                 {playing ? (
                     <iframe
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                        src={`https://www.youtube.com/embed/${videoId}?playsinline=1&autoplay=0`}
                         title={title}
-                        allowFullScreen
-                        allow="autoplay"
                         className={styles.iframe}
                     />
                 ) : (
                     <>
                         <img
-                            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                             alt={title}
                             className={styles.thumbnailImg}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                            }}
                         />
                     </>
                 )}

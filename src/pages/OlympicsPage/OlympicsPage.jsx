@@ -6,14 +6,10 @@ import MedalTable from "../../features/Olimpiadas/components/MedalTable/MedalTab
 import NewsList from "../../components/Common/NewsList/NewsList";
 import styles from "./OlympicsPage.module.css";
 import { useState } from "react";
-import { noticiasOlimpiadasMock } from "../../mocks/news.js";
-import { filtros, sports } from "../../mocks/filters/olympicsFilters.js";
-import imgHero from "../../assets/olimpiadas/jogos_paris_2024.png";
-import { Summer2024 } from '../../mocks/medalData.js';
+import FeaturedAthletes from "../../features/Olimpiadas/components/FeaturedAthletes/FeaturedAthletes.jsx";
+import OlympicsStats from "../../features/Olimpiadas/components/OlympicsStats/OlympicsStats.jsx";
 
-export default function OlympicsPage() {
-  const [activeSport, setActiveSport] = useState("Natação");
-  const [activeCategory, setActiveCategory] = useState(filtros[0]);
+export default function OlympicsPage({image, medalData, news, athletes, stats}) {
 
   return (
     <div className={styles.pageContainer}>
@@ -22,7 +18,7 @@ export default function OlympicsPage() {
 
       <section className={styles.heroSection}>
         <div className={styles.heroBanner}>
-          <img src={imgHero} alt="Jogos Olímpicos na CazéTV" />
+          <img src={image} alt="Jogos Olímpicos na CazéTV" />
 
           <div className={styles.liveInfo}>
             Salto Artístico Feminino — Grupo A
@@ -30,42 +26,15 @@ export default function OlympicsPage() {
         </div>
       </section>
 
-      <MedalTable edicao={Summer2024} />  
+      <OlympicsStats className={styles.olympicsStats} stats={stats} />
 
+      <MedalTable edicao={medalData} />  
 
-      {/*<div className={styles.filterWrapper}>
-        <FilterSection
-          titulo="Categorias Esportivas"
-          filtros={filtros}
-          filtroAtivo={activeCategory}
-          setFiltroAtivo={setActiveCategory}
-        />
-      </div>
-
-      <section className={styles.sportsSection}>
-        <div className={styles.sportsHeader}>
-          <span className={styles.sportsTitleBar} />
-          <span className={styles.sportsTitle}>Esportes</span>
-          <span className={styles.sportsActiveLabel}>Esportes Aquáticos</span>
-        </div>
-
-        <ul className={styles.sportsList}>
-          {sports.map((sport) => (
-            <li
-              key={sport}
-              className={`${styles.sportItem} ${activeSport === sport ? styles.activeItem : ""}`}
-              onClick={() => setActiveSport(sport)}
-            >
-              {sport}
-              {activeSport === sport && <span className={styles.activeIndicator} />}
-            </li>
-          ))}
-        </ul>
-      </section>*/}
+      <FeaturedAthletes athletes={athletes} />
 
       <NewsList
         title="Notícias das Olimpíadas"
-        noticias={noticiasOlimpiadasMock}
+        noticias={news}
       />
 
       <CommonFooter />

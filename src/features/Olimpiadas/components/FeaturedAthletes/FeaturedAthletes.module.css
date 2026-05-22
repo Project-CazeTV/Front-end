@@ -1,0 +1,168 @@
+.container {
+  padding: 0 16px;
+  margin-top: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 40px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.titleBar {
+  display: block;
+  width: 4px;
+  height: 36px;
+  background: #3b6ef8;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-color);
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.athleteCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #eee;
+  cursor: pointer;
+}
+
+.athletePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.athleteCard:hover .athletePhoto {
+  transform: scale(1.04);
+}
+
+.athleteOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 14px 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.athleteModality {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.athleteName {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.athleteMedals {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.medalBadge {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.mobileOnly { display: flex; }
+.desktopOnly { display: none; }
+
+.carouselWrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+.carouselCard {
+  width: 220px;
+}
+
+.navBtn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navBtn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+@media (min-width: 1024px) {
+  .mobileOnly { display: none; }
+  .desktopOnly { display: grid; }
+
+  .container {
+    padding: 0 40px;
+    margin-top: 48px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .athletesGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .athleteCard {
+    width: 200px;
+    height: 280px;
+    aspect-ratio: unset;
+  }
+
+  .athleteName {
+    font-size: 14px;
+  }
+}

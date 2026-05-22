@@ -1,0 +1,119 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.2s ease-out;
+  will-change: opacity;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(82vw, 320px);
+  height: 100dvh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1001;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  contain: layout paint;
+}
+
+.drawerOpen {
+  transform: translate3d(0, 0, 0);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.logoSmall {
+  height: 45px;
+  width: auto;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 5px;
+}
+
+#closeIcon {
+  font-size: 32px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.mobileItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  font-weight: 600;
+  font-size: 13px;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.subItemsWrapper {
+  display: none;
+}
+
+.isExpanded {
+  display: block;
+}
+
+.mobileSubList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subItemMobile {
+  padding: 10px 0;
+  font-size: 12px;
+  opacity: 0.8;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.05);
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-out;
+}

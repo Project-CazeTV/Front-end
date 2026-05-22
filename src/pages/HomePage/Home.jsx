@@ -1,6 +1,6 @@
 import ColoredHeader from '../../components/Layout/ColoredHeader/ColoredHeader.jsx'
 import MainHeader from '../../components/Layout/MainHeader/MainHeader.jsx'
-import HomeNews from '../../components/Common/HomeNews/HomeNews';
+import HomeNews from '../../features/Home/components/HomeNews/HomeNews.jsx';
 import FilterSection from '../../components/Common/FilterSection/FilterSection.jsx';
 import NewsList from '../../components/Common/NewsList/NewsList.jsx';
 import CommonFooter from '../../components/Layout/CommonFooter/CommonFooter.jsx';
@@ -39,7 +39,9 @@ export default function Home() {
           <ShopHeader banners={banners} search={false} />
         </div>
       </section>
+      <section className={styles.videosSection}>
       <VideoList videos={videosHome} title="Em Alta na Cazé" />
+      </section>
       <NewsList title="Cazé News" noticias={noticiasMenoresMock} />
       <CommonFooter />
     </>

@@ -9,7 +9,7 @@ import FeaturedPlayers from '../../features/WorldCup/components/FeaturedPlayers/
 import NewsList from '../../components/Common/NewsList/NewsList';
 import CopaSede from '../../features/WorldCup/components/CopaSede/CopaSede';
 import { players } from '../../mocks/players';
-import { newsWorldCup } from '../../mocks/newsWorldCup';
+import { newsWorldCup } from '../../mocks/news.js';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
@@ -20,6 +20,8 @@ import VideoCard from '../../features/WorldCup/components/VideoCard/VideoCard.js
 import videoConvocacao from '../../assets/copa/convocacao.mp4';
 import { convocadosBrasil } from '../../mocks/players.js';
 import PlayersNational from '../../features/WorldCup/components/NationalSoccerTeam/PlayersNational.jsx';
+
+
 export default function WorldCupPage() {
   const location = useLocation();
   const [activeFilter, setActiveFilter] = useState(location.state?.filtroAtivo ?? "Grupos");
@@ -178,9 +180,9 @@ export default function WorldCupPage() {
       title="Convocação" 
       subtitle="Veja como foi a convocação dos jogadores para a Copa do Mundo 2026."
       flex={false}
-       />
-       <PlayersNational players={convocadosBrasil} title="Convocados" subtitle="Copa do Mundo 2026" />
-       </div>
+      />
+      <PlayersNational players={convocadosBrasil} title="Convocados" subtitle="Copa do Mundo 2026" />
+      </div>
 
       <NewsList
         title="O que ta rolando por aí?"

@@ -1,22 +1,37 @@
-import styles from "./PriceSection.module.css"
+import styles from "./PriceSection.module.css";
 
-export default function PriceSection({produtos}) {
+const FRETE = 15.90;
 
-    const SUBTOTAL = produtos.reduce((total, produto) => total + (produto.price * produto.amount), 0);
-
-    const FRETE_TRANSPORTE = 15.90
-
-    const TOTAL = SUBTOTAL + FRETE_TRANSPORTE
+export default function PriceSection({ produtos }) {
+    const subtotal = produtos.reduce(
+        (acc, p) => acc + p.price * p.amount, 0
+    );
+    const total = subtotal + FRETE;
 
     return (
-         <div className={styles.resumo}>
-            <div className={styles.conteudoResumo}>
-                <h2 className={styles.h2Cart}>Resumo do Pedido</h2>
-                <h4 className={styles.h4Cart}>SubTotal: R$ {SUBTOTAL.toFixed(2)}</h4>
-                <h4 className={styles.h4Cart}>Frete: R$ {FRETE_TRANSPORTE.toFixed(2)}</h4>
-                <h4 className={styles.h4Cart}>Frete: R$ {TOTAL.toFixed(2)}</h4>
-                <button className={styles.btnFinalizar}>Finalizar Compra</button>
+        <section className={styles.section}>
+            <div className={styles.card}>
+                <p className={styles.title}>Resumo do Pedido</p>
+
+                <div className={styles.row}>
+                    <span className={styles.label}>Subtotal</span>
+                    <span className={styles.value}>R$ {subtotal.toFixed(2)}</span>
+                </div>
+
+                <div className={styles.row}>
+                    <span className={styles.label}>Frete</span>
+                    <span className={styles.value}>R$ {FRETE.toFixed(2)}</span>
+                </div>
+
+                <div className={styles.rowTotal}>
+                    <span className={styles.totalLabel}>Total</span>
+                    <span className={styles.totalValue}>R$ {total.toFixed(2)}</span>
+                </div>
             </div>
-        </div>
-    )
+
+            <button className={styles.btnFinalizar}>
+                Finalizar Compra
+            </button>
+        </section>
+    );
 }

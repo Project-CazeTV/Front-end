@@ -1,19 +1,39 @@
-.h2Ex6 {
-    font-size: clamp(16px, 2.5vw, 22px);
+.section {
+    width: 100%;
 }
 
-.h3Ex6 {
-    font-size: clamp(14px, 2vw, 18px);
+.sectionLabel {
+    color: var(--text-color2);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+    margin: 0;
 }
 
-.h4Ex6 {
-    font-size: clamp(14px, 1.5vw, 16px);
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.carrinho {
-    width: 90%;
-    max-width: 700px;
-    margin-top: 40px;
-    border-top: 1px solid var(--bg-buttom);
-    padding: 5px;
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    gap: 12px;
+}
+
+.emptyIcon {
+    font-size: 40px;
+    opacity: 0.3;
+}
+
+.emptyText {
+    color: var(--text-color2);
+    font-size: 15px;
+    margin: 0;
 }

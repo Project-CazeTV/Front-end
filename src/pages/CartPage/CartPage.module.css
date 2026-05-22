@@ -1,5 +1,84 @@
-.CartPage {
+.page {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.topBar {
+    display: flex;
     align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.backBtn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.backBtn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.pageTitle {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    flex: 1;
+    margin: 0;
+}
+
+.itemCount {
+    background: #0047d6;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    padding-bottom: 40px;
+    gap: 0;
+    flex: 1;
+}
+
+.divider {
+    height: 0.5px;
+    background: rgba(255, 255, 255, 0.07);
+    margin: 20px 0;
+}
+
+/* Tablet e desktop */
+@media (min-width: 640px) {
+    .content {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 28px 24px 60px;
+    }
+
+    .topBar {
+        padding: 16px 24px;
+    }
 }

@@ -1,34 +1,3 @@
-import pedro from "../assets/artilharias/brasileirao/pedro.png";
-import john from "../assets/artilharias/brasileirao/jonh.png";
-import kevin from "../assets/artilharias/brasileirao/kevin.png";
-import juba from "../assets/artilharias/brasileirao/juba.png";
-import arthur from "../assets/artilharias/brasileirao/arthur.png";
-import danilo from "../assets/artilharias/brasileirao/danilo.png";
-import breno from "../assets/artilharias/brasileirao/breno.png";
-import vini from "../assets/artilharias/brasileirao/vini.png";
-import calleri from "../assets/artilharias/brasileirao/calleri.png";
-import luciano from "../assets/artilharias/brasileirao/luciano.png";
-import lopez from "../assets/artilharias/brasileirao/lopez.png";
-import christian from "../assets/artilharias/brasileirao/christian.png";
-import mendonza from "../assets/artilharias/brasileirao/mendonza.png";
-import edenilson from "../assets/artilharias/brasileirao/edenilson.png";
-import pedroRocha from "../assets/artilharias/brasileirao/pedrorocha.png";
-import Carlos from "../assets/artilharias/libertadores/Carlos.png";
-import Arce from "../assets/artilharias/libertadores/Arce.png";
-import Barrandeguy from "../assets/artilharias/libertadores/Barrandeguy.png";
-import Fydriszewski from "../assets/artilharias/libertadores/Fydriszewski.png";
-import Tiago from "../assets/artilharias/libertadores/Tiago.png";
-import Melgarejo from "../assets/artilharias/libertadores/Melgarejo.png";
-import Gustavo from "../assets/artilharias/libertadores/Gustavo.png";
-import Chancellor from "../assets/artilharias/libertadores/Chancellor.png";
-import Fajardo from "../assets/artilharias/libertadores/Fajardo.png";
-import Yotun from "../assets/artilharias/libertadores/Yotún.png";
-import Tortolero from "../assets/artilharias/libertadores/Tortolero.png";
-import Hayen from "../assets/artilharias/libertadores/Hayen.png";
-import Francisco from "../assets/artilharias/libertadores/Francisco.png";
-import Willian from "../assets/artilharias/libertadores/Willian.png";
-import Villalba from "../assets/artilharias/libertadores/Villalba.png";
-
 // ─────────────────────────────────────────────
 // CAMPEONATOS.JS
 // Dados atualizados até 09/05/2026
@@ -143,21 +112,21 @@ export const brasileirao = {
     { data: "25/05/2026", hora: "20h00", timeA: "Coritiba", timeB: "Bahia", estadio: "Couto Pereira", rodada: 17 },
   ],
   artilharia: [
-    { nome: "Pedro", gols: 9, clube: "Flamengo", imagem: pedro },
-    { nome: "John Kennedy", gols: 8, clube: "Fluminense", imagem: john },
-    { nome: "Kevin Viveros", gols: 8, clube: "Athletico-PR", imagem: kevin },
-    { nome: "Luciano Juba", gols: 7, clube: "Bahia", imagem: juba },
-    { nome: "Arthur", gols: 7, clube: "Botafogo", imagem: arthur },
-    { nome: "Danilo Santos", gols: 7, clube: "Botafogo", imagem: danilo },
-    { nome: "Breno", gols: 7, clube: "Coritiba", imagem: breno },
-    { nome: "Vinicius", gols: 7, clube: "Grêmio", imagem: vini },
-    { nome: "Calleri", gols: 6, clube: "São Paulo", imagem: calleri },
-    { nome: "Luciano", gols: 5, clube: "São Paulo", imagem: luciano },
-    { nome: "Lopez", gols: 5, clube: "Palmeiras", imagem: lopez },
-    { nome: "Christian", gols: 5, clube: "Cruzeiro", imagem: christian },
-    { nome: "Mendoza", gols: 5, clube: "Athletico-PR", imagem: mendonza },
-    { nome: "Edenilson", gols: 4, clube: "Botafogo", imagem: edenilson },
-    { nome: "Pedro Rocha", gols: 4, clube: "Coritiba", imagem: pedroRocha },
+    { nome: "Pedro", gols: 9, clube: "Flamengo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233733/pedro_bijmj1.png" },
+    { nome: "John Kennedy", gols: 8, clube: "Fluminense", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233732/jonh_mppp51.png" },
+    { nome: "Kevin Viveros", gols: 8, clube: "Athletico-PR", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233731/kevin_xvviy7.png" },
+    { nome: "Luciano Juba", gols: 7, clube: "Bahia", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233739/juba_jjdis2.png" },
+    { nome: "Arthur", gols: 7, clube: "Botafogo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233731/arthur_lclgo1.png" },
+    { nome: "Danilo Santos", gols: 7, clube: "Botafogo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233730/danilo_b0tzxm.png" },
+    { nome: "Breno", gols: 7, clube: "Coritiba", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233734/breno_mwnfqu.png" },
+    { nome: "Vinicius", gols: 7, clube: "Grêmio", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233735/vini_o6z5tg.png" },
+    { nome: "Calleri", gols: 6, clube: "São Paulo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233734/calleri_j5fjed.png" },
+    { nome: "Luciano", gols: 5, clube: "São Paulo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233733/luciano_oqu6na.png" },
+    { nome: "Lopez", gols: 5, clube: "Palmeiras", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233737/lopez_toewg9.png" },
+    { nome: "Christian", gols: 5, clube: "Cruzeiro", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233736/christian_yr10rv.png" },
+    { nome: "Mendoza", gols: 5, clube: "Athletico-PR", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233738/mendonza_vjwhlb.png" },
+    { nome: "Edenilson", gols: 4, clube: "Botafogo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233730/edenilson_lpdzz2.png" },
+    { nome: "Pedro Rocha", gols: 4, clube: "Coritiba", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233738/pedrorocha_q0e75m.png" },
   ]
 };
 
@@ -469,21 +438,21 @@ proximosJogos: [
   { data: "27/05/2026", hora: "19h00", timeA: "Libertad", timeB: "Universidad Central", estadio: "Tigo La Huerta", fase: "Fase de grupos • 6ª rodada" },
 ],
 artilharia: [
-  { nome: "Carlos González", gols: 5, clube: "Independiente del Valle", imagem: Carlos },
-  { nome: "Arce", gols: 5, clube: "Independiente Rivadavia", imagem: Arce },
-  { nome: "Barrandeguy", gols: 3, clube: "Juventud", imagem: Barrandeguy },
-  { nome: "Fydriszewski", gols: 3, clube: "Independiente Medellín", imagem: Fydriszewski },
-  { nome: "Tiago Palacios", gols: 3, clube: "Estudiantes", imagem: Tiago },
-  { nome: "Melgarejo", gols: 3, clube: "Libertad", imagem: Melgarejo },
-  { nome: "Gustavo Henrique", gols: 3, clube: "Corinthians", imagem: Gustavo },
-  { nome: "Chancellor", gols: 2, clube: "Universidad de Quito", imagem: Chancellor },
-  { nome: "Fajardo", gols: 2, clube: "Universidad de Quito", imagem: Fajardo },
-  { nome: "Yotún", gols: 2, clube: "Sporting Cristal", imagem: Yotun },
-  { nome: "Tortolero", gols: 2, clube: "Carabobo", imagem: Tortolero },
-  { nome: "Hayen Palacios", gols: 2, clube: "Independiente Medellín", imagem: Hayen },
-  { nome: "Francisco González", gols: 2, clube: "O'Higgins", imagem: Francisco },
-  { nome: "Willian José", gols: 2, clube: "Bahia", imagem: Willian },
-  { nome: "Villalba", gols: 2, clube: "Barcelona de Guayaquil", imagem: Villalba },
+  { nome: "Carlos González", gols: 5, clube: "Independiente del Valle", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233573/Carlos_obwnvo.png" },
+  { nome: "Arce", gols: 5, clube: "Independiente Rivadavia", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Arce_p7zeaz.png" },
+  { nome: "Barrandeguy", gols: 3, clube: "Juventud", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Barrandeguy_asyk8j.png" },
+  { nome: "Fydriszewski", gols: 3, clube: "Independiente Medellín", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Fydriszewski_zd3lse.png" },
+  { nome: "Tiago Palacios", gols: 3, clube: "Estudiantes", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Tiago_et1dn9.png" },
+  { nome: "Melgarejo", gols: 3, clube: "Libertad", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Melgarejo_rom9r9.png" },
+  { nome: "Gustavo Henrique", gols: 3, clube: "Corinthians", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Gustavo_y6731q.png" },
+  { nome: "Chancellor", gols: 2, clube: "Universidad de Quito", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Chancellor_bcwciq.png" },
+  { nome: "Fajardo", gols: 2, clube: "Universidad de Quito", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Fajardo_szcjon.png" },
+  { nome: "Yotún", gols: 2, clube: "Sporting Cristal", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Yot%C3%BAn_taeqqc.png" },
+  { nome: "Tortolero", gols: 2, clube: "Carabobo", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Tortolero_y9rbwr.png" },
+  { nome: "Hayen Palacios", gols: 2, clube: "Independiente Medellín", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233572/Hayen_sywh5g.png" },
+  { nome: "Francisco González", gols: 2, clube: "O'Higgins", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Francisco_wm2jnp.png" },
+  { nome: "Willian José", gols: 2, clube: "Bahia", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Willian_xyzosy.png" },
+  { nome: "Villalba", gols: 2, clube: "Barcelona de Guayaquil", imagem: "https://res.cloudinary.com/dcrnq7lyb/image/upload/v1779233571/Villalba_w6zxh7.png" },
 ]
 };
 

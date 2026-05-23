@@ -33,7 +33,7 @@
 }
 
 .value {
-    color: var(--text-color);
+    color: var(--text-color2);
     font-size: 13px;
     font-weight: 500;
 }
@@ -59,16 +59,17 @@
 
 .btnFinalizar {
     width: 100%;
-    padding: 16px;
+    padding: 12px;
     background: #0047d6;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     border: none;
-    border-radius: 14px;
+    border-radius: 8px;
     cursor: pointer;
     letter-spacing: 0.3px;
     transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
 }
 
 .btnFinalizar:hover {

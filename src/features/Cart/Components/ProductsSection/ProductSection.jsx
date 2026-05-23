@@ -1,11 +1,12 @@
 import styles from "./ProductSection.module.css";
 import CartProduct from "../CartProduct/CartProduct";
+import { IoCartOutline } from "react-icons/io5";
 
 export default function ProductSection({ produtos, onAumentar, onDiminuir, onRemover }) {
     if (produtos.length === 0) {
         return (
             <div className={styles.empty}>
-                <span className={styles.emptyIcon}>🛒</span>
+                <span className={styles.emptyIcon}><IoCartOutline /></span>
                 <p className={styles.emptyText}>Seu carrinho está vazio</p>
             </div>
         );

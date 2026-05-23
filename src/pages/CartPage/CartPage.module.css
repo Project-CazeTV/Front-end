@@ -9,19 +9,20 @@
     align-items: center;
     gap: 12px;
     padding: 14px 16px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 0.5px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: var(--bg-color);
 }
 
 .backBtn {
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.07);
-    border: none;
+    background: var(--bg-buttom);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -31,12 +32,8 @@
     transition: background 0.2s ease;
 }
 
-.backBtn:hover {
-    background: rgba(255, 255, 255, 0.12);
-}
-
 .pageTitle {
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 0.2px;
@@ -65,11 +62,10 @@
 
 .divider {
     height: 0.5px;
-    background: rgba(255, 255, 255, 0.07);
+    background: var(--border-color);
     margin: 20px 0;
 }
 
-/* Tablet e desktop */
 @media (min-width: 640px) {
     .content {
         max-width: 600px;

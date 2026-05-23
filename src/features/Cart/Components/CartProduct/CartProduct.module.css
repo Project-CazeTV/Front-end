@@ -1,16 +1,20 @@
+:root{
+    --bg-img: #d8d8d8;
+}
+
+[data-theme="dark"]{
+  --bg-img: #252525;
+}
+
 .card {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #1a1a1a;
-    border: 0.5px solid rgba(255, 255, 255, 0.07);
+    background: var(--bg-buttom);
+    border: 0.5px solid var(--border-color);
     border-radius: 14px;
     padding: 12px;
     transition: border-color 0.2s ease;
-}
-
-.card:active {
-    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .img {
@@ -18,7 +22,7 @@
     height: 64px;
     border-radius: 10px;
     object-fit: cover;
-    background: #252525;
+    background: var(--bg-img);
     flex-shrink: 0;
 }
 
@@ -31,7 +35,7 @@
 }
 
 .name {
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
@@ -41,7 +45,7 @@
 }
 
 .unitPrice {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-color2);
     font-size: 12px;
     margin: 0 0 8px 0;
 }
@@ -75,12 +79,8 @@
 }
 
 .btnMinus {
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.btnMinus:hover {
-    background: rgba(255, 255, 255, 0.13);
+    background: var(--bg-img);
+    color: #ffffff;
 }
 
 .btnPlus {
@@ -88,12 +88,8 @@
     color: #ffffff;
 }
 
-.btnPlus:hover {
-    background: #0055ff;
-}
-
 .qtyVal {
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: 600;
     min-width: 18px;
@@ -110,7 +106,7 @@
 }
 
 .total {
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 700;
 }
@@ -118,20 +114,16 @@
 .btnRemove {
     width: 30px;
     height: 30px;
-    background: rgba(255, 60, 60, 0.1);
+    background: #0047d6;
     border: none;
     border-radius: 8px;
-    color: #ff4d4d;
+    color: #fff;
     font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.btnRemove:hover {
-    background: rgba(255, 60, 60, 0.2);
 }
 
 .btnRemove:active {

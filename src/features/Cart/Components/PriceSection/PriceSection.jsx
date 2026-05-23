@@ -1,8 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./PriceSection.module.css";
 
 const FRETE = 15.90;
 
 export default function PriceSection({ produtos }) {
+
+    const navigate = useNavigate()
+
+    const finalizarCompra = () => {
+        alert("Obrigado por comprar na Cazé Store!")
+        navigate("/")
+        localStorage.removeItem("cart");
+    }
+
     const subtotal = produtos.reduce(
         (acc, p) => acc + p.price * p.amount, 0
     );
@@ -27,11 +37,13 @@ export default function PriceSection({ produtos }) {
                     <span className={styles.totalLabel}>Total</span>
                     <span className={styles.totalValue}>R$ {total.toFixed(2)}</span>
                 </div>
+                <button 
+                    className={styles.btnFinalizar}
+                    onClick={finalizarCompra}
+                >
+                    Finalizar Compra
+                </button>
             </div>
-
-            <button className={styles.btnFinalizar}>
-                Finalizar Compra
-            </button>
         </section>
     );
 }

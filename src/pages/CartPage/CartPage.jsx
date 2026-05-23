@@ -7,6 +7,8 @@ import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 import ProductSection from "../../features/Cart/Components/ProductsSection/ProductSection";
 import PriceSection from "../../features/Cart/Components/PriceSection/PriceSection";
 
+import { FaArrowLeftLong } from "react-icons/fa6";
+
 import styles from "./CartPage.module.css";
 
 export default function CartPage() {
@@ -48,7 +50,7 @@ export default function CartPage() {
 
             <div className={styles.topBar}>
                 <button className={styles.backBtn} onClick={() => navigate(-1)}>
-                    ←
+                    <FaArrowLeftLong />
                 </button>
                 <h1 className={styles.pageTitle}>Meu Carrinho</h1>
                 {cart.length > 0 && (

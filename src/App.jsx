@@ -17,6 +17,7 @@ import imgHero2 from "../src/assets/olimpiadas/jogos_olimpicos.png";
 import { Summer2024, winter2026 } from '../src/mocks/medalData.js';
 import { featuredAthletes, featuredAthletes2026 } from '../src/mocks/olimpiadas.js';
 import { olympicsStats, olympicsStats2026 } from "../src/mocks/olimpiadas.js";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/olympics/winter" element={<OlympicsPage image={imgHero2} medalData={winter2026} news={noticiasOlimpiadasMock2026} athletes={featuredAthletes2026} stats={olympicsStats2026}  />}/>
         <Route path="/historia/cazetv" element={<HistoriaPage />}/>
         <Route path="/shop" element={<ShopPage />}/>
+        <Route path="/shop/produto/:id" element={<ProductPage />} />
         <Route path="/cart" element={<CartPage />}/>
         <Route path="/brasileirao" element={<ChampionshipPage campeonato={brasileirao}/>}/>
         <Route path="/paulistao" element={<ChampionshipPage campeonato={paulista}/>}/>

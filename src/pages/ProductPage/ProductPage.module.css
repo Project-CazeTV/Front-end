@@ -1,0 +1,252 @@
+.page {
+    background: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg-color);
+}
+
+.backBtn {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-buttom);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+}
+
+.backBtn:hover {
+    opacity: 0.7;
+}
+
+.topBarTitle {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 48px 0;
+    flex: 1;
+}
+
+.imgWrapper {
+    width: 100%;
+    background: var(--bg-buttom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.img {
+    width: 100%;
+    max-width: 300px;
+    height: 260px;
+    object-fit: contain;
+}
+
+.info {
+    padding: 20px 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.priceRow {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.pricePer {
+    color: var(--text-color2);
+    font-size: 13px;
+}
+
+.divider {
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 20px;
+}
+
+.qtySection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.qtyLabel {
+    color: var(--text-color2);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.qtyRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 6px 10px;
+}
+
+.btnMinus,
+.btnPlus {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.1s ease;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.btnMinus:active,
+.btnPlus:active {
+    transform: scale(0.92);
+}
+
+.btnMinus {
+    background: var(--bg-img);
+    color: #ffffff;
+}
+
+.btnMinus:hover {
+    opacity: 0.75;
+}
+
+.btnPlus {
+    background: #0047d6;
+    color: #ffffff;
+}
+
+.btnPlus:hover {
+    opacity: 0.85;
+}
+
+.qtyVal {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.totalLabel {
+    color: var(--text-color2);
+    font-size: 14px;
+}
+
+.totalValue {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btnCart {
+    width: 100%;
+    padding: 16px;
+    background: #0047d6;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.btnCart:hover {
+    opacity: 0.85;
+}
+
+.btnCart:active {
+    transform: scale(0.98);
+}
+
+.btnCartAdded {
+    background: #1a6e2e;
+    pointer-events: none;
+}
+
+.dividerFull {
+    height: 1px;
+    background: var(--border-color);
+    margin: 28px 0 0 0;
+}
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .imgWrapper {
+        border-radius: 16px;
+        margin-top: 20px;
+    }
+
+    .info {
+        padding: 20px 0 0;
+    }
+
+    .topBar {
+        border-bottom: 1px solid var(--border-color);
+    }
+}

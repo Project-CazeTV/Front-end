@@ -2,10 +2,19 @@ import { truncateString } from "../../utils/ProductCardUtil";
 
 import styles from "./ProductCard.module.css";
 
+import { useNavigate } from "react-router-dom";
+
 export default function ProductCard({id,nome,img,preco,cores,addToCart,}) {
+
+  const navigate = useNavigate();
+
+  function handleVerProduto() {
+    navigate(`/shop/produto/${id}`, { state: { id, nome, img, preco, coresDisponiveis: cores } });
+  }
+
   return (
-    <div className={styles.card}>
-      <div className={styles.imgContainer}>
+    <div className={styles.card} onClick={handleVerProduto}>
+      <div className={styles.imgContainer} >
         <img src={img} alt={nome} />
       </div>
 
@@ -32,7 +41,8 @@ export default function ProductCard({id,nome,img,preco,cores,addToCart,}) {
 
       <button
         className={styles.cardButton}
-        onClick={() =>
+        onClick={(e) => {
+          e.stopPropagation();
           addToCart({
             id,
             name: nome,
@@ -40,7 +50,7 @@ export default function ProductCard({id,nome,img,preco,cores,addToCart,}) {
             price: preco,
             color: cores?.[0],
           })
-        }
+        }}
       >
         Adicionar ao carrinho
       </button>

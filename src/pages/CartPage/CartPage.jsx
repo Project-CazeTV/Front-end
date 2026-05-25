@@ -49,9 +49,6 @@ export default function CartPage() {
             <MainHeader />
 
             <div className={styles.topBar}>
-                <button className={styles.backBtn} onClick={() => navigate(-1)}>
-                    <FaArrowLeftLong />
-                </button>
                 <h1 className={styles.pageTitle}>Meu Carrinho</h1>
                 {cart.length > 0 && (
                     <span className={styles.itemCount}>

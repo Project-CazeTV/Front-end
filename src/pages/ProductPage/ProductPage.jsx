@@ -55,11 +55,6 @@ export default function ProductPage() {
             <ColoredHeader />
             <MainHeader />
 
-            <div className={styles.topBar}>
-                <button className={styles.backBtn} onClick={() => navigate(-1)}><FaArrowLeftLong /></button>
-                <span className={styles.topBarTitle}>Produto</span>
-            </div>
-
             <div className={styles.content}>
                 <div className={styles.imgWrapper}>
                     <img src={produto.img} alt={nome} className={styles.img} />

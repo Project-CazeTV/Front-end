@@ -8,7 +8,7 @@
 .card {
     background: var(--bg-buttom);
     border: 0.5px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: 10px;
     padding: 16px;
 }
 
@@ -63,9 +63,10 @@
     background: #0047d6;
     color: #ffffff;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
+    font-family: "Sora", sans-serif;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     letter-spacing: 0.3px;
     transition: background 0.2s ease, transform 0.1s ease;

@@ -51,7 +51,8 @@
     border: 0;
     border-radius: 100px;
     transition: 0.3s;
-    font-size: 12px;
+    font-size: 11px;
+    font-family: "Sora", sans-serif;
 }
 
 .cardButton:active {
@@ -138,7 +139,7 @@
 
     .cardButton {
         padding: 8px;
-        font-size: 11px;
+        font-size: 10px;
     }
 
 }

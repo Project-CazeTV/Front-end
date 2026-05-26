@@ -1,6 +1,8 @@
 export const mainNewsMock = [
   {
     id: 1,
+    categoria: "Principal Masculina",
+    tagColor: "#0047BB",
     titulo: "Brasil e Egito se enfrentam no dia 6 de junho, em Cleveland",
     descricao: "O Brasil já tem definido seu último adversário antes da estreia na Copa do Mundo de 2026. A Seleção enfrentará o Egito no Huntington Bank Field, em Cleveland, no dia 6 de junho, uma semana antes da estreia no Mundial, contra o Marrocos.",
     corpo: `A Confederação Brasileira de Futebol (CBF) confirmou nesta semana o último amistoso preparatório da Seleção Brasileira antes da estreia na Copa do Mundo de 2026. O adversário será o Egito, e o duelo acontecerá no dia 6 de junho, no Huntington Bank Field, em Cleveland, Ohio — uma das cidades-sede do próprio Mundial.
@@ -14,11 +16,13 @@ Do lado brasileiro, a expectativa é que Vinicius Jr., Rodrygo e Endrick formem 
 Cleveland receberá o jogo com os ingressos praticamente esgotados. A comunidade brasileira nos Estados Unidos, que é uma das maiores do mundo, já garantiu uma grande presença nas arquibancadas. A expectativa é de um estádio tomado pelo verde e amarelo — um ensaio geral para o que a torcida espera ver durante toda a competição.
 
 A estreia do Brasil no Mundial será no dia 13 de junho, contra Marrocos, também em solo americano. A Seleção está no Grupo D ao lado de Marrocos, Croácia e Arábia Saudita.`,
+    tempo: "4 DIAS",
     imagem: "https://observatoriodoesporte.mg.gov.br/wp-content/uploads/2017/10/2017-10-11t011140z_599294514_rc166cf358b0_rtrmadp_3_soccer-worldcup-bra-chl.jpg",
-    link: "/noticia/1"
   },
   {
     id: 2,
+    categoria: "Esqui Alpino",
+    tagColor: "#DC2626",
     titulo: "Lucas Pinheiro é ouro, e Brasil conquista 1ª medalha nos Jogos de Inverno",
     descricao: "Lucas Pinheiro Braathen conquistou em 14 de fevereiro de 2026 a primeira medalha de ouro do Brasil na história dos Jogos Olímpicos de Inverno, vencendo a prova de slalom gigante no esqui alpino em Milão-Cortina 2026.",
     corpo: `Era 14 de fevereiro de 2026 quando o Brasil escreveu uma das páginas mais marcantes de sua história olímpica. Lucas Pinheiro Braathen desceu a pista de slalom gigante em Milão-Cortina com uma precisão cirúrgica e cruzou a linha de chegada com o melhor tempo da prova, conquistando o primeiro ouro brasileiro em Jogos Olímpicos de Inverno.
@@ -32,11 +36,13 @@ A prova foi marcada por condições climáticas desafiadoras, com neve fresca ca
 A conquista repercutiu em todo o Brasil. O presidente da CBSki, o Comitê Olímpico Brasileiro e até o presidente da República prestaram homenagens ao atleta nas redes sociais. A mídia esportiva nacional, que historicamente dedica pouco espaço aos esportes de inverno, abriu manchetes e transmitiu a cerimônia ao vivo em horário nobre.
 
 Para Lucas, o ouro em Milão é só o começo. "Quero mais. Quero mostrar que o Brasil pode competir no mais alto nível em qualquer modalidade. Esse ouro é de todo mundo que acreditou", finalizou o campeão.`,
+    tempo: "2 SEMANAS",
     imagem: "https://i.metroimg.com/uMnE3xnZ29IrB2fk8A-oMBaVs9thtsOU_t-vW-Zfxcc/w:900/q:85/f:webp/plain/https://images.metroimg.com/2026/02/lucas-pinheiro-braathen-ouro-olimpico-2.jpg",
-    link: "/noticia/2"
   },
   {
     id: 3,
+    categoria: "Destaques",
+    tagColor: "#FFD700",
     titulo: "Oscar Schmidt, lenda do basquete brasileiro, morre aos 68 anos.",
     descricao: "Filho de Oscar Schmidt, o corretor e diretor criativo Felipe Schmidt abriu o coração sobre a partida do pai. O ídolo do basquete brasileiro morreu aos 68 anos de idade após passar mal em casa.",
     corpo: `O Brasil perdeu nesta sexta-feira um de seus maiores ícones esportivos. Oscar Schmidt, o maior pontuador da história dos Jogos Olímpicos, morreu aos 68 anos após passar mal em casa e ser levado às pressas ao hospital, onde não resistiu. A notícia foi confirmada pela família no início da tarde e rapidamente tomou conta das redes sociais e dos principais veículos esportivos do país.
@@ -50,8 +56,8 @@ Fora das quadras, Oscar era conhecido pela personalidade extrovertida e pelo car
 Clubes, federações e atletas de todo o mundo lamentaram a perda. A NBA emitiu uma nota oficial exaltando a contribuição de Oscar ao basquete global. O Comitê Olímpico Brasileiro decretou luto oficial de três dias.
 
 Oscar Schmidt deixa a esposa, três filhos e um legado que vai muito além dos pontos marcados. Ele provou que o Brasil podia competir de igual para igual com as maiores potências do basquete mundial — e fez isso com um sorriso no rosto até o fim.`,
+    tempo: "2 MESES",
     imagem: "https://img.olympics.com/images/image/private/t_social_share_thumb/f_auto/primary/olv1vrsemhduun7qoihe",
-    link: "/noticia/3"
   }
 ];
 

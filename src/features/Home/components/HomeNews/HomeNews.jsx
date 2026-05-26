@@ -2,12 +2,15 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 import styles from './HomeNews.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomeNews({ news }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const nextNews = useCallback(() => {
     setDirection(1);
@@ -38,6 +41,20 @@ export default function HomeNews({ news }) {
   });
 
   const current = news[index];
+
+  const avancar = () => {
+    navigate('/news', { 
+      state: {
+        titulo: current.titulo,
+        imagem: current.imagem,
+        descricao: current.descricao,
+        tempo: current.tempo,
+        corpo: current.corpo,
+        categoria: current.categoria,
+        tagColor: current.tagColor
+      }
+    });
+  }
 
   return (
     <section
@@ -70,7 +87,7 @@ export default function HomeNews({ news }) {
           >
             <h2 className={styles.title}>{current.titulo}</h2>
             <p className={styles.description}>{current.descricao}</p>
-            <button className={styles.btn}>
+            <button className={styles.btn} onClick={avancar}>
               ver notícia completa
               <span className="material-symbols-outlined">arrow_circle_right</span>
             </button>

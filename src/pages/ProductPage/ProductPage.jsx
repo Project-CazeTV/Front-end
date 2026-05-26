@@ -18,11 +18,16 @@ export default function ProductPage() {
         return null;
     }
 
-    const nome  = produto.nome  ?? produto.name;
-    const preco = produto.preco ?? produto.price;
+    const nome  = produto.nome;
+    const preco = produto.preco;
 
-    function aumentar() { setAmount(prev => prev + 1); }
-    function diminuir() { setAmount(prev => (prev > 1 ? prev - 1 : 1)); }
+    function aumentar() { 
+        setAmount(amount + 1)
+    }
+
+    function diminuir() { 
+        setAmount((amount > 1 ? amount - 1 : 1))
+    }
 
     function addToCart() {
         const cart = JSON.parse(localStorage.getItem("cart")) || [];

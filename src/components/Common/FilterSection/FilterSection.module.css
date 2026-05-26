@@ -48,9 +48,10 @@
   border-radius: 8px;
   white-space: nowrap;
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 300;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: "Sora", sans-serif;
 }
 
 .filtroBtn:hover, .filtroBtnActive {

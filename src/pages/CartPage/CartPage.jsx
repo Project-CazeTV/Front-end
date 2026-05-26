@@ -18,6 +18,10 @@ export default function CartPage() {
         return JSON.parse(localStorage.getItem("cart")) || [];
     });
 
+    if (cart.length <= 0) {
+        return navigate("/shop")
+    }
+
     function saveCart(updated) {
         setCart(updated);
         localStorage.setItem("cart", JSON.stringify(updated));
@@ -50,11 +54,9 @@ export default function CartPage() {
 
             <div className={styles.topBar}>
                 <h1 className={styles.pageTitle}>Meu Carrinho</h1>
-                {cart.length > 0 && (
-                    <span className={styles.itemCount}>
-                        {cart.reduce((acc, p) => acc + p.amount, 0)} {cart.reduce((acc, p) => acc + p.amount, 0) === 1 ? "item" : "itens"}
-                    </span>
-                )}
+                <span className={styles.itemCount}>
+                    {cart.reduce((acc, p) => acc + p.amount, 0)} {cart.reduce((acc, p) => acc + p.amount, 0) === 1 ? "item" : "itens"}
+                </span>
             </div>
 
             <div className={styles.content}>
@@ -64,13 +66,8 @@ export default function CartPage() {
                     onDiminuir={diminuirQuantidade}
                     onRemover={removerProduto}
                 />
-
-                {cart.length > 0 && (
-                    <>
-                        <div className={styles.divider} />
-                        <PriceSection produtos={cart} />
-                    </>
-                )}
+                <div className={styles.divider} />
+                <PriceSection produtos={cart} />
             </div>
 
             <CommonFooter />

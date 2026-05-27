@@ -16,7 +16,7 @@ export default function CountdownCard() {
           <img src={logoCbf} alt="CBF" className={styles.logoCbf} />
         </div>
 
-        <p className={styles.titleText}>COPA DO MUNDO É NA CAZÉ TV.</p>
+        <p className={styles.titleText}>CONTAGEM REGRESSIVA ATÉ O HEXA.</p>
 
         <div className={styles.countdownGrid}>
           {Object.entries(timeLeft).map(([label, value]) => (

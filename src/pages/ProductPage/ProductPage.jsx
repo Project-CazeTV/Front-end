@@ -7,11 +7,13 @@ import RelatedProducts from "../../features/Shop/components/RelatedProducts/Rela
 import styles from "./ProductPage.module.css";
 
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { userAuth } from "../../hooks/UserAuth/UserAuth";
 
 export default function ProductPage() {
     const { state: produto } = useLocation();
     const navigate = useNavigate();
     const [amount, setAmount] = useState(1);
+    const { user, loading } = userAuth()
 
     if (!produto) {
         navigate("/shop");
@@ -30,6 +32,11 @@ export default function ProductPage() {
     }
 
     function addToCart() {
+
+        if(!user) {
+            return navigate("/login")
+        }
+
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const exists = cart.find(item => item.id === produto.id);
 
@@ -101,7 +108,7 @@ export default function ProductPage() {
 
                 <div className={styles.dividerFull} />
 
-                <RelatedProducts currentId={produto.id} />
+                <RelatedProducts currentId={produto.id} addToCart={addToCart}/>
             </div>
 
             <CommonFooter />

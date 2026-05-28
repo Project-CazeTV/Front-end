@@ -8,12 +8,15 @@ import styles from "./ProductPage.module.css";
 
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { userAuth } from "../../hooks/UserAuth/UserAuth";
+import useScrollTop from "../../hooks/useScrollTop/useScrollTop";
 
 export default function ProductPage() {
     const { state: produto } = useLocation();
     const navigate = useNavigate();
     const [amount, setAmount] = useState(1);
     const { user, loading } = userAuth()
+
+    useScrollTop()
 
     if (!produto) {
         navigate("/shop");
@@ -65,7 +68,7 @@ export default function ProductPage() {
     return (
         <div className={styles.page}>
             <ColoredHeader />
-            <MainHeader />
+            <MainHeader logo={"CazeStore"}/>
 
             <div className={styles.content}>
                 <div className={styles.imgWrapper}>

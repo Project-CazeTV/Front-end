@@ -12,6 +12,7 @@ import { useAccountMenu } from '../../../hooks/useAccountMenu/useAccountMenu';
 import { userAuth } from '../../../hooks/UserAuth/UserAuth';
 import { navigationMap } from '../../../utils/navigationMap';
 import { menuData } from '../../../mocks/navegacao/optionsHeader';
+import CazeStore from '../../../assets/CazeStore.png';
 
 export default function MainHeader({ logo, isTransparent }) {
   const navigate = useNavigate();
@@ -46,9 +47,9 @@ export default function MainHeader({ logo, isTransparent }) {
       <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
         <div className={styles.topBar}>
           <img
-            src={logo || LogoCazeIcon}
+            src={logo === "CazeStore" ? CazeStore : LogoCazeIcon}
             alt="Cazé TV"
-            className={styles.logo}
+            className={logo === "CazeStore" ? styles.logoStore : styles.logo }
             onClick={() => navigate('/')}
             loading="eager"
           />

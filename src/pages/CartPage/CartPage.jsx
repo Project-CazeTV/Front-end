@@ -50,7 +50,7 @@ export default function CartPage() {
     return (
         <div className={styles.page}>
             <ColoredHeader />
-            <MainHeader />
+            <MainHeader logo={"CazeStore"}/>
 
             <div className={styles.topBar}>
                 <h1 className={styles.pageTitle}>Meu Carrinho</h1>

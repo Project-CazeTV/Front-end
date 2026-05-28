@@ -30,6 +30,14 @@
   cursor: pointer;
 }
 
+.logoStore {
+  height: 50px;
+  width: auto;
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+}
+
 #menuIcon {
   position: relative;
   top: 20px;
@@ -104,5 +112,9 @@
 @media (min-width: 1024px) {
   .hamburgerBtn {
     display: none !important;
+  }
+
+  .logoStore {
+    height: 70px;
   }
 }

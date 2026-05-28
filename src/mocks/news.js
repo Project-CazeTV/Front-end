@@ -76,7 +76,7 @@ O treinador também falou sobre a preparação do grupo. Segundo ele, os jogador
 
 A estreia do Brasil no Mundial está marcada para o dia 13 de junho, contra Marrocos. A torcida brasileira já lotou os ingressos disponíveis para o jogo, e a expectativa é de uma atmosfera incrível nas arquibancadas americanas.`,
     tempo: "3 MESES",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3OqENRL9zVhkgHBC6Tl7GjEl8o6sgAu-FUw&s"
+    imagem: "https://stcbfsiteprdimgbrs.blob.core.windows.net/img-site/cdn/WhatsApp%20Image%202025-12-05%20at%2019.54.38.jpeg"
   },
   {
     id: 2,

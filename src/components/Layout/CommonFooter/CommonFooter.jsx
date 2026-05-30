@@ -30,8 +30,8 @@ export default function CommonFooter() {
               <ul>
                 <li><a href="/historia/cazetv">História</a></li>
                 <li><a href="#">Carreiras</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/ajuda">Central de Ajuda</a></li>
               </ul>
             </div>
 

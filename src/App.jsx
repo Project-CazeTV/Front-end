@@ -20,6 +20,7 @@ import { olympicsStats, olympicsStats2026 } from "../src/mocks/olimpiadas.js";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import HelpCenterPage from "./pages/HelpCenterPage/HelpCenterPage";
 import ContactPage from './pages/ContactPage/ContactPage';
+import HelpTopicPage from "./pages/HelpTopicPage/HelpTopicPage";
 
 
 function App() {
@@ -48,6 +49,10 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/ajuda" element={<HelpCenterPage />} />
         <Route path="/contato" element={<ContactPage />} />
+        <Route
+          path="/ajuda/:topic"
+          element={<HelpTopicPage />}
+        />
       </Routes>
     </Router>
   )

@@ -4,37 +4,39 @@ import styles from "./HelpCenterPage.module.css";
 import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
+import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const helpTopics = [
     {
         title: "Conta e Acesso",
-        description:
-            "Login, cadastro, recuperação de senha e gerenciamento da conta.",
+        description: "Login, cadastro, recuperação de senha e gerenciamento da conta.",
+        route: "/ajuda/conta-acesso",
     },
     {
         title: "Loja",
-        description:
-            "Compras, carrinho, pedidos e produtos oficiais da CazéTV.",
+        description: "Compras, carrinho, pedidos e produtos oficiais da CazéTV.",
+        route: "/ajuda/loja",
     },
     {
         title: "Notícias",
-        description:
-            "Como acompanhar notícias, matérias e conteúdos exclusivos.",
+        description: "Como acompanhar notícias, matérias e conteúdos exclusivos.",
+        route: "/ajuda/noticias",
     },
     {
         title: "Campeonatos",
-        description:
-            "Informações sobre Brasileirão, Libertadores e outras competições.",
+        description: "Informações sobre Brasileirão, Libertadores e outras competições.",
+        route: "/ajuda/campeonatos",
     },
     {
         title: "Plataforma",
-        description:
-            "Navegação, funcionalidades e utilização do site.",
+        description: "Navegação, funcionalidades e utilização do site.",
+        route: "/ajuda/plataforma",
     },
     {
         title: "Suporte Técnico",
-        description:
-            "Problemas de carregamento, erros e dúvidas técnicas.",
+        description: "Problemas de carregamento, erros e dúvidas técnicas.",
+        route: "/ajuda/suporte-tecnico",
     },
 ];
 
@@ -56,10 +58,14 @@ export default function HelpCenterPage() {
 
                 <div className={styles.grid}>
                     {helpTopics.map((topic) => (
-                        <div key={topic.title} className={styles.card}>
+                        <Link
+                            key={topic.title}
+                            to={topic.route}
+                            className={styles.card}
+                        >
                             <h2>{topic.title}</h2>
                             <p>{topic.description}</p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
@@ -70,7 +76,7 @@ export default function HelpCenterPage() {
                     </div>
 
                     <div className={styles.buttons}>
-                        <a href="/contato" className={styles.button}>
+                        <a href="/contato" className={`${styles.button} ${styles.contactButton}`}>
                             Fale Conosco
                         </a>
 
@@ -78,9 +84,10 @@ export default function HelpCenterPage() {
                             href="https://wa.me/5500000000000"
                             target="_blank"
                             rel="noreferrer"
-                            className={styles.button}
+                            className={`${styles.button} ${styles.whatsappButton}`}
                         >
-                            WhatsApp
+                            <FaWhatsapp />
+                            <span>WhatsApp</span>
                         </a>
                     </div>
                 </section>

@@ -20,7 +20,7 @@ export default function CommonFooter() {
               <ul>
                 <li><a href="#">Todos os jogos</a></li>
                 <li><a href="#">Todos os times</a></li>
-                <li><a href="#">Todas as competições</a></li>
+                <li><a href="/competicoes">Todas as competições</a></li>
                 <li><a href="#">Apostas brasil</a></li>
               </ul>
             </div>

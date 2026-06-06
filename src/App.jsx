@@ -21,6 +21,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import HelpCenterPage from "./pages/HelpCenterPage/HelpCenterPage";
 import ContactPage from './pages/ContactPage/ContactPage';
 import HelpTopicPage from "./pages/HelpTopicPage/HelpTopicPage";
+import CompetitionsPage from "./pages/CompetitionsPage/CompetitionsPage";
 
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
         <Route
           path="/ajuda/:topic"
           element={<HelpTopicPage />}
+        />
+        <Route
+          path="/competicoes"
+          element={<CompetitionsPage />}
         />
       </Routes>
     </Router>

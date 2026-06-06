@@ -18,7 +18,9 @@ export default function ContactPage() {
 
             <main className={styles.container}>
                 <section className={styles.contactSection}>
-                    <h1>Contato</h1>
+                    <h1 className={styles.title}>
+                        Entre em <span>Contato</span>
+                    </h1>
 
                     <p className={styles.subtitle}>
                         Tem alguma dúvida, sugestão ou problema?

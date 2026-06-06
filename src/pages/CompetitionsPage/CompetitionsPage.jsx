@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
-
 import styles from "./CompetitionsPage.module.css";
-
-// importe as logos que vocês já possuem
 import brasileiraoLogo from "../../assets/brasileirao2.png";
 import libertadoresLogo from "../../assets/Conmebol_Libertadores_logo.svg.png";
 import copaBrasilLogo from "../../assets/CopaDoBrasil.png";

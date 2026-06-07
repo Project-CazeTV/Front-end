@@ -11,41 +11,6 @@
     text-transform: uppercase;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-
-    margin-bottom: 40px;
-
-    position: relative;
-    display: inline-block;
-
-    letter-spacing: 1px;
-}
-
-.title span {
-    color: #00c853;
-    /* verde da CazéTV */
-}
-
-.title::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-
-    width: 80px;
-    height: 5px;
-
-    background: linear-gradient(90deg,
-            #00c853,
-            #2196f3);
-
-    border-radius: 999px;
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -55,8 +20,9 @@
 .card {
     text-decoration: none;
     color: inherit;
-
     transition: transform .3s ease;
+    overflow: hidden;          
+    border-radius: 12px;      
 }
 
 .card:hover {
@@ -65,42 +31,59 @@
 
 .image {
     width: 100%;
-    height: 220px;
-
+    height: 160px;
     object-fit: contain;
-
-    padding: 20px;
-
+    padding: 16px;
     background: white;
     border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;  /* <-- adicione isso */
+    display: block;           /* <-- e isso */
 }
 
 .card h2 {
     margin-top: 12px;
-
     text-align: center;
-
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
+    color: #2563eb;
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 32px 16px;
+    }
+
     .container h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: center;
+        margin-bottom: 28px;
     }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .image {
-        height: 220px;
+        height: 160px;
+        padding: 16px;
+    }
+
+    .card h2 {
+        font-size: 0.9rem;
+        margin-top: 8px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .image {
+        height: 130px;
+        padding: 12px;
     }
 }

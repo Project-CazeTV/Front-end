@@ -70,18 +70,18 @@
     margin-top: 60px;
     padding: 40px;
     border-radius: 16px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-
     border: 1px solid #2e2e2e;
+    box-sizing: border-box; 
 }
 
 .buttons {
     display: flex;
     gap: 16px;
+    box-sizing: border-box;
 }
 
 .button {
@@ -141,7 +141,6 @@
     opacity: 0.8;
 }
 
-/* Tablet */
 @media (max-width: 768px) {
     .container {
         padding: 40px 16px;
@@ -171,7 +170,6 @@
     }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
     .container {
         padding: 30px 12px;
@@ -205,5 +203,6 @@
     .button {
         width: 100%;
         min-width: unset;
+        box-sizing: border-box;
     }
 }

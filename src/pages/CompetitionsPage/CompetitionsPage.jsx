@@ -63,8 +63,8 @@ export default function CompetitionsPage() {
             <MainHeader />
 
             <main className={styles.container}>
-                <h1 className={styles.title}>
-                    Principais <span>Competições</span>
+                <h1>
+                    Principais Competições
                 </h1>
 
                 <div className={styles.grid}>

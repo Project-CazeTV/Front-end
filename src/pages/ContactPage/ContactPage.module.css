@@ -1,6 +1,7 @@
 .container {
     min-height: 70vh;
     padding: 80px 20px;
+    box-sizing: border-box;
 }
 
 .contactSection {
@@ -52,6 +53,7 @@
     font-size: 1rem;
     outline: none;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .form textarea {
@@ -130,11 +132,23 @@
 }
 
 @media (max-width: 768px) {
-    .contactSection h1 {
-        font-size: 2.2rem;
+    .container {
+        padding: 40px 16px;
+    }
+
+    .title {
+        font-size: 1.8rem!important;
+        border-left-width: 5px;
+        padding-left: 12px;
+        text-align: left;
     }
 
     .subtitle {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
+        font-size: 0.95rem;
+    }
+
+    .contactGrid {
+        grid-template-columns: 1fr;
     }
 }

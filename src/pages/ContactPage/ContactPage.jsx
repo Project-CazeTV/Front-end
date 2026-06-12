@@ -19,7 +19,7 @@ export default function ContactPage() {
             <main className={styles.container}>
                 <section className={styles.contactSection}>
                     <h1 className={styles.title}>
-                        Entre em <span>Contato</span>
+                        Entre em Contato
                     </h1>
 
                     <p className={styles.subtitle}>

@@ -49,7 +49,7 @@ export default function HelpCenterPage() {
             <main className={styles.container}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>
-                        Central de <span>Ajuda</span>
+                        Central de Ajuda
                     </h1>
 
                     <p>

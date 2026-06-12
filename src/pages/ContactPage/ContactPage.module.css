@@ -19,8 +19,6 @@
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
-
-    border-left: 8px solid #f97316;
     padding-left: 18px;
 
     line-height: 1.1;
@@ -28,9 +26,6 @@
     margin-bottom: 15px;
 }
 
-.title span {
-    color: #f97316;
-}
 .subtitle {
     max-width: 500px;
     margin: 0 auto 50px;
@@ -66,7 +61,7 @@
     padding: 16px 40px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, #f97316, #2d2d2d);
+    background: linear-gradient(135deg, #85827f, #2d2d2d);
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -97,7 +92,7 @@
 
 .contactGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 

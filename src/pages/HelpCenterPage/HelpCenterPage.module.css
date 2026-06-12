@@ -22,17 +22,9 @@
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
-
-    border-left: 8px solid #2563eb;
     padding-left: 18px;
-
     line-height: 1.1;
-
     margin-bottom: 15px;
-}
-
-.title span {
-    color: #2563eb;
 }
 
 .grid {

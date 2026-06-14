@@ -50,14 +50,8 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/ajuda" element={<HelpCenterPage />} />
         <Route path="/contato" element={<ContactPage />} />
-        <Route
-          path="/ajuda/:topic"
-          element={<HelpTopicPage />}
-        />
-        <Route
-          path="/competicoes"
-          element={<CompetitionsPage />}
-        />
+        <Route path="/ajuda/:topic" element={<HelpTopicPage />}/>
+        <Route path="/competicoes" element={<CompetitionsPage />} />
       </Routes>
     </Router>
   )

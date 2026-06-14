@@ -77,50 +77,43 @@
 }
 
 .button {
-    padding: 14px 24px;
-    border-radius: 12px;
+    padding: 12px 24px;
+    border-radius: 0;
     text-decoration: none;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 
-    min-width: 180px;
-
-    transition: all 0.3s ease;
+    min-width: 160px;
+    transition: opacity 0.2s, transform 0.15s;
 }
 
 .button:hover {
     transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 .button svg {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .contactButton {
-    background-color: #2563eb;
-    color: white;
-}
-
-.contactButton:hover {
-    background-color: #1d4ed8;
+    background: #f5a700;
+    color: #000;
+    box-shadow: none;
 }
 
 .whatsappButton {
-    background-color: #25D366;
-    color: white;
-}
-
-.whatsappButton:hover {
-    background-color: #1ebe5d;
-}
-
-.contactButton,
-.whatsappButton {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
 }
 
 .card h2 {

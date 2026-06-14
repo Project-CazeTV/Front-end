@@ -44,17 +44,9 @@ export default function HelpCenterPage() {
                     </div>
 
                     <div className={styles.buttons}>
-                        <a href="/contato" className={`${styles.button} ${styles.contactButton}`}>
-                            Fale Conosco
-                        </a>
+                        <a href="/contato" className={`${styles.button} ${styles.contactButton}`}>Fale Conosco</a>
 
-                        <a
-                            href="https://wa.me/5500000000000"
-                            target="_blank"
-                            rel="noreferrer"
-                            className={`${styles.button} ${styles.whatsappButton}`}
-                        >
-                            <FaWhatsapp />
+                        <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" className={`${styles.button} ${styles.whatsappButton}`}><FaWhatsapp />
                             <span>WhatsApp</span>
                         </a>
                     </div>

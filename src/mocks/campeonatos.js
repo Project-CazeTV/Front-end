@@ -1,11 +1,54 @@
-// ─────────────────────────────────────────────
-// CAMPEONATOS.JS
-// Dados atualizados até 09/05/2026
-// Fonte: CBF, CONMEBOL, Wikipédia, Gazeta Esportiva
-// ─────────────────────────────────────────────
+import brasileiraoLogo from "../assets/brasileirao2.png";
+import libertadoresLogo from "../assets/Conmebol_Libertadores_logo.svg.png";
+import copaBrasilLogo from "../assets/CopaDoBrasil.png";
+import sulamericanaLogo from "../assets/Conmebol_Sudamericana_logo.png";
+import paulistaLogo from "../assets/paulistao.png";
+import cariocaLogo from "../assets/carioca.jpeg";
+import mineiroLogo from "../assets/mineiro.png";
+import gauchoLogo from "../assets/gauchoo.png";
 
-// ── STRUCTURE DE CADA CAMPEONATO ──
-// id, nome, nomeCompleto, edicao, logo, cor, fase, tabela, jogosPassados, proximosJogos
+export const competitions = [
+    {
+        name: "Brasileirão",
+        image: brasileiraoLogo,
+        route: "/brasileirao",
+    },
+    {
+        name: "Libertadores",
+        image: libertadoresLogo,
+        route: "/libertadores",
+    },
+    {
+        name: "Copa do Brasil",
+        image: copaBrasilLogo,
+        route: "/copa-do-brasil",
+    },
+    {
+        name: "Sul-Americana",
+        image: sulamericanaLogo,
+        route: "/sudamericana",
+    },
+    {
+        name: "Paulistão",
+        image: paulistaLogo,
+        route: "/paulistao",
+    },
+    {
+        name: "Carioca",
+        image: cariocaLogo,
+        route: "/carioca",
+    },
+    {
+        name: "Mineiro",
+        image: mineiroLogo,
+        route: "/mineiro",
+    },
+    {
+        name: "Gaúcho",
+        image: gauchoLogo,
+        route: "/gaucho",
+    },
+];
 
 export const brasileirao = {
   id: "brasileirao-2026",

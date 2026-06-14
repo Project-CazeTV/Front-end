@@ -4,57 +4,7 @@ import ColoredHeader from "../../components/Layout/ColoredHeader/ColoredHeader";
 import MainHeader from "../../components/Layout/MainHeader/MainHeader";
 import CommonFooter from "../../components/Layout/CommonFooter/CommonFooter";
 import styles from "./CompetitionsPage.module.css";
-import brasileiraoLogo from "../../assets/brasileirao2.png";
-import libertadoresLogo from "../../assets/Conmebol_Libertadores_logo.svg.png";
-import copaBrasilLogo from "../../assets/CopaDoBrasil.png";
-import sulamericanaLogo from "../../assets/Conmebol_Sudamericana_logo.png";
-import paulistaLogo from "../../assets/paulistao.png";
-import cariocaLogo from "../../assets/carioca.jpeg";
-import mineiroLogo from "../../assets/mineiro.png";
-import gauchoLogo from "../../assets/gauchoo.png";
-
-const competitions = [
-    {
-        name: "Brasileirão",
-        image: brasileiraoLogo,
-        route: "/brasileirao",
-    },
-    {
-        name: "Libertadores",
-        image: libertadoresLogo,
-        route: "/libertadores",
-    },
-    {
-        name: "Copa do Brasil",
-        image: copaBrasilLogo,
-        route: "/copa-do-brasil",
-    },
-    {
-        name: "Sul-Americana",
-        image: sulamericanaLogo,
-        route: "/sudamericana",
-    },
-    {
-        name: "Paulistão",
-        image: paulistaLogo,
-        route: "/paulistao",
-    },
-    {
-        name: "Carioca",
-        image: cariocaLogo,
-        route: "/carioca",
-    },
-    {
-        name: "Mineiro",
-        image: mineiroLogo,
-        route: "/mineiro",
-    },
-    {
-        name: "Gaúcho",
-        image: gauchoLogo,
-        route: "/gaucho",
-    },
-];
+import { competitions } from "../../mocks/campeonatos";
 
 export default function CompetitionsPage() {
     return (

@@ -19,17 +19,8 @@ export default function CompetitionsPage() {
 
                 <div className={styles.grid}>
                     {competitions.map((competition) => (
-                        <Link
-                            key={competition.name}
-                            to={competition.route}
-                            className={styles.card}
-                        >
-                            <img
-                                src={competition.image}
-                                alt={competition.name}
-                                className={styles.image}
-                            />
-
+                        <Link key={competition.name} to={competition.route} className={styles.card}>
+                            <img src={competition.image} alt={competition.name} className={styles.image}/>
                             <h2>{competition.name}</h2>
                         </Link>
                     ))}

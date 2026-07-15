@@ -1,17 +1,17 @@
 export const videosHome = [
     {
-        id: "h3di7glmH5w",
-        title: "São Paulo x Corinthians - Melhores Momentos - Brasileirão 2026",
-        category: "Brasileirão"
+        id: "-OaghjvIqow",
+        title: "MELHORES MOMENTOS: FRANÇA 0 X 2 ESPANHA | COPA DO MUNDO FIFA™ 2026 | SEMIFINAL",
+        category: "Copa do Mundo"
     },
     {
-        id: "AROS7Qs48sM",
-        title: "Mirassol x LDU - Melhores Momentos - Libertadores 2026",
-        category: "Libertadores"
+        id: "FOdbAWK1vO4",
+        title: "MELHORES MOMENTOS: ARGENTINA 3 X 1 SUÍÇA | COPA DO MUNDO FIFA™ 2026 | QUARTAS DE FINAL",
+        category: "Copa do Mundo"
     },
     {
-        id: "HWFNlErlGbg",
-        title: "Flamengo x Medellín - Melhores Momentos - Libertadores 2026",
-        category: "Libertadores"
+        id: "KnwHI27RqXA",
+        title: "MELHORES MOMENTOS: BRASIL 1 X 2 NORUEGA | COPA DO MUNDO FIFA™ 2026 | OITAVAS DE FINAL",
+        category: "Copa do Mundo"
     }
 ]

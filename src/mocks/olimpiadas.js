@@ -5,7 +5,7 @@ export const featuredAthletes = [
         modality: "Ginástica Artística",
         country: "Brasil",
         medals: ["gold", "silver", "silver", "bronze"],
-        image: "https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/campea-mundial-e-olimpica-no-salto-rebeca-andrade-completa-colecao-com-ouro-no-pan/@@images/image-1600-c5243fcc81e67bb5c8cefd05e779b164.jpeg",
+        image: "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/08/rebeca-andrade-prata-e1722542642824.jpeg?w=1200&h=1200&crop=1",
     },
     {
         id: 2,

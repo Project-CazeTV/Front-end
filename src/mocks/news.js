@@ -17,7 +17,7 @@ Cleveland receberá o jogo com os ingressos praticamente esgotados. A comunidade
 
 A estreia do Brasil no Mundial será no dia 13 de junho, contra Marrocos, também em solo americano. A Seleção está no Grupo D ao lado de Marrocos, Croácia e Arábia Saudita.`,
     tempo: "4 DIAS",
-    imagem: "https://observatoriodoesporte.mg.gov.br/wp-content/uploads/2017/10/2017-10-11t011140z_599294514_rc166cf358b0_rtrmadp_3_soccer-worldcup-bra-chl.jpg",
+    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy7arIOnNPafMQYOK7VhQp209GMbVxM9Fgsa56rmbC4H-OBM_eE_QY7JEC&s=10",
   },
   {
     id: 2,
